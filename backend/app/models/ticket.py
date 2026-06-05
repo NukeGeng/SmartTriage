@@ -74,6 +74,7 @@ class Ticket(Base):
     )
     assigned_to: Mapped["User | None"] = relationship(
         "User",
+        back_populates="assigned_tickets",
         foreign_keys=[assigned_to_id],
     )
     analysis: Mapped["TicketAnalysis | None"] = relationship(

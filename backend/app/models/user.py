@@ -57,5 +57,6 @@ class User(Base):
     )
     assigned_tickets: Mapped[list["Ticket"]] = relationship(
         "Ticket",
+        back_populates="assigned_to",
         foreign_keys="Ticket.assigned_to_id",
     )
