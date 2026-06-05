@@ -1,8 +1,22 @@
-"""Database session setup placeholder.
+from collections.abc import Generator
 
-SQLAlchemy engine and session management are added in the database config prompt.
-"""
+from sqlalchemy import create_engine
+from sqlalchemy.orm import Session, sessionmaker
+
+from app.core.config import settings
+
+engine = create_engine(settings.DATABASE_URL, pool_pre_ping=True)
+
+SessionLocal = sessionmaker(
+    autocommit=False,
+    autoflush=False,
+    bind=engine,
+)
 
 
-def get_db():
-    raise RuntimeError("Database session is not configured yet.")
+def get_db() -> Generator[Session, None, None]:
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()

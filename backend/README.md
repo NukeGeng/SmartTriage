@@ -8,7 +8,17 @@ FastAPI service for SmartTriage business workflows. This service owns authentica
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
+copy .env.example .env
 uvicorn app.main:app --reload --port 8000
+```
+
+## Database Migrations
+
+Start PostgreSQL from the repository root, then run Alembic from `backend/`:
+
+```bash
+docker compose up -d postgres
+alembic upgrade head
 ```
 
 ## Health Check
