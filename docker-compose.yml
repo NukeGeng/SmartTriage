@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: smarttriage-postgres
+    environment:
+      POSTGRES_USER: smarttriage
+      POSTGRES_PASSWORD: smarttriage
+      POSTGRES_DB: smarttriage_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - smarttriage_pgdata:/var/lib/postgresql/data
+
+volumes:
+  smarttriage_pgdata:
