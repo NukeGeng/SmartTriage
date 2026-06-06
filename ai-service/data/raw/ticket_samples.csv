@@ -1,0 +1,301 @@
+title,description,category,category_label,priority
+Không đăng nhập được tài khoản sinh viên,Em nhập đúng mật khẩu nhưng hệ thống báo lỗi đăng nhập. Mong được hỗ trợ sớm.,account_system,Tài khoản / Hệ thống,low
+Quên mật khẩu cổng sinh viên,Em cần reset mật khẩu để truy cập cổng thông tin. Vấn đề xảy ra từ hôm qua. Tình trạng này ảnh hưởng đến việc học của lớp em.,account_system,Tài khoản / Hệ thống,medium
+Tài khoản bị khóa trước giờ thi,"Tài khoản của em bị khóa, sáng mai em có lịch thi online. Nhiều bạn trong lớp cũng gặp tình trạng tương tự. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.",account_system,Tài khoản / Hệ thống,high
+Không đăng nhập được tài khoản sinh viên lần 2,Em nhập đúng mật khẩu nhưng hệ thống báo lỗi đăng nhập. Em đã thử lại nhiều lần nhưng chưa được.,account_system,Tài khoản / Hệ thống,low
+Quên mật khẩu cổng sinh viên lần 2,Em cần reset mật khẩu để truy cập cổng thông tin. Nếu cần thêm thông tin em có thể bổ sung. Tình trạng này ảnh hưởng đến việc học của lớp em.,account_system,Tài khoản / Hệ thống,medium
+Tài khoản bị khóa trước giờ thi lần 2,"Tài khoản của em bị khóa, sáng mai em có lịch thi online. Tình trạng này ảnh hưởng đến việc học. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.",account_system,Tài khoản / Hệ thống,high
+Không đăng nhập được tài khoản sinh viên lần 3,Em nhập đúng mật khẩu nhưng hệ thống báo lỗi đăng nhập. Em cần xử lý trong tuần này.,account_system,Tài khoản / Hệ thống,low
+Quên mật khẩu cổng sinh viên lần 3,Em cần reset mật khẩu để truy cập cổng thông tin. Nhờ phòng ban kiểm tra giúp em. Tình trạng này ảnh hưởng đến việc học của lớp em.,account_system,Tài khoản / Hệ thống,medium
+Tài khoản bị khóa trước giờ thi lần 3,"Tài khoản của em bị khóa, sáng mai em có lịch thi online. Hiện tại em vẫn chưa thể sử dụng bình thường. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.",account_system,Tài khoản / Hệ thống,high
+Không đăng nhập được tài khoản sinh viên lần 4,Em nhập đúng mật khẩu nhưng hệ thống báo lỗi đăng nhập. Cảm ơn bộ phận hỗ trợ.,account_system,Tài khoản / Hệ thống,low
+Quên mật khẩu cổng sinh viên lần 4,Em cần reset mật khẩu để truy cập cổng thông tin. Mong được hỗ trợ sớm. Tình trạng này ảnh hưởng đến việc học của lớp em.,account_system,Tài khoản / Hệ thống,medium
+Tài khoản bị khóa trước giờ thi lần 4,"Tài khoản của em bị khóa, sáng mai em có lịch thi online. Vấn đề xảy ra từ hôm qua. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.",account_system,Tài khoản / Hệ thống,high
+Không đăng nhập được tài khoản sinh viên lần 5,Em nhập đúng mật khẩu nhưng hệ thống báo lỗi đăng nhập. Nhiều bạn trong lớp cũng gặp tình trạng tương tự.,account_system,Tài khoản / Hệ thống,low
+Quên mật khẩu cổng sinh viên lần 5,Em cần reset mật khẩu để truy cập cổng thông tin. Em đã thử lại nhiều lần nhưng chưa được. Tình trạng này ảnh hưởng đến việc học của lớp em.,account_system,Tài khoản / Hệ thống,medium
+Tài khoản bị khóa trước giờ thi lần 5,"Tài khoản của em bị khóa, sáng mai em có lịch thi online. Nếu cần thêm thông tin em có thể bổ sung. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.",account_system,Tài khoản / Hệ thống,high
+Không đăng nhập được tài khoản sinh viên lần 6,Em nhập đúng mật khẩu nhưng hệ thống báo lỗi đăng nhập. Tình trạng này ảnh hưởng đến việc học.,account_system,Tài khoản / Hệ thống,low
+Quên mật khẩu cổng sinh viên lần 6,Em cần reset mật khẩu để truy cập cổng thông tin. Em cần xử lý trong tuần này. Tình trạng này ảnh hưởng đến việc học của lớp em.,account_system,Tài khoản / Hệ thống,medium
+Tài khoản bị khóa trước giờ thi lần 6,"Tài khoản của em bị khóa, sáng mai em có lịch thi online. Nhờ phòng ban kiểm tra giúp em. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.",account_system,Tài khoản / Hệ thống,high
+Không đăng nhập được tài khoản sinh viên lần 7,Em nhập đúng mật khẩu nhưng hệ thống báo lỗi đăng nhập. Hiện tại em vẫn chưa thể sử dụng bình thường.,account_system,Tài khoản / Hệ thống,low
+Quên mật khẩu cổng sinh viên lần 7,Em cần reset mật khẩu để truy cập cổng thông tin. Cảm ơn bộ phận hỗ trợ. Tình trạng này ảnh hưởng đến việc học của lớp em.,account_system,Tài khoản / Hệ thống,medium
+Tài khoản bị khóa trước giờ thi lần 7,"Tài khoản của em bị khóa, sáng mai em có lịch thi online. Mong được hỗ trợ sớm. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.",account_system,Tài khoản / Hệ thống,high
+Không đăng nhập được tài khoản sinh viên lần 8,Em nhập đúng mật khẩu nhưng hệ thống báo lỗi đăng nhập. Vấn đề xảy ra từ hôm qua.,account_system,Tài khoản / Hệ thống,low
+Quên mật khẩu cổng sinh viên lần 8,Em cần reset mật khẩu để truy cập cổng thông tin. Nhiều bạn trong lớp cũng gặp tình trạng tương tự. Tình trạng này ảnh hưởng đến việc học của lớp em.,account_system,Tài khoản / Hệ thống,medium
+Tài khoản bị khóa trước giờ thi lần 8,"Tài khoản của em bị khóa, sáng mai em có lịch thi online. Em đã thử lại nhiều lần nhưng chưa được. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.",account_system,Tài khoản / Hệ thống,high
+Không đăng nhập được tài khoản sinh viên lần 9,Em nhập đúng mật khẩu nhưng hệ thống báo lỗi đăng nhập. Nếu cần thêm thông tin em có thể bổ sung.,account_system,Tài khoản / Hệ thống,low
+Quên mật khẩu cổng sinh viên lần 9,Em cần reset mật khẩu để truy cập cổng thông tin. Tình trạng này ảnh hưởng đến việc học. Tình trạng này ảnh hưởng đến việc học của lớp em.,account_system,Tài khoản / Hệ thống,medium
+Tài khoản bị khóa trước giờ thi lần 9,"Tài khoản của em bị khóa, sáng mai em có lịch thi online. Em cần xử lý trong tuần này. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.",account_system,Tài khoản / Hệ thống,high
+Không đăng nhập được tài khoản sinh viên lần 10,Em nhập đúng mật khẩu nhưng hệ thống báo lỗi đăng nhập. Nhờ phòng ban kiểm tra giúp em.,account_system,Tài khoản / Hệ thống,low
+Quên mật khẩu cổng sinh viên lần 10,Em cần reset mật khẩu để truy cập cổng thông tin. Hiện tại em vẫn chưa thể sử dụng bình thường. Tình trạng này ảnh hưởng đến việc học của lớp em.,account_system,Tài khoản / Hệ thống,medium
+Tài khoản bị khóa trước giờ thi lần 10,"Tài khoản của em bị khóa, sáng mai em có lịch thi online. Cảm ơn bộ phận hỗ trợ. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.",account_system,Tài khoản / Hệ thống,high
+Wifi phòng B305 rất yếu,"Wifi thường xuyên mất kết nối, nhiều sinh viên không truy cập được tài liệu. Mong được hỗ trợ sớm.",network,Mạng / Wifi,low
+Mạng ký túc xá chập chờn,Internet ở khu ký túc xá bị chậm vào buổi tối. Vấn đề xảy ra từ hôm qua. Tình trạng này ảnh hưởng đến việc học của lớp em.,network,Mạng / Wifi,medium
+Không kết nối được wifi trường,Thiết bị của em không thể kết nối wifi trong phòng học. Nhiều bạn trong lớp cũng gặp tình trạng tương tự. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,network,Mạng / Wifi,high
+Wifi phòng B305 rất yếu lần 2,"Wifi thường xuyên mất kết nối, nhiều sinh viên không truy cập được tài liệu. Em đã thử lại nhiều lần nhưng chưa được.",network,Mạng / Wifi,low
+Mạng ký túc xá chập chờn lần 2,Internet ở khu ký túc xá bị chậm vào buổi tối. Nếu cần thêm thông tin em có thể bổ sung. Tình trạng này ảnh hưởng đến việc học của lớp em.,network,Mạng / Wifi,medium
+Không kết nối được wifi trường lần 2,Thiết bị của em không thể kết nối wifi trong phòng học. Tình trạng này ảnh hưởng đến việc học. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,network,Mạng / Wifi,high
+Wifi phòng B305 rất yếu lần 3,"Wifi thường xuyên mất kết nối, nhiều sinh viên không truy cập được tài liệu. Em cần xử lý trong tuần này.",network,Mạng / Wifi,low
+Mạng ký túc xá chập chờn lần 3,Internet ở khu ký túc xá bị chậm vào buổi tối. Nhờ phòng ban kiểm tra giúp em. Tình trạng này ảnh hưởng đến việc học của lớp em.,network,Mạng / Wifi,medium
+Không kết nối được wifi trường lần 3,Thiết bị của em không thể kết nối wifi trong phòng học. Hiện tại em vẫn chưa thể sử dụng bình thường. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,network,Mạng / Wifi,high
+Wifi phòng B305 rất yếu lần 4,"Wifi thường xuyên mất kết nối, nhiều sinh viên không truy cập được tài liệu. Cảm ơn bộ phận hỗ trợ.",network,Mạng / Wifi,low
+Mạng ký túc xá chập chờn lần 4,Internet ở khu ký túc xá bị chậm vào buổi tối. Mong được hỗ trợ sớm. Tình trạng này ảnh hưởng đến việc học của lớp em.,network,Mạng / Wifi,medium
+Không kết nối được wifi trường lần 4,Thiết bị của em không thể kết nối wifi trong phòng học. Vấn đề xảy ra từ hôm qua. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,network,Mạng / Wifi,high
+Wifi phòng B305 rất yếu lần 5,"Wifi thường xuyên mất kết nối, nhiều sinh viên không truy cập được tài liệu. Nhiều bạn trong lớp cũng gặp tình trạng tương tự.",network,Mạng / Wifi,low
+Mạng ký túc xá chập chờn lần 5,Internet ở khu ký túc xá bị chậm vào buổi tối. Em đã thử lại nhiều lần nhưng chưa được. Tình trạng này ảnh hưởng đến việc học của lớp em.,network,Mạng / Wifi,medium
+Không kết nối được wifi trường lần 5,Thiết bị của em không thể kết nối wifi trong phòng học. Nếu cần thêm thông tin em có thể bổ sung. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,network,Mạng / Wifi,high
+Wifi phòng B305 rất yếu lần 6,"Wifi thường xuyên mất kết nối, nhiều sinh viên không truy cập được tài liệu. Tình trạng này ảnh hưởng đến việc học.",network,Mạng / Wifi,low
+Mạng ký túc xá chập chờn lần 6,Internet ở khu ký túc xá bị chậm vào buổi tối. Em cần xử lý trong tuần này. Tình trạng này ảnh hưởng đến việc học của lớp em.,network,Mạng / Wifi,medium
+Không kết nối được wifi trường lần 6,Thiết bị của em không thể kết nối wifi trong phòng học. Nhờ phòng ban kiểm tra giúp em. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,network,Mạng / Wifi,high
+Wifi phòng B305 rất yếu lần 7,"Wifi thường xuyên mất kết nối, nhiều sinh viên không truy cập được tài liệu. Hiện tại em vẫn chưa thể sử dụng bình thường.",network,Mạng / Wifi,low
+Mạng ký túc xá chập chờn lần 7,Internet ở khu ký túc xá bị chậm vào buổi tối. Cảm ơn bộ phận hỗ trợ. Tình trạng này ảnh hưởng đến việc học của lớp em.,network,Mạng / Wifi,medium
+Không kết nối được wifi trường lần 7,Thiết bị của em không thể kết nối wifi trong phòng học. Mong được hỗ trợ sớm. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,network,Mạng / Wifi,high
+Wifi phòng B305 rất yếu lần 8,"Wifi thường xuyên mất kết nối, nhiều sinh viên không truy cập được tài liệu. Vấn đề xảy ra từ hôm qua.",network,Mạng / Wifi,low
+Mạng ký túc xá chập chờn lần 8,Internet ở khu ký túc xá bị chậm vào buổi tối. Nhiều bạn trong lớp cũng gặp tình trạng tương tự. Tình trạng này ảnh hưởng đến việc học của lớp em.,network,Mạng / Wifi,medium
+Không kết nối được wifi trường lần 8,Thiết bị của em không thể kết nối wifi trong phòng học. Em đã thử lại nhiều lần nhưng chưa được. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,network,Mạng / Wifi,high
+Wifi phòng B305 rất yếu lần 9,"Wifi thường xuyên mất kết nối, nhiều sinh viên không truy cập được tài liệu. Nếu cần thêm thông tin em có thể bổ sung.",network,Mạng / Wifi,low
+Mạng ký túc xá chập chờn lần 9,Internet ở khu ký túc xá bị chậm vào buổi tối. Tình trạng này ảnh hưởng đến việc học. Tình trạng này ảnh hưởng đến việc học của lớp em.,network,Mạng / Wifi,medium
+Không kết nối được wifi trường lần 9,Thiết bị của em không thể kết nối wifi trong phòng học. Em cần xử lý trong tuần này. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,network,Mạng / Wifi,high
+Wifi phòng B305 rất yếu lần 10,"Wifi thường xuyên mất kết nối, nhiều sinh viên không truy cập được tài liệu. Nhờ phòng ban kiểm tra giúp em.",network,Mạng / Wifi,low
+Mạng ký túc xá chập chờn lần 10,Internet ở khu ký túc xá bị chậm vào buổi tối. Hiện tại em vẫn chưa thể sử dụng bình thường. Tình trạng này ảnh hưởng đến việc học của lớp em.,network,Mạng / Wifi,medium
+Không kết nối được wifi trường lần 10,Thiết bị của em không thể kết nối wifi trong phòng học. Cảm ơn bộ phận hỗ trợ. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,network,Mạng / Wifi,high
+Máy chiếu phòng A402 không lên hình,Giảng viên cắm HDMI nhưng máy chiếu không hiển thị. Mong được hỗ trợ sớm.,classroom_device,Thiết bị phòng học,low
+Loa phòng học bị rè,Âm thanh trong phòng học quá rè nên sinh viên khó nghe bài giảng. Vấn đề xảy ra từ hôm qua. Tình trạng này ảnh hưởng đến việc học của lớp em.,classroom_device,Thiết bị phòng học,medium
+Micro giảng đường không hoạt động,Micro không thu tiếng trong buổi học sáng nay. Nhiều bạn trong lớp cũng gặp tình trạng tương tự. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,classroom_device,Thiết bị phòng học,high
+Máy chiếu phòng A402 không lên hình lần 2,Giảng viên cắm HDMI nhưng máy chiếu không hiển thị. Em đã thử lại nhiều lần nhưng chưa được.,classroom_device,Thiết bị phòng học,low
+Loa phòng học bị rè lần 2,Âm thanh trong phòng học quá rè nên sinh viên khó nghe bài giảng. Nếu cần thêm thông tin em có thể bổ sung. Tình trạng này ảnh hưởng đến việc học của lớp em.,classroom_device,Thiết bị phòng học,medium
+Micro giảng đường không hoạt động lần 2,Micro không thu tiếng trong buổi học sáng nay. Tình trạng này ảnh hưởng đến việc học. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,classroom_device,Thiết bị phòng học,high
+Máy chiếu phòng A402 không lên hình lần 3,Giảng viên cắm HDMI nhưng máy chiếu không hiển thị. Em cần xử lý trong tuần này.,classroom_device,Thiết bị phòng học,low
+Loa phòng học bị rè lần 3,Âm thanh trong phòng học quá rè nên sinh viên khó nghe bài giảng. Nhờ phòng ban kiểm tra giúp em. Tình trạng này ảnh hưởng đến việc học của lớp em.,classroom_device,Thiết bị phòng học,medium
+Micro giảng đường không hoạt động lần 3,Micro không thu tiếng trong buổi học sáng nay. Hiện tại em vẫn chưa thể sử dụng bình thường. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,classroom_device,Thiết bị phòng học,high
+Máy chiếu phòng A402 không lên hình lần 4,Giảng viên cắm HDMI nhưng máy chiếu không hiển thị. Cảm ơn bộ phận hỗ trợ.,classroom_device,Thiết bị phòng học,low
+Loa phòng học bị rè lần 4,Âm thanh trong phòng học quá rè nên sinh viên khó nghe bài giảng. Mong được hỗ trợ sớm. Tình trạng này ảnh hưởng đến việc học của lớp em.,classroom_device,Thiết bị phòng học,medium
+Micro giảng đường không hoạt động lần 4,Micro không thu tiếng trong buổi học sáng nay. Vấn đề xảy ra từ hôm qua. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,classroom_device,Thiết bị phòng học,high
+Máy chiếu phòng A402 không lên hình lần 5,Giảng viên cắm HDMI nhưng máy chiếu không hiển thị. Nhiều bạn trong lớp cũng gặp tình trạng tương tự.,classroom_device,Thiết bị phòng học,low
+Loa phòng học bị rè lần 5,Âm thanh trong phòng học quá rè nên sinh viên khó nghe bài giảng. Em đã thử lại nhiều lần nhưng chưa được. Tình trạng này ảnh hưởng đến việc học của lớp em.,classroom_device,Thiết bị phòng học,medium
+Micro giảng đường không hoạt động lần 5,Micro không thu tiếng trong buổi học sáng nay. Nếu cần thêm thông tin em có thể bổ sung. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,classroom_device,Thiết bị phòng học,high
+Máy chiếu phòng A402 không lên hình lần 6,Giảng viên cắm HDMI nhưng máy chiếu không hiển thị. Tình trạng này ảnh hưởng đến việc học.,classroom_device,Thiết bị phòng học,low
+Loa phòng học bị rè lần 6,Âm thanh trong phòng học quá rè nên sinh viên khó nghe bài giảng. Em cần xử lý trong tuần này. Tình trạng này ảnh hưởng đến việc học của lớp em.,classroom_device,Thiết bị phòng học,medium
+Micro giảng đường không hoạt động lần 6,Micro không thu tiếng trong buổi học sáng nay. Nhờ phòng ban kiểm tra giúp em. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,classroom_device,Thiết bị phòng học,high
+Máy chiếu phòng A402 không lên hình lần 7,Giảng viên cắm HDMI nhưng máy chiếu không hiển thị. Hiện tại em vẫn chưa thể sử dụng bình thường.,classroom_device,Thiết bị phòng học,low
+Loa phòng học bị rè lần 7,Âm thanh trong phòng học quá rè nên sinh viên khó nghe bài giảng. Cảm ơn bộ phận hỗ trợ. Tình trạng này ảnh hưởng đến việc học của lớp em.,classroom_device,Thiết bị phòng học,medium
+Micro giảng đường không hoạt động lần 7,Micro không thu tiếng trong buổi học sáng nay. Mong được hỗ trợ sớm. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,classroom_device,Thiết bị phòng học,high
+Máy chiếu phòng A402 không lên hình lần 8,Giảng viên cắm HDMI nhưng máy chiếu không hiển thị. Vấn đề xảy ra từ hôm qua.,classroom_device,Thiết bị phòng học,low
+Loa phòng học bị rè lần 8,Âm thanh trong phòng học quá rè nên sinh viên khó nghe bài giảng. Nhiều bạn trong lớp cũng gặp tình trạng tương tự. Tình trạng này ảnh hưởng đến việc học của lớp em.,classroom_device,Thiết bị phòng học,medium
+Micro giảng đường không hoạt động lần 8,Micro không thu tiếng trong buổi học sáng nay. Em đã thử lại nhiều lần nhưng chưa được. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,classroom_device,Thiết bị phòng học,high
+Máy chiếu phòng A402 không lên hình lần 9,Giảng viên cắm HDMI nhưng máy chiếu không hiển thị. Nếu cần thêm thông tin em có thể bổ sung.,classroom_device,Thiết bị phòng học,low
+Loa phòng học bị rè lần 9,Âm thanh trong phòng học quá rè nên sinh viên khó nghe bài giảng. Tình trạng này ảnh hưởng đến việc học. Tình trạng này ảnh hưởng đến việc học của lớp em.,classroom_device,Thiết bị phòng học,medium
+Micro giảng đường không hoạt động lần 9,Micro không thu tiếng trong buổi học sáng nay. Em cần xử lý trong tuần này. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,classroom_device,Thiết bị phòng học,high
+Máy chiếu phòng A402 không lên hình lần 10,Giảng viên cắm HDMI nhưng máy chiếu không hiển thị. Nhờ phòng ban kiểm tra giúp em.,classroom_device,Thiết bị phòng học,low
+Loa phòng học bị rè lần 10,Âm thanh trong phòng học quá rè nên sinh viên khó nghe bài giảng. Hiện tại em vẫn chưa thể sử dụng bình thường. Tình trạng này ảnh hưởng đến việc học của lớp em.,classroom_device,Thiết bị phòng học,medium
+Micro giảng đường không hoạt động lần 10,Micro không thu tiếng trong buổi học sáng nay. Cảm ơn bộ phận hỗ trợ. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,classroom_device,Thiết bị phòng học,high
+Đèn phòng học bị hỏng,Một số bóng đèn trong phòng học bị hỏng làm phòng khá tối. Mong được hỗ trợ sớm.,facility,Cơ sở vật chất,low
+Máy lạnh phòng C201 không mát,"Máy lạnh hoạt động yếu, cả lớp rất khó tập trung. Vấn đề xảy ra từ hôm qua. Tình trạng này ảnh hưởng đến việc học của lớp em.",facility,Cơ sở vật chất,medium
+Nhà vệ sinh tầng 3 thiếu nước,Khu vệ sinh tầng 3 không có nước trong giờ học. Nhiều bạn trong lớp cũng gặp tình trạng tương tự. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,facility,Cơ sở vật chất,high
+Đèn phòng học bị hỏng lần 2,Một số bóng đèn trong phòng học bị hỏng làm phòng khá tối. Em đã thử lại nhiều lần nhưng chưa được.,facility,Cơ sở vật chất,low
+Máy lạnh phòng C201 không mát lần 2,"Máy lạnh hoạt động yếu, cả lớp rất khó tập trung. Nếu cần thêm thông tin em có thể bổ sung. Tình trạng này ảnh hưởng đến việc học của lớp em.",facility,Cơ sở vật chất,medium
+Nhà vệ sinh tầng 3 thiếu nước lần 2,Khu vệ sinh tầng 3 không có nước trong giờ học. Tình trạng này ảnh hưởng đến việc học. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,facility,Cơ sở vật chất,high
+Đèn phòng học bị hỏng lần 3,Một số bóng đèn trong phòng học bị hỏng làm phòng khá tối. Em cần xử lý trong tuần này.,facility,Cơ sở vật chất,low
+Máy lạnh phòng C201 không mát lần 3,"Máy lạnh hoạt động yếu, cả lớp rất khó tập trung. Nhờ phòng ban kiểm tra giúp em. Tình trạng này ảnh hưởng đến việc học của lớp em.",facility,Cơ sở vật chất,medium
+Nhà vệ sinh tầng 3 thiếu nước lần 3,Khu vệ sinh tầng 3 không có nước trong giờ học. Hiện tại em vẫn chưa thể sử dụng bình thường. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,facility,Cơ sở vật chất,high
+Đèn phòng học bị hỏng lần 4,Một số bóng đèn trong phòng học bị hỏng làm phòng khá tối. Cảm ơn bộ phận hỗ trợ.,facility,Cơ sở vật chất,low
+Máy lạnh phòng C201 không mát lần 4,"Máy lạnh hoạt động yếu, cả lớp rất khó tập trung. Mong được hỗ trợ sớm. Tình trạng này ảnh hưởng đến việc học của lớp em.",facility,Cơ sở vật chất,medium
+Nhà vệ sinh tầng 3 thiếu nước lần 4,Khu vệ sinh tầng 3 không có nước trong giờ học. Vấn đề xảy ra từ hôm qua. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,facility,Cơ sở vật chất,high
+Đèn phòng học bị hỏng lần 5,Một số bóng đèn trong phòng học bị hỏng làm phòng khá tối. Nhiều bạn trong lớp cũng gặp tình trạng tương tự.,facility,Cơ sở vật chất,low
+Máy lạnh phòng C201 không mát lần 5,"Máy lạnh hoạt động yếu, cả lớp rất khó tập trung. Em đã thử lại nhiều lần nhưng chưa được. Tình trạng này ảnh hưởng đến việc học của lớp em.",facility,Cơ sở vật chất,medium
+Nhà vệ sinh tầng 3 thiếu nước lần 5,Khu vệ sinh tầng 3 không có nước trong giờ học. Nếu cần thêm thông tin em có thể bổ sung. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,facility,Cơ sở vật chất,high
+Đèn phòng học bị hỏng lần 6,Một số bóng đèn trong phòng học bị hỏng làm phòng khá tối. Tình trạng này ảnh hưởng đến việc học.,facility,Cơ sở vật chất,low
+Máy lạnh phòng C201 không mát lần 6,"Máy lạnh hoạt động yếu, cả lớp rất khó tập trung. Em cần xử lý trong tuần này. Tình trạng này ảnh hưởng đến việc học của lớp em.",facility,Cơ sở vật chất,medium
+Nhà vệ sinh tầng 3 thiếu nước lần 6,Khu vệ sinh tầng 3 không có nước trong giờ học. Nhờ phòng ban kiểm tra giúp em. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,facility,Cơ sở vật chất,high
+Đèn phòng học bị hỏng lần 7,Một số bóng đèn trong phòng học bị hỏng làm phòng khá tối. Hiện tại em vẫn chưa thể sử dụng bình thường.,facility,Cơ sở vật chất,low
+Máy lạnh phòng C201 không mát lần 7,"Máy lạnh hoạt động yếu, cả lớp rất khó tập trung. Cảm ơn bộ phận hỗ trợ. Tình trạng này ảnh hưởng đến việc học của lớp em.",facility,Cơ sở vật chất,medium
+Nhà vệ sinh tầng 3 thiếu nước lần 7,Khu vệ sinh tầng 3 không có nước trong giờ học. Mong được hỗ trợ sớm. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,facility,Cơ sở vật chất,high
+Đèn phòng học bị hỏng lần 8,Một số bóng đèn trong phòng học bị hỏng làm phòng khá tối. Vấn đề xảy ra từ hôm qua.,facility,Cơ sở vật chất,low
+Máy lạnh phòng C201 không mát lần 8,"Máy lạnh hoạt động yếu, cả lớp rất khó tập trung. Nhiều bạn trong lớp cũng gặp tình trạng tương tự. Tình trạng này ảnh hưởng đến việc học của lớp em.",facility,Cơ sở vật chất,medium
+Nhà vệ sinh tầng 3 thiếu nước lần 8,Khu vệ sinh tầng 3 không có nước trong giờ học. Em đã thử lại nhiều lần nhưng chưa được. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,facility,Cơ sở vật chất,high
+Đèn phòng học bị hỏng lần 9,Một số bóng đèn trong phòng học bị hỏng làm phòng khá tối. Nếu cần thêm thông tin em có thể bổ sung.,facility,Cơ sở vật chất,low
+Máy lạnh phòng C201 không mát lần 9,"Máy lạnh hoạt động yếu, cả lớp rất khó tập trung. Tình trạng này ảnh hưởng đến việc học. Tình trạng này ảnh hưởng đến việc học của lớp em.",facility,Cơ sở vật chất,medium
+Nhà vệ sinh tầng 3 thiếu nước lần 9,Khu vệ sinh tầng 3 không có nước trong giờ học. Em cần xử lý trong tuần này. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,facility,Cơ sở vật chất,high
+Đèn phòng học bị hỏng lần 10,Một số bóng đèn trong phòng học bị hỏng làm phòng khá tối. Nhờ phòng ban kiểm tra giúp em.,facility,Cơ sở vật chất,low
+Máy lạnh phòng C201 không mát lần 10,"Máy lạnh hoạt động yếu, cả lớp rất khó tập trung. Hiện tại em vẫn chưa thể sử dụng bình thường. Tình trạng này ảnh hưởng đến việc học của lớp em.",facility,Cơ sở vật chất,medium
+Nhà vệ sinh tầng 3 thiếu nước lần 10,Khu vệ sinh tầng 3 không có nước trong giờ học. Cảm ơn bộ phận hỗ trợ. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,facility,Cơ sở vật chất,high
+Trùng lịch thi hai môn,Em bị trùng lịch thi hai môn trong cùng buổi sáng. Mong được hỗ trợ sớm.,schedule_exam,Lịch học / Lịch thi,low
+Sai phòng thi trên hệ thống,Thông tin phòng thi hiển thị khác với thông báo của khoa. Vấn đề xảy ra từ hôm qua. Tình trạng này ảnh hưởng đến việc học của lớp em.,schedule_exam,Lịch học / Lịch thi,medium
+Chưa thấy lịch học tuần này,Lớp em chưa thấy lịch học cập nhật trên cổng sinh viên. Nhiều bạn trong lớp cũng gặp tình trạng tương tự. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,schedule_exam,Lịch học / Lịch thi,high
+Trùng lịch thi hai môn lần 2,Em bị trùng lịch thi hai môn trong cùng buổi sáng. Em đã thử lại nhiều lần nhưng chưa được.,schedule_exam,Lịch học / Lịch thi,low
+Sai phòng thi trên hệ thống lần 2,Thông tin phòng thi hiển thị khác với thông báo của khoa. Nếu cần thêm thông tin em có thể bổ sung. Tình trạng này ảnh hưởng đến việc học của lớp em.,schedule_exam,Lịch học / Lịch thi,medium
+Chưa thấy lịch học tuần này lần 2,Lớp em chưa thấy lịch học cập nhật trên cổng sinh viên. Tình trạng này ảnh hưởng đến việc học. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,schedule_exam,Lịch học / Lịch thi,high
+Trùng lịch thi hai môn lần 3,Em bị trùng lịch thi hai môn trong cùng buổi sáng. Em cần xử lý trong tuần này.,schedule_exam,Lịch học / Lịch thi,low
+Sai phòng thi trên hệ thống lần 3,Thông tin phòng thi hiển thị khác với thông báo của khoa. Nhờ phòng ban kiểm tra giúp em. Tình trạng này ảnh hưởng đến việc học của lớp em.,schedule_exam,Lịch học / Lịch thi,medium
+Chưa thấy lịch học tuần này lần 3,Lớp em chưa thấy lịch học cập nhật trên cổng sinh viên. Hiện tại em vẫn chưa thể sử dụng bình thường. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,schedule_exam,Lịch học / Lịch thi,high
+Trùng lịch thi hai môn lần 4,Em bị trùng lịch thi hai môn trong cùng buổi sáng. Cảm ơn bộ phận hỗ trợ.,schedule_exam,Lịch học / Lịch thi,low
+Sai phòng thi trên hệ thống lần 4,Thông tin phòng thi hiển thị khác với thông báo của khoa. Mong được hỗ trợ sớm. Tình trạng này ảnh hưởng đến việc học của lớp em.,schedule_exam,Lịch học / Lịch thi,medium
+Chưa thấy lịch học tuần này lần 4,Lớp em chưa thấy lịch học cập nhật trên cổng sinh viên. Vấn đề xảy ra từ hôm qua. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,schedule_exam,Lịch học / Lịch thi,high
+Trùng lịch thi hai môn lần 5,Em bị trùng lịch thi hai môn trong cùng buổi sáng. Nhiều bạn trong lớp cũng gặp tình trạng tương tự.,schedule_exam,Lịch học / Lịch thi,low
+Sai phòng thi trên hệ thống lần 5,Thông tin phòng thi hiển thị khác với thông báo của khoa. Em đã thử lại nhiều lần nhưng chưa được. Tình trạng này ảnh hưởng đến việc học của lớp em.,schedule_exam,Lịch học / Lịch thi,medium
+Chưa thấy lịch học tuần này lần 5,Lớp em chưa thấy lịch học cập nhật trên cổng sinh viên. Nếu cần thêm thông tin em có thể bổ sung. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,schedule_exam,Lịch học / Lịch thi,high
+Trùng lịch thi hai môn lần 6,Em bị trùng lịch thi hai môn trong cùng buổi sáng. Tình trạng này ảnh hưởng đến việc học.,schedule_exam,Lịch học / Lịch thi,low
+Sai phòng thi trên hệ thống lần 6,Thông tin phòng thi hiển thị khác với thông báo của khoa. Em cần xử lý trong tuần này. Tình trạng này ảnh hưởng đến việc học của lớp em.,schedule_exam,Lịch học / Lịch thi,medium
+Chưa thấy lịch học tuần này lần 6,Lớp em chưa thấy lịch học cập nhật trên cổng sinh viên. Nhờ phòng ban kiểm tra giúp em. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,schedule_exam,Lịch học / Lịch thi,high
+Trùng lịch thi hai môn lần 7,Em bị trùng lịch thi hai môn trong cùng buổi sáng. Hiện tại em vẫn chưa thể sử dụng bình thường.,schedule_exam,Lịch học / Lịch thi,low
+Sai phòng thi trên hệ thống lần 7,Thông tin phòng thi hiển thị khác với thông báo của khoa. Cảm ơn bộ phận hỗ trợ. Tình trạng này ảnh hưởng đến việc học của lớp em.,schedule_exam,Lịch học / Lịch thi,medium
+Chưa thấy lịch học tuần này lần 7,Lớp em chưa thấy lịch học cập nhật trên cổng sinh viên. Mong được hỗ trợ sớm. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,schedule_exam,Lịch học / Lịch thi,high
+Trùng lịch thi hai môn lần 8,Em bị trùng lịch thi hai môn trong cùng buổi sáng. Vấn đề xảy ra từ hôm qua.,schedule_exam,Lịch học / Lịch thi,low
+Sai phòng thi trên hệ thống lần 8,Thông tin phòng thi hiển thị khác với thông báo của khoa. Nhiều bạn trong lớp cũng gặp tình trạng tương tự. Tình trạng này ảnh hưởng đến việc học của lớp em.,schedule_exam,Lịch học / Lịch thi,medium
+Chưa thấy lịch học tuần này lần 8,Lớp em chưa thấy lịch học cập nhật trên cổng sinh viên. Em đã thử lại nhiều lần nhưng chưa được. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,schedule_exam,Lịch học / Lịch thi,high
+Trùng lịch thi hai môn lần 9,Em bị trùng lịch thi hai môn trong cùng buổi sáng. Nếu cần thêm thông tin em có thể bổ sung.,schedule_exam,Lịch học / Lịch thi,low
+Sai phòng thi trên hệ thống lần 9,Thông tin phòng thi hiển thị khác với thông báo của khoa. Tình trạng này ảnh hưởng đến việc học. Tình trạng này ảnh hưởng đến việc học của lớp em.,schedule_exam,Lịch học / Lịch thi,medium
+Chưa thấy lịch học tuần này lần 9,Lớp em chưa thấy lịch học cập nhật trên cổng sinh viên. Em cần xử lý trong tuần này. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,schedule_exam,Lịch học / Lịch thi,high
+Trùng lịch thi hai môn lần 10,Em bị trùng lịch thi hai môn trong cùng buổi sáng. Nhờ phòng ban kiểm tra giúp em.,schedule_exam,Lịch học / Lịch thi,low
+Sai phòng thi trên hệ thống lần 10,Thông tin phòng thi hiển thị khác với thông báo của khoa. Hiện tại em vẫn chưa thể sử dụng bình thường. Tình trạng này ảnh hưởng đến việc học của lớp em.,schedule_exam,Lịch học / Lịch thi,medium
+Chưa thấy lịch học tuần này lần 10,Lớp em chưa thấy lịch học cập nhật trên cổng sinh viên. Cảm ơn bộ phận hỗ trợ. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,schedule_exam,Lịch học / Lịch thi,high
+Đã chuyển khoản nhưng chưa cập nhật học phí,Em đã thanh toán học phí nhưng hệ thống vẫn báo chưa đóng. Mong được hỗ trợ sớm.,tuition_payment,Học phí / Thanh toán,low
+Không in được biên lai học phí,Em cần biên lai để nộp hồ sơ nhưng hệ thống báo lỗi. Vấn đề xảy ra từ hôm qua. Tình trạng này ảnh hưởng đến việc học của lớp em.,tuition_payment,Học phí / Thanh toán,medium
+Sai số tiền học phí phải đóng,Số tiền học phí hiển thị cao hơn thông báo của phòng tài chính. Nhiều bạn trong lớp cũng gặp tình trạng tương tự. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,tuition_payment,Học phí / Thanh toán,high
+Đã chuyển khoản nhưng chưa cập nhật học phí lần 2,Em đã thanh toán học phí nhưng hệ thống vẫn báo chưa đóng. Em đã thử lại nhiều lần nhưng chưa được.,tuition_payment,Học phí / Thanh toán,low
+Không in được biên lai học phí lần 2,Em cần biên lai để nộp hồ sơ nhưng hệ thống báo lỗi. Nếu cần thêm thông tin em có thể bổ sung. Tình trạng này ảnh hưởng đến việc học của lớp em.,tuition_payment,Học phí / Thanh toán,medium
+Sai số tiền học phí phải đóng lần 2,Số tiền học phí hiển thị cao hơn thông báo của phòng tài chính. Tình trạng này ảnh hưởng đến việc học. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,tuition_payment,Học phí / Thanh toán,high
+Đã chuyển khoản nhưng chưa cập nhật học phí lần 3,Em đã thanh toán học phí nhưng hệ thống vẫn báo chưa đóng. Em cần xử lý trong tuần này.,tuition_payment,Học phí / Thanh toán,low
+Không in được biên lai học phí lần 3,Em cần biên lai để nộp hồ sơ nhưng hệ thống báo lỗi. Nhờ phòng ban kiểm tra giúp em. Tình trạng này ảnh hưởng đến việc học của lớp em.,tuition_payment,Học phí / Thanh toán,medium
+Sai số tiền học phí phải đóng lần 3,Số tiền học phí hiển thị cao hơn thông báo của phòng tài chính. Hiện tại em vẫn chưa thể sử dụng bình thường. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,tuition_payment,Học phí / Thanh toán,high
+Đã chuyển khoản nhưng chưa cập nhật học phí lần 4,Em đã thanh toán học phí nhưng hệ thống vẫn báo chưa đóng. Cảm ơn bộ phận hỗ trợ.,tuition_payment,Học phí / Thanh toán,low
+Không in được biên lai học phí lần 4,Em cần biên lai để nộp hồ sơ nhưng hệ thống báo lỗi. Mong được hỗ trợ sớm. Tình trạng này ảnh hưởng đến việc học của lớp em.,tuition_payment,Học phí / Thanh toán,medium
+Sai số tiền học phí phải đóng lần 4,Số tiền học phí hiển thị cao hơn thông báo của phòng tài chính. Vấn đề xảy ra từ hôm qua. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,tuition_payment,Học phí / Thanh toán,high
+Đã chuyển khoản nhưng chưa cập nhật học phí lần 5,Em đã thanh toán học phí nhưng hệ thống vẫn báo chưa đóng. Nhiều bạn trong lớp cũng gặp tình trạng tương tự.,tuition_payment,Học phí / Thanh toán,low
+Không in được biên lai học phí lần 5,Em cần biên lai để nộp hồ sơ nhưng hệ thống báo lỗi. Em đã thử lại nhiều lần nhưng chưa được. Tình trạng này ảnh hưởng đến việc học của lớp em.,tuition_payment,Học phí / Thanh toán,medium
+Sai số tiền học phí phải đóng lần 5,Số tiền học phí hiển thị cao hơn thông báo của phòng tài chính. Nếu cần thêm thông tin em có thể bổ sung. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,tuition_payment,Học phí / Thanh toán,high
+Đã chuyển khoản nhưng chưa cập nhật học phí lần 6,Em đã thanh toán học phí nhưng hệ thống vẫn báo chưa đóng. Tình trạng này ảnh hưởng đến việc học.,tuition_payment,Học phí / Thanh toán,low
+Không in được biên lai học phí lần 6,Em cần biên lai để nộp hồ sơ nhưng hệ thống báo lỗi. Em cần xử lý trong tuần này. Tình trạng này ảnh hưởng đến việc học của lớp em.,tuition_payment,Học phí / Thanh toán,medium
+Sai số tiền học phí phải đóng lần 6,Số tiền học phí hiển thị cao hơn thông báo của phòng tài chính. Nhờ phòng ban kiểm tra giúp em. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,tuition_payment,Học phí / Thanh toán,high
+Đã chuyển khoản nhưng chưa cập nhật học phí lần 7,Em đã thanh toán học phí nhưng hệ thống vẫn báo chưa đóng. Hiện tại em vẫn chưa thể sử dụng bình thường.,tuition_payment,Học phí / Thanh toán,low
+Không in được biên lai học phí lần 7,Em cần biên lai để nộp hồ sơ nhưng hệ thống báo lỗi. Cảm ơn bộ phận hỗ trợ. Tình trạng này ảnh hưởng đến việc học của lớp em.,tuition_payment,Học phí / Thanh toán,medium
+Sai số tiền học phí phải đóng lần 7,Số tiền học phí hiển thị cao hơn thông báo của phòng tài chính. Mong được hỗ trợ sớm. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,tuition_payment,Học phí / Thanh toán,high
+Đã chuyển khoản nhưng chưa cập nhật học phí lần 8,Em đã thanh toán học phí nhưng hệ thống vẫn báo chưa đóng. Vấn đề xảy ra từ hôm qua.,tuition_payment,Học phí / Thanh toán,low
+Không in được biên lai học phí lần 8,Em cần biên lai để nộp hồ sơ nhưng hệ thống báo lỗi. Nhiều bạn trong lớp cũng gặp tình trạng tương tự. Tình trạng này ảnh hưởng đến việc học của lớp em.,tuition_payment,Học phí / Thanh toán,medium
+Sai số tiền học phí phải đóng lần 8,Số tiền học phí hiển thị cao hơn thông báo của phòng tài chính. Em đã thử lại nhiều lần nhưng chưa được. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,tuition_payment,Học phí / Thanh toán,high
+Đã chuyển khoản nhưng chưa cập nhật học phí lần 9,Em đã thanh toán học phí nhưng hệ thống vẫn báo chưa đóng. Nếu cần thêm thông tin em có thể bổ sung.,tuition_payment,Học phí / Thanh toán,low
+Không in được biên lai học phí lần 9,Em cần biên lai để nộp hồ sơ nhưng hệ thống báo lỗi. Tình trạng này ảnh hưởng đến việc học. Tình trạng này ảnh hưởng đến việc học của lớp em.,tuition_payment,Học phí / Thanh toán,medium
+Sai số tiền học phí phải đóng lần 9,Số tiền học phí hiển thị cao hơn thông báo của phòng tài chính. Em cần xử lý trong tuần này. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,tuition_payment,Học phí / Thanh toán,high
+Đã chuyển khoản nhưng chưa cập nhật học phí lần 10,Em đã thanh toán học phí nhưng hệ thống vẫn báo chưa đóng. Nhờ phòng ban kiểm tra giúp em.,tuition_payment,Học phí / Thanh toán,low
+Không in được biên lai học phí lần 10,Em cần biên lai để nộp hồ sơ nhưng hệ thống báo lỗi. Hiện tại em vẫn chưa thể sử dụng bình thường. Tình trạng này ảnh hưởng đến việc học của lớp em.,tuition_payment,Học phí / Thanh toán,medium
+Sai số tiền học phí phải đóng lần 10,Số tiền học phí hiển thị cao hơn thông báo của phòng tài chính. Cảm ơn bộ phận hỗ trợ. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,tuition_payment,Học phí / Thanh toán,high
+Xin giấy xác nhận sinh viên,Em cần giấy xác nhận sinh viên để bổ sung hồ sơ thực tập. Mong được hỗ trợ sớm.,document_profile,Hồ sơ / Giấy tờ,low
+Bảng điểm chưa cập nhật,Điểm học kỳ trước chưa hiển thị trong bảng điểm điện tử. Vấn đề xảy ra từ hôm qua. Tình trạng này ảnh hưởng đến việc học của lớp em.,document_profile,Hồ sơ / Giấy tờ,medium
+Hồ sơ sinh viên thiếu thông tin,Thông tin ngày sinh trong hồ sơ của em đang bị sai. Nhiều bạn trong lớp cũng gặp tình trạng tương tự. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,document_profile,Hồ sơ / Giấy tờ,high
+Xin giấy xác nhận sinh viên lần 2,Em cần giấy xác nhận sinh viên để bổ sung hồ sơ thực tập. Em đã thử lại nhiều lần nhưng chưa được.,document_profile,Hồ sơ / Giấy tờ,low
+Bảng điểm chưa cập nhật lần 2,Điểm học kỳ trước chưa hiển thị trong bảng điểm điện tử. Nếu cần thêm thông tin em có thể bổ sung. Tình trạng này ảnh hưởng đến việc học của lớp em.,document_profile,Hồ sơ / Giấy tờ,medium
+Hồ sơ sinh viên thiếu thông tin lần 2,Thông tin ngày sinh trong hồ sơ của em đang bị sai. Tình trạng này ảnh hưởng đến việc học. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,document_profile,Hồ sơ / Giấy tờ,high
+Xin giấy xác nhận sinh viên lần 3,Em cần giấy xác nhận sinh viên để bổ sung hồ sơ thực tập. Em cần xử lý trong tuần này.,document_profile,Hồ sơ / Giấy tờ,low
+Bảng điểm chưa cập nhật lần 3,Điểm học kỳ trước chưa hiển thị trong bảng điểm điện tử. Nhờ phòng ban kiểm tra giúp em. Tình trạng này ảnh hưởng đến việc học của lớp em.,document_profile,Hồ sơ / Giấy tờ,medium
+Hồ sơ sinh viên thiếu thông tin lần 3,Thông tin ngày sinh trong hồ sơ của em đang bị sai. Hiện tại em vẫn chưa thể sử dụng bình thường. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,document_profile,Hồ sơ / Giấy tờ,high
+Xin giấy xác nhận sinh viên lần 4,Em cần giấy xác nhận sinh viên để bổ sung hồ sơ thực tập. Cảm ơn bộ phận hỗ trợ.,document_profile,Hồ sơ / Giấy tờ,low
+Bảng điểm chưa cập nhật lần 4,Điểm học kỳ trước chưa hiển thị trong bảng điểm điện tử. Mong được hỗ trợ sớm. Tình trạng này ảnh hưởng đến việc học của lớp em.,document_profile,Hồ sơ / Giấy tờ,medium
+Hồ sơ sinh viên thiếu thông tin lần 4,Thông tin ngày sinh trong hồ sơ của em đang bị sai. Vấn đề xảy ra từ hôm qua. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,document_profile,Hồ sơ / Giấy tờ,high
+Xin giấy xác nhận sinh viên lần 5,Em cần giấy xác nhận sinh viên để bổ sung hồ sơ thực tập. Nhiều bạn trong lớp cũng gặp tình trạng tương tự.,document_profile,Hồ sơ / Giấy tờ,low
+Bảng điểm chưa cập nhật lần 5,Điểm học kỳ trước chưa hiển thị trong bảng điểm điện tử. Em đã thử lại nhiều lần nhưng chưa được. Tình trạng này ảnh hưởng đến việc học của lớp em.,document_profile,Hồ sơ / Giấy tờ,medium
+Hồ sơ sinh viên thiếu thông tin lần 5,Thông tin ngày sinh trong hồ sơ của em đang bị sai. Nếu cần thêm thông tin em có thể bổ sung. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,document_profile,Hồ sơ / Giấy tờ,high
+Xin giấy xác nhận sinh viên lần 6,Em cần giấy xác nhận sinh viên để bổ sung hồ sơ thực tập. Tình trạng này ảnh hưởng đến việc học.,document_profile,Hồ sơ / Giấy tờ,low
+Bảng điểm chưa cập nhật lần 6,Điểm học kỳ trước chưa hiển thị trong bảng điểm điện tử. Em cần xử lý trong tuần này. Tình trạng này ảnh hưởng đến việc học của lớp em.,document_profile,Hồ sơ / Giấy tờ,medium
+Hồ sơ sinh viên thiếu thông tin lần 6,Thông tin ngày sinh trong hồ sơ của em đang bị sai. Nhờ phòng ban kiểm tra giúp em. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,document_profile,Hồ sơ / Giấy tờ,high
+Xin giấy xác nhận sinh viên lần 7,Em cần giấy xác nhận sinh viên để bổ sung hồ sơ thực tập. Hiện tại em vẫn chưa thể sử dụng bình thường.,document_profile,Hồ sơ / Giấy tờ,low
+Bảng điểm chưa cập nhật lần 7,Điểm học kỳ trước chưa hiển thị trong bảng điểm điện tử. Cảm ơn bộ phận hỗ trợ. Tình trạng này ảnh hưởng đến việc học của lớp em.,document_profile,Hồ sơ / Giấy tờ,medium
+Hồ sơ sinh viên thiếu thông tin lần 7,Thông tin ngày sinh trong hồ sơ của em đang bị sai. Mong được hỗ trợ sớm. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,document_profile,Hồ sơ / Giấy tờ,high
+Xin giấy xác nhận sinh viên lần 8,Em cần giấy xác nhận sinh viên để bổ sung hồ sơ thực tập. Vấn đề xảy ra từ hôm qua.,document_profile,Hồ sơ / Giấy tờ,low
+Bảng điểm chưa cập nhật lần 8,Điểm học kỳ trước chưa hiển thị trong bảng điểm điện tử. Nhiều bạn trong lớp cũng gặp tình trạng tương tự. Tình trạng này ảnh hưởng đến việc học của lớp em.,document_profile,Hồ sơ / Giấy tờ,medium
+Hồ sơ sinh viên thiếu thông tin lần 8,Thông tin ngày sinh trong hồ sơ của em đang bị sai. Em đã thử lại nhiều lần nhưng chưa được. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,document_profile,Hồ sơ / Giấy tờ,high
+Xin giấy xác nhận sinh viên lần 9,Em cần giấy xác nhận sinh viên để bổ sung hồ sơ thực tập. Nếu cần thêm thông tin em có thể bổ sung.,document_profile,Hồ sơ / Giấy tờ,low
+Bảng điểm chưa cập nhật lần 9,Điểm học kỳ trước chưa hiển thị trong bảng điểm điện tử. Tình trạng này ảnh hưởng đến việc học. Tình trạng này ảnh hưởng đến việc học của lớp em.,document_profile,Hồ sơ / Giấy tờ,medium
+Hồ sơ sinh viên thiếu thông tin lần 9,Thông tin ngày sinh trong hồ sơ của em đang bị sai. Em cần xử lý trong tuần này. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,document_profile,Hồ sơ / Giấy tờ,high
+Xin giấy xác nhận sinh viên lần 10,Em cần giấy xác nhận sinh viên để bổ sung hồ sơ thực tập. Nhờ phòng ban kiểm tra giúp em.,document_profile,Hồ sơ / Giấy tờ,low
+Bảng điểm chưa cập nhật lần 10,Điểm học kỳ trước chưa hiển thị trong bảng điểm điện tử. Hiện tại em vẫn chưa thể sử dụng bình thường. Tình trạng này ảnh hưởng đến việc học của lớp em.,document_profile,Hồ sơ / Giấy tờ,medium
+Hồ sơ sinh viên thiếu thông tin lần 10,Thông tin ngày sinh trong hồ sơ của em đang bị sai. Cảm ơn bộ phận hỗ trợ. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,document_profile,Hồ sơ / Giấy tờ,high
+Không vào được lớp trên LMS,Em không thấy môn học trên hệ thống học tập trực tuyến. Mong được hỗ trợ sớm.,learning_platform,Hệ thống học tập trực tuyến,low
+Không nộp được bài tập online,Trang nộp bài báo lỗi khi em tải file lên. Vấn đề xảy ra từ hôm qua. Tình trạng này ảnh hưởng đến việc học của lớp em.,learning_platform,Hệ thống học tập trực tuyến,medium
+Video bài giảng không phát,Video bài giảng trên nền tảng học online bị đứng liên tục. Nhiều bạn trong lớp cũng gặp tình trạng tương tự. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,learning_platform,Hệ thống học tập trực tuyến,high
+Không vào được lớp trên LMS lần 2,Em không thấy môn học trên hệ thống học tập trực tuyến. Em đã thử lại nhiều lần nhưng chưa được.,learning_platform,Hệ thống học tập trực tuyến,low
+Không nộp được bài tập online lần 2,Trang nộp bài báo lỗi khi em tải file lên. Nếu cần thêm thông tin em có thể bổ sung. Tình trạng này ảnh hưởng đến việc học của lớp em.,learning_platform,Hệ thống học tập trực tuyến,medium
+Video bài giảng không phát lần 2,Video bài giảng trên nền tảng học online bị đứng liên tục. Tình trạng này ảnh hưởng đến việc học. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,learning_platform,Hệ thống học tập trực tuyến,high
+Không vào được lớp trên LMS lần 3,Em không thấy môn học trên hệ thống học tập trực tuyến. Em cần xử lý trong tuần này.,learning_platform,Hệ thống học tập trực tuyến,low
+Không nộp được bài tập online lần 3,Trang nộp bài báo lỗi khi em tải file lên. Nhờ phòng ban kiểm tra giúp em. Tình trạng này ảnh hưởng đến việc học của lớp em.,learning_platform,Hệ thống học tập trực tuyến,medium
+Video bài giảng không phát lần 3,Video bài giảng trên nền tảng học online bị đứng liên tục. Hiện tại em vẫn chưa thể sử dụng bình thường. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,learning_platform,Hệ thống học tập trực tuyến,high
+Không vào được lớp trên LMS lần 4,Em không thấy môn học trên hệ thống học tập trực tuyến. Cảm ơn bộ phận hỗ trợ.,learning_platform,Hệ thống học tập trực tuyến,low
+Không nộp được bài tập online lần 4,Trang nộp bài báo lỗi khi em tải file lên. Mong được hỗ trợ sớm. Tình trạng này ảnh hưởng đến việc học của lớp em.,learning_platform,Hệ thống học tập trực tuyến,medium
+Video bài giảng không phát lần 4,Video bài giảng trên nền tảng học online bị đứng liên tục. Vấn đề xảy ra từ hôm qua. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,learning_platform,Hệ thống học tập trực tuyến,high
+Không vào được lớp trên LMS lần 5,Em không thấy môn học trên hệ thống học tập trực tuyến. Nhiều bạn trong lớp cũng gặp tình trạng tương tự.,learning_platform,Hệ thống học tập trực tuyến,low
+Không nộp được bài tập online lần 5,Trang nộp bài báo lỗi khi em tải file lên. Em đã thử lại nhiều lần nhưng chưa được. Tình trạng này ảnh hưởng đến việc học của lớp em.,learning_platform,Hệ thống học tập trực tuyến,medium
+Video bài giảng không phát lần 5,Video bài giảng trên nền tảng học online bị đứng liên tục. Nếu cần thêm thông tin em có thể bổ sung. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,learning_platform,Hệ thống học tập trực tuyến,high
+Không vào được lớp trên LMS lần 6,Em không thấy môn học trên hệ thống học tập trực tuyến. Tình trạng này ảnh hưởng đến việc học.,learning_platform,Hệ thống học tập trực tuyến,low
+Không nộp được bài tập online lần 6,Trang nộp bài báo lỗi khi em tải file lên. Em cần xử lý trong tuần này. Tình trạng này ảnh hưởng đến việc học của lớp em.,learning_platform,Hệ thống học tập trực tuyến,medium
+Video bài giảng không phát lần 6,Video bài giảng trên nền tảng học online bị đứng liên tục. Nhờ phòng ban kiểm tra giúp em. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,learning_platform,Hệ thống học tập trực tuyến,high
+Không vào được lớp trên LMS lần 7,Em không thấy môn học trên hệ thống học tập trực tuyến. Hiện tại em vẫn chưa thể sử dụng bình thường.,learning_platform,Hệ thống học tập trực tuyến,low
+Không nộp được bài tập online lần 7,Trang nộp bài báo lỗi khi em tải file lên. Cảm ơn bộ phận hỗ trợ. Tình trạng này ảnh hưởng đến việc học của lớp em.,learning_platform,Hệ thống học tập trực tuyến,medium
+Video bài giảng không phát lần 7,Video bài giảng trên nền tảng học online bị đứng liên tục. Mong được hỗ trợ sớm. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,learning_platform,Hệ thống học tập trực tuyến,high
+Không vào được lớp trên LMS lần 8,Em không thấy môn học trên hệ thống học tập trực tuyến. Vấn đề xảy ra từ hôm qua.,learning_platform,Hệ thống học tập trực tuyến,low
+Không nộp được bài tập online lần 8,Trang nộp bài báo lỗi khi em tải file lên. Nhiều bạn trong lớp cũng gặp tình trạng tương tự. Tình trạng này ảnh hưởng đến việc học của lớp em.,learning_platform,Hệ thống học tập trực tuyến,medium
+Video bài giảng không phát lần 8,Video bài giảng trên nền tảng học online bị đứng liên tục. Em đã thử lại nhiều lần nhưng chưa được. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,learning_platform,Hệ thống học tập trực tuyến,high
+Không vào được lớp trên LMS lần 9,Em không thấy môn học trên hệ thống học tập trực tuyến. Nếu cần thêm thông tin em có thể bổ sung.,learning_platform,Hệ thống học tập trực tuyến,low
+Không nộp được bài tập online lần 9,Trang nộp bài báo lỗi khi em tải file lên. Tình trạng này ảnh hưởng đến việc học. Tình trạng này ảnh hưởng đến việc học của lớp em.,learning_platform,Hệ thống học tập trực tuyến,medium
+Video bài giảng không phát lần 9,Video bài giảng trên nền tảng học online bị đứng liên tục. Em cần xử lý trong tuần này. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,learning_platform,Hệ thống học tập trực tuyến,high
+Không vào được lớp trên LMS lần 10,Em không thấy môn học trên hệ thống học tập trực tuyến. Nhờ phòng ban kiểm tra giúp em.,learning_platform,Hệ thống học tập trực tuyến,low
+Không nộp được bài tập online lần 10,Trang nộp bài báo lỗi khi em tải file lên. Hiện tại em vẫn chưa thể sử dụng bình thường. Tình trạng này ảnh hưởng đến việc học của lớp em.,learning_platform,Hệ thống học tập trực tuyến,medium
+Video bài giảng không phát lần 10,Video bài giảng trên nền tảng học online bị đứng liên tục. Cảm ơn bộ phận hỗ trợ. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,learning_platform,Hệ thống học tập trực tuyến,high
+Góp ý giao diện cổng sinh viên,"Em thấy mục lịch học hơi khó tìm, nên có thanh tìm kiếm rõ hơn. Mong được hỗ trợ sớm.",feedback,Góp ý dịch vụ,low
+Đề xuất thêm thông báo qua email,Sinh viên nên nhận email khi lịch thi thay đổi. Vấn đề xảy ra từ hôm qua. Tình trạng này ảnh hưởng đến việc học của lớp em.,feedback,Góp ý dịch vụ,medium
+Góp ý quy trình hỗ trợ,Mong bộ phận hỗ trợ phản hồi tiến độ xử lý rõ ràng hơn. Nhiều bạn trong lớp cũng gặp tình trạng tương tự. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,feedback,Góp ý dịch vụ,high
+Góp ý giao diện cổng sinh viên lần 2,"Em thấy mục lịch học hơi khó tìm, nên có thanh tìm kiếm rõ hơn. Em đã thử lại nhiều lần nhưng chưa được.",feedback,Góp ý dịch vụ,low
+Đề xuất thêm thông báo qua email lần 2,Sinh viên nên nhận email khi lịch thi thay đổi. Nếu cần thêm thông tin em có thể bổ sung. Tình trạng này ảnh hưởng đến việc học của lớp em.,feedback,Góp ý dịch vụ,medium
+Góp ý quy trình hỗ trợ lần 2,Mong bộ phận hỗ trợ phản hồi tiến độ xử lý rõ ràng hơn. Tình trạng này ảnh hưởng đến việc học. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,feedback,Góp ý dịch vụ,high
+Góp ý giao diện cổng sinh viên lần 3,"Em thấy mục lịch học hơi khó tìm, nên có thanh tìm kiếm rõ hơn. Em cần xử lý trong tuần này.",feedback,Góp ý dịch vụ,low
+Đề xuất thêm thông báo qua email lần 3,Sinh viên nên nhận email khi lịch thi thay đổi. Nhờ phòng ban kiểm tra giúp em. Tình trạng này ảnh hưởng đến việc học của lớp em.,feedback,Góp ý dịch vụ,medium
+Góp ý quy trình hỗ trợ lần 3,Mong bộ phận hỗ trợ phản hồi tiến độ xử lý rõ ràng hơn. Hiện tại em vẫn chưa thể sử dụng bình thường. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,feedback,Góp ý dịch vụ,high
+Góp ý giao diện cổng sinh viên lần 4,"Em thấy mục lịch học hơi khó tìm, nên có thanh tìm kiếm rõ hơn. Cảm ơn bộ phận hỗ trợ.",feedback,Góp ý dịch vụ,low
+Đề xuất thêm thông báo qua email lần 4,Sinh viên nên nhận email khi lịch thi thay đổi. Mong được hỗ trợ sớm. Tình trạng này ảnh hưởng đến việc học của lớp em.,feedback,Góp ý dịch vụ,medium
+Góp ý quy trình hỗ trợ lần 4,Mong bộ phận hỗ trợ phản hồi tiến độ xử lý rõ ràng hơn. Vấn đề xảy ra từ hôm qua. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,feedback,Góp ý dịch vụ,high
+Góp ý giao diện cổng sinh viên lần 5,"Em thấy mục lịch học hơi khó tìm, nên có thanh tìm kiếm rõ hơn. Nhiều bạn trong lớp cũng gặp tình trạng tương tự.",feedback,Góp ý dịch vụ,low
+Đề xuất thêm thông báo qua email lần 5,Sinh viên nên nhận email khi lịch thi thay đổi. Em đã thử lại nhiều lần nhưng chưa được. Tình trạng này ảnh hưởng đến việc học của lớp em.,feedback,Góp ý dịch vụ,medium
+Góp ý quy trình hỗ trợ lần 5,Mong bộ phận hỗ trợ phản hồi tiến độ xử lý rõ ràng hơn. Nếu cần thêm thông tin em có thể bổ sung. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,feedback,Góp ý dịch vụ,high
+Góp ý giao diện cổng sinh viên lần 6,"Em thấy mục lịch học hơi khó tìm, nên có thanh tìm kiếm rõ hơn. Tình trạng này ảnh hưởng đến việc học.",feedback,Góp ý dịch vụ,low
+Đề xuất thêm thông báo qua email lần 6,Sinh viên nên nhận email khi lịch thi thay đổi. Em cần xử lý trong tuần này. Tình trạng này ảnh hưởng đến việc học của lớp em.,feedback,Góp ý dịch vụ,medium
+Góp ý quy trình hỗ trợ lần 6,Mong bộ phận hỗ trợ phản hồi tiến độ xử lý rõ ràng hơn. Nhờ phòng ban kiểm tra giúp em. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,feedback,Góp ý dịch vụ,high
+Góp ý giao diện cổng sinh viên lần 7,"Em thấy mục lịch học hơi khó tìm, nên có thanh tìm kiếm rõ hơn. Hiện tại em vẫn chưa thể sử dụng bình thường.",feedback,Góp ý dịch vụ,low
+Đề xuất thêm thông báo qua email lần 7,Sinh viên nên nhận email khi lịch thi thay đổi. Cảm ơn bộ phận hỗ trợ. Tình trạng này ảnh hưởng đến việc học của lớp em.,feedback,Góp ý dịch vụ,medium
+Góp ý quy trình hỗ trợ lần 7,Mong bộ phận hỗ trợ phản hồi tiến độ xử lý rõ ràng hơn. Mong được hỗ trợ sớm. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,feedback,Góp ý dịch vụ,high
+Góp ý giao diện cổng sinh viên lần 8,"Em thấy mục lịch học hơi khó tìm, nên có thanh tìm kiếm rõ hơn. Vấn đề xảy ra từ hôm qua.",feedback,Góp ý dịch vụ,low
+Đề xuất thêm thông báo qua email lần 8,Sinh viên nên nhận email khi lịch thi thay đổi. Nhiều bạn trong lớp cũng gặp tình trạng tương tự. Tình trạng này ảnh hưởng đến việc học của lớp em.,feedback,Góp ý dịch vụ,medium
+Góp ý quy trình hỗ trợ lần 8,Mong bộ phận hỗ trợ phản hồi tiến độ xử lý rõ ràng hơn. Em đã thử lại nhiều lần nhưng chưa được. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,feedback,Góp ý dịch vụ,high
+Góp ý giao diện cổng sinh viên lần 9,"Em thấy mục lịch học hơi khó tìm, nên có thanh tìm kiếm rõ hơn. Nếu cần thêm thông tin em có thể bổ sung.",feedback,Góp ý dịch vụ,low
+Đề xuất thêm thông báo qua email lần 9,Sinh viên nên nhận email khi lịch thi thay đổi. Tình trạng này ảnh hưởng đến việc học. Tình trạng này ảnh hưởng đến việc học của lớp em.,feedback,Góp ý dịch vụ,medium
+Góp ý quy trình hỗ trợ lần 9,Mong bộ phận hỗ trợ phản hồi tiến độ xử lý rõ ràng hơn. Em cần xử lý trong tuần này. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,feedback,Góp ý dịch vụ,high
+Góp ý giao diện cổng sinh viên lần 10,"Em thấy mục lịch học hơi khó tìm, nên có thanh tìm kiếm rõ hơn. Nhờ phòng ban kiểm tra giúp em.",feedback,Góp ý dịch vụ,low
+Đề xuất thêm thông báo qua email lần 10,Sinh viên nên nhận email khi lịch thi thay đổi. Hiện tại em vẫn chưa thể sử dụng bình thường. Tình trạng này ảnh hưởng đến việc học của lớp em.,feedback,Góp ý dịch vụ,medium
+Góp ý quy trình hỗ trợ lần 10,Mong bộ phận hỗ trợ phản hồi tiến độ xử lý rõ ràng hơn. Cảm ơn bộ phận hỗ trợ. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,feedback,Góp ý dịch vụ,high
+Cần tư vấn thông tin chung,Em chưa biết phản ánh này nên gửi cho phòng ban nào. Mong được hỗ trợ sớm.,other,Khác,low
+Hỏi về hoạt động sinh viên,Em muốn hỏi thêm thông tin về hoạt động ngoại khóa. Vấn đề xảy ra từ hôm qua. Tình trạng này ảnh hưởng đến việc học của lớp em.,other,Khác,medium
+Yêu cầu hỗ trợ khác,Em cần nhà trường hỗ trợ một vấn đề chưa có trong danh mục. Nhiều bạn trong lớp cũng gặp tình trạng tương tự. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,other,Khác,high
+Cần tư vấn thông tin chung lần 2,Em chưa biết phản ánh này nên gửi cho phòng ban nào. Em đã thử lại nhiều lần nhưng chưa được.,other,Khác,low
+Hỏi về hoạt động sinh viên lần 2,Em muốn hỏi thêm thông tin về hoạt động ngoại khóa. Nếu cần thêm thông tin em có thể bổ sung. Tình trạng này ảnh hưởng đến việc học của lớp em.,other,Khác,medium
+Yêu cầu hỗ trợ khác lần 2,Em cần nhà trường hỗ trợ một vấn đề chưa có trong danh mục. Tình trạng này ảnh hưởng đến việc học. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,other,Khác,high
+Cần tư vấn thông tin chung lần 3,Em chưa biết phản ánh này nên gửi cho phòng ban nào. Em cần xử lý trong tuần này.,other,Khác,low
+Hỏi về hoạt động sinh viên lần 3,Em muốn hỏi thêm thông tin về hoạt động ngoại khóa. Nhờ phòng ban kiểm tra giúp em. Tình trạng này ảnh hưởng đến việc học của lớp em.,other,Khác,medium
+Yêu cầu hỗ trợ khác lần 3,Em cần nhà trường hỗ trợ một vấn đề chưa có trong danh mục. Hiện tại em vẫn chưa thể sử dụng bình thường. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,other,Khác,high
+Cần tư vấn thông tin chung lần 4,Em chưa biết phản ánh này nên gửi cho phòng ban nào. Cảm ơn bộ phận hỗ trợ.,other,Khác,low
+Hỏi về hoạt động sinh viên lần 4,Em muốn hỏi thêm thông tin về hoạt động ngoại khóa. Mong được hỗ trợ sớm. Tình trạng này ảnh hưởng đến việc học của lớp em.,other,Khác,medium
+Yêu cầu hỗ trợ khác lần 4,Em cần nhà trường hỗ trợ một vấn đề chưa có trong danh mục. Vấn đề xảy ra từ hôm qua. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,other,Khác,high
+Cần tư vấn thông tin chung lần 5,Em chưa biết phản ánh này nên gửi cho phòng ban nào. Nhiều bạn trong lớp cũng gặp tình trạng tương tự.,other,Khác,low
+Hỏi về hoạt động sinh viên lần 5,Em muốn hỏi thêm thông tin về hoạt động ngoại khóa. Em đã thử lại nhiều lần nhưng chưa được. Tình trạng này ảnh hưởng đến việc học của lớp em.,other,Khác,medium
+Yêu cầu hỗ trợ khác lần 5,Em cần nhà trường hỗ trợ một vấn đề chưa có trong danh mục. Nếu cần thêm thông tin em có thể bổ sung. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,other,Khác,high
+Cần tư vấn thông tin chung lần 6,Em chưa biết phản ánh này nên gửi cho phòng ban nào. Tình trạng này ảnh hưởng đến việc học.,other,Khác,low
+Hỏi về hoạt động sinh viên lần 6,Em muốn hỏi thêm thông tin về hoạt động ngoại khóa. Em cần xử lý trong tuần này. Tình trạng này ảnh hưởng đến việc học của lớp em.,other,Khác,medium
+Yêu cầu hỗ trợ khác lần 6,Em cần nhà trường hỗ trợ một vấn đề chưa có trong danh mục. Nhờ phòng ban kiểm tra giúp em. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,other,Khác,high
+Cần tư vấn thông tin chung lần 7,Em chưa biết phản ánh này nên gửi cho phòng ban nào. Hiện tại em vẫn chưa thể sử dụng bình thường.,other,Khác,low
+Hỏi về hoạt động sinh viên lần 7,Em muốn hỏi thêm thông tin về hoạt động ngoại khóa. Cảm ơn bộ phận hỗ trợ. Tình trạng này ảnh hưởng đến việc học của lớp em.,other,Khác,medium
+Yêu cầu hỗ trợ khác lần 7,Em cần nhà trường hỗ trợ một vấn đề chưa có trong danh mục. Mong được hỗ trợ sớm. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,other,Khác,high
+Cần tư vấn thông tin chung lần 8,Em chưa biết phản ánh này nên gửi cho phòng ban nào. Vấn đề xảy ra từ hôm qua.,other,Khác,low
+Hỏi về hoạt động sinh viên lần 8,Em muốn hỏi thêm thông tin về hoạt động ngoại khóa. Nhiều bạn trong lớp cũng gặp tình trạng tương tự. Tình trạng này ảnh hưởng đến việc học của lớp em.,other,Khác,medium
+Yêu cầu hỗ trợ khác lần 8,Em cần nhà trường hỗ trợ một vấn đề chưa có trong danh mục. Em đã thử lại nhiều lần nhưng chưa được. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,other,Khác,high
+Cần tư vấn thông tin chung lần 9,Em chưa biết phản ánh này nên gửi cho phòng ban nào. Nếu cần thêm thông tin em có thể bổ sung.,other,Khác,low
+Hỏi về hoạt động sinh viên lần 9,Em muốn hỏi thêm thông tin về hoạt động ngoại khóa. Tình trạng này ảnh hưởng đến việc học. Tình trạng này ảnh hưởng đến việc học của lớp em.,other,Khác,medium
+Yêu cầu hỗ trợ khác lần 9,Em cần nhà trường hỗ trợ một vấn đề chưa có trong danh mục. Em cần xử lý trong tuần này. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,other,Khác,high
+Cần tư vấn thông tin chung lần 10,Em chưa biết phản ánh này nên gửi cho phòng ban nào. Nhờ phòng ban kiểm tra giúp em.,other,Khác,low
+Hỏi về hoạt động sinh viên lần 10,Em muốn hỏi thêm thông tin về hoạt động ngoại khóa. Hiện tại em vẫn chưa thể sử dụng bình thường. Tình trạng này ảnh hưởng đến việc học của lớp em.,other,Khác,medium
+Yêu cầu hỗ trợ khác lần 10,Em cần nhà trường hỗ trợ một vấn đề chưa có trong danh mục. Cảm ơn bộ phận hỗ trợ. Em cần xử lý gấp vì sáng mai có thi/kiểm tra.,other,Khác,high
