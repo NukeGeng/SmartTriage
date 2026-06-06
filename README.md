@@ -81,6 +81,20 @@ npm run dev
 | AI Service | http://localhost:8001 | API phân tích ML |
 | PostgreSQL | localhost:5432 | Database chính |
 
+## Kiểm Thử
+
+```bash
+cd backend
+pytest
+
+cd ../ai-service
+pytest
+
+cd ../frontend
+npm run lint
+npm run build
+```
+
 ## Cấu Trúc Thư Mục
 
 ```txt
