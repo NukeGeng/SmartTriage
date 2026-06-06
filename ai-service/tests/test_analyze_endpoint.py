@@ -12,7 +12,7 @@ def test_analyze_ticket_endpoint() -> None:
             "ticket_id": "TCK-001",
             "title": "Không đăng nhập được hệ thống thi online",
             "description": "Em không đăng nhập được vào hệ thống thi online, sáng mai em có lịch thi.",
-            "open_tickets": [],
+            "existing_tickets": [],
         },
     )
 

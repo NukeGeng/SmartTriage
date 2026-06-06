@@ -88,7 +88,7 @@ class TicketRepository:
         return list(items), total
 
     @staticmethod
-    def list_open_for_ai(db: Session, limit: int = 50) -> list[Ticket]:
+    def list_open_for_ai(db: Session, limit: int = 100) -> list[Ticket]:
         statement = (
             select(Ticket)
             .options(joinedload(Ticket.analysis))

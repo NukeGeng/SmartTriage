@@ -47,7 +47,7 @@ class TicketService:
             title=ticket.title,
             description=ticket.description,
             created_by_role=current_user.role.value,
-            open_tickets=self._build_open_ticket_context(db),
+            existing_tickets=self._build_existing_ticket_context(db),
         )
 
         if analysis_payload:
@@ -190,14 +190,13 @@ class TicketService:
         )
 
     @staticmethod
-    def _build_open_ticket_context(db: Session) -> list[dict[str, Any]]:
+    def _build_existing_ticket_context(db: Session) -> list[dict[str, Any]]:
         tickets = TicketRepository.list_open_for_ai(db)
         return [
             {
                 "ticket_id": str(ticket.id),
                 "title": ticket.title,
                 "description": ticket.description,
-                "category": ticket.analysis.predicted_category if ticket.analysis else None,
             }
             for ticket in tickets
         ]
