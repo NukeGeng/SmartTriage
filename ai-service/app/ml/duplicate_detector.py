@@ -22,14 +22,57 @@ class DuplicateDetector:
         threshold: float = 0.45,
         existing_tickets: list[dict[str, Any]] | None = None,
     ) -> list[dict]:
-        tickets = existing_tickets if existing_tickets is not None else self._load_index()
+        if existing_tickets:
+            return self.find_duplicates_from_items(
+                title=title,
+                description=description,
+                existing_tickets=existing_tickets,
+                top_k=top_k,
+                threshold=threshold,
+                exclude_ticket_id=ticket_id,
+            )
+        return self._find_duplicate_rows(
+            ticket_id=ticket_id,
+            title=title,
+            description=description,
+            tickets=self._load_index(),
+            top_k=top_k,
+            threshold=threshold,
+        )
+
+    def find_duplicates_from_items(
+        self,
+        title: str,
+        description: str,
+        existing_tickets: list[dict[str, Any]],
+        top_k: int = 3,
+        threshold: float = 0.45,
+        exclude_ticket_id: str | None = None,
+    ) -> list[dict]:
+        return self._find_duplicate_rows(
+            ticket_id=exclude_ticket_id,
+            title=title,
+            description=description,
+            tickets=existing_tickets,
+            top_k=top_k,
+            threshold=threshold,
+        )
+
+    def _find_duplicate_rows(
+        self,
+        ticket_id: str | None,
+        title: str,
+        description: str,
+        tickets: list[dict[str, Any]],
+        top_k: int,
+        threshold: float,
+    ) -> list[dict]:
         if not tickets:
             return []
-
         rows = [
             ticket
             for ticket in tickets
-            if str(ticket.get("ticket_id")) != str(ticket_id)
+            if (ticket_id is None or str(ticket.get("ticket_id")) != str(ticket_id))
             and ticket.get("title")
             and ticket.get("description")
         ]

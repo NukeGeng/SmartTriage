@@ -29,14 +29,14 @@ class AIServiceClient:
         title: str,
         description: str,
         created_by_role: str = "student",
-        open_tickets: list[dict[str, Any]] | None = None,
+        existing_tickets: list[dict[str, Any]] | None = None,
     ) -> dict[str, Any] | None:
         payload = {
             "ticket_id": ticket_id,
             "title": title,
             "description": description,
             "created_by_role": created_by_role,
-            "open_tickets": open_tickets or [],
+            "existing_tickets": existing_tickets or [],
         }
         try:
             with httpx.Client(timeout=self.timeout_seconds) as client:

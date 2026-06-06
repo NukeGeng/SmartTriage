@@ -3,10 +3,13 @@ from typing import Literal
 from pydantic import BaseModel, Field
 
 
-class OpenTicketContext(BaseModel):
+class ExistingTicket(BaseModel):
     ticket_id: str
     title: str
     description: str
+
+
+class OpenTicketContext(ExistingTicket):
     category: str | None = None
 
 
@@ -15,6 +18,7 @@ class AnalyzeTicketRequest(BaseModel):
     title: str = Field(min_length=5)
     description: str = Field(min_length=10)
     created_by_role: str | None = None
+    existing_tickets: list[ExistingTicket] = Field(default_factory=list)
     open_tickets: list[OpenTicketContext] = Field(default_factory=list)
 
 

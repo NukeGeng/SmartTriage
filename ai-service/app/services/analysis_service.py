@@ -38,14 +38,20 @@ class AnalysisService:
         department = recommend_department(category, priority)
 
         try:
-            duplicate_candidates = self.duplicate_detector.find_duplicates(
-                ticket_id=payload.ticket_id,
-                title=payload.title,
-                description=payload.description,
-                existing_tickets=[ticket.model_dump() for ticket in payload.open_tickets]
-                if payload.open_tickets
-                else None,
-            )
+            runtime_tickets = payload.existing_tickets or payload.open_tickets
+            if runtime_tickets:
+                duplicate_candidates = self.duplicate_detector.find_duplicates_from_items(
+                    title=payload.title,
+                    description=payload.description,
+                    existing_tickets=[ticket.model_dump() for ticket in runtime_tickets],
+                    exclude_ticket_id=payload.ticket_id,
+                )
+            else:
+                duplicate_candidates = self.duplicate_detector.find_duplicates(
+                    ticket_id=payload.ticket_id,
+                    title=payload.title,
+                    description=payload.description,
+                )
         except Exception as exc:
             logger.exception("Duplicate detection failed for ticket %s: %s", payload.ticket_id, exc)
             duplicate_candidates = []
