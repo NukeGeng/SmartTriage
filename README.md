@@ -37,14 +37,29 @@ Ba service chính:
 
 ## Cách Chạy Local
 
-Hiện tại repository mới khởi tạo PostgreSQL nền tảng cho local development:
+Chạy toàn bộ hệ thống bằng Docker Compose:
 
 ```bash
-docker compose up -d postgres
-docker compose config
+docker compose build
+docker compose up -d
 ```
 
-Khi các service được triển khai ở những prompt tiếp theo, dự kiến chạy:
+Kiểm tra health:
+
+```bash
+docker compose config
+curl http://localhost:8000/api/v1/health
+curl http://localhost:8001/api/v1/health
+```
+
+Setup nhanh môi trường demo local:
+
+```bash
+chmod +x scripts/*.sh
+./scripts/dev_setup.sh
+```
+
+Chạy từng service ở chế độ development:
 
 ```bash
 cd backend
