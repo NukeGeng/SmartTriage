@@ -19,8 +19,21 @@ def test_analyze_ticket_endpoint() -> None:
     assert response.status_code == 200
     body = response.json()
     assert body["success"] is True
-    assert body["data"]["category"] == "account_system"
-    assert body["data"]["priority"] == "high"
+    data = body["data"]
+    assert {
+        "category",
+        "category_label",
+        "confidence",
+        "priority",
+        "priority_score",
+        "suggested_department",
+        "duplicate_candidates",
+        "suggested_actions",
+        "model_version",
+    }.issubset(data)
+    assert data["category"] == "account_system"
+    assert data["priority"] == "high"
+    assert isinstance(data["suggested_actions"], list)
 
 
 def test_model_info_endpoint_without_model_is_safe(tmp_path, monkeypatch) -> None:
