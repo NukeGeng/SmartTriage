@@ -1,0 +1,20 @@
+{
+  "model_version": "tfidf-logreg-v1",
+  "algorithm": "TF-IDF + Logistic Regression",
+  "dataset_path": "data\\raw\\ticket_samples.csv",
+  "accuracy": 1.0,
+  "macro_f1": 1.0,
+  "categories": [
+    "account_system",
+    "classroom_device",
+    "document_profile",
+    "facility",
+    "feedback",
+    "learning_platform",
+    "network",
+    "other",
+    "schedule_exam",
+    "tuition_payment"
+  ],
+  "created_at": "2026-06-06T10:50:12.128014+00:00"
+}

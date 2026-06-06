@@ -1,0 +1,51 @@
+ticket_id,title,description,status
+TCK-001-01,Không đăng nhập được hệ thống thi online,Không thể đăng nhập vào hệ thống thi trước lịch thi sáng mai. Mẫu ghi nhận số 1.,open
+TCK-002-02,Lỗi đăng nhập tài khoản sinh viên,Tài khoản sinh viên báo sai mật khẩu dù đã nhập đúng. Mẫu ghi nhận số 2.,open
+TCK-003-03,Wifi phòng B305 rất yếu,Wifi tại phòng B305 mất kết nối nhiều lần trong buổi học. Mẫu ghi nhận số 3.,open
+TCK-004-04,Mạng ký túc xá chậm,Internet ký túc xá không ổn định vào buổi tối. Mẫu ghi nhận số 4.,open
+TCK-005-05,Máy chiếu phòng A402 không hoạt động,Máy chiếu không nhận tín hiệu HDMI từ laptop. Mẫu ghi nhận số 5.,open
+TCK-006-06,Loa giảng đường bị rè,Loa trong phòng học phát âm thanh rè và nhỏ. Mẫu ghi nhận số 6.,open
+TCK-007-07,Đèn phòng học bị hỏng,Một số bóng đèn trong phòng học không sáng. Mẫu ghi nhận số 7.,open
+TCK-008-08,Máy lạnh phòng C201 không mát,"Máy lạnh hoạt động yếu, cả lớp thấy nóng. Mẫu ghi nhận số 8.",open
+TCK-009-09,Trùng lịch thi hai môn,Sinh viên bị trùng hai lịch thi trong cùng một buổi. Mẫu ghi nhận số 9.,open
+TCK-010-10,Sai phòng thi trên hệ thống,Phòng thi hiển thị trên cổng sinh viên không đúng. Mẫu ghi nhận số 10.,open
+TCK-001-11,Không đăng nhập được hệ thống thi online,Không thể đăng nhập vào hệ thống thi trước lịch thi sáng mai. Mẫu ghi nhận số 11.,open
+TCK-002-12,Lỗi đăng nhập tài khoản sinh viên,Tài khoản sinh viên báo sai mật khẩu dù đã nhập đúng. Mẫu ghi nhận số 12.,open
+TCK-003-13,Wifi phòng B305 rất yếu,Wifi tại phòng B305 mất kết nối nhiều lần trong buổi học. Mẫu ghi nhận số 13.,open
+TCK-004-14,Mạng ký túc xá chậm,Internet ký túc xá không ổn định vào buổi tối. Mẫu ghi nhận số 14.,open
+TCK-005-15,Máy chiếu phòng A402 không hoạt động,Máy chiếu không nhận tín hiệu HDMI từ laptop. Mẫu ghi nhận số 15.,open
+TCK-006-16,Loa giảng đường bị rè,Loa trong phòng học phát âm thanh rè và nhỏ. Mẫu ghi nhận số 16.,open
+TCK-007-17,Đèn phòng học bị hỏng,Một số bóng đèn trong phòng học không sáng. Mẫu ghi nhận số 17.,open
+TCK-008-18,Máy lạnh phòng C201 không mát,"Máy lạnh hoạt động yếu, cả lớp thấy nóng. Mẫu ghi nhận số 18.",open
+TCK-009-19,Trùng lịch thi hai môn,Sinh viên bị trùng hai lịch thi trong cùng một buổi. Mẫu ghi nhận số 19.,open
+TCK-010-20,Sai phòng thi trên hệ thống,Phòng thi hiển thị trên cổng sinh viên không đúng. Mẫu ghi nhận số 20.,open
+TCK-001-21,Không đăng nhập được hệ thống thi online,Không thể đăng nhập vào hệ thống thi trước lịch thi sáng mai. Mẫu ghi nhận số 21.,open
+TCK-002-22,Lỗi đăng nhập tài khoản sinh viên,Tài khoản sinh viên báo sai mật khẩu dù đã nhập đúng. Mẫu ghi nhận số 22.,open
+TCK-003-23,Wifi phòng B305 rất yếu,Wifi tại phòng B305 mất kết nối nhiều lần trong buổi học. Mẫu ghi nhận số 23.,open
+TCK-004-24,Mạng ký túc xá chậm,Internet ký túc xá không ổn định vào buổi tối. Mẫu ghi nhận số 24.,open
+TCK-005-25,Máy chiếu phòng A402 không hoạt động,Máy chiếu không nhận tín hiệu HDMI từ laptop. Mẫu ghi nhận số 25.,open
+TCK-006-26,Loa giảng đường bị rè,Loa trong phòng học phát âm thanh rè và nhỏ. Mẫu ghi nhận số 26.,open
+TCK-007-27,Đèn phòng học bị hỏng,Một số bóng đèn trong phòng học không sáng. Mẫu ghi nhận số 27.,open
+TCK-008-28,Máy lạnh phòng C201 không mát,"Máy lạnh hoạt động yếu, cả lớp thấy nóng. Mẫu ghi nhận số 28.",open
+TCK-009-29,Trùng lịch thi hai môn,Sinh viên bị trùng hai lịch thi trong cùng một buổi. Mẫu ghi nhận số 29.,open
+TCK-010-30,Sai phòng thi trên hệ thống,Phòng thi hiển thị trên cổng sinh viên không đúng. Mẫu ghi nhận số 30.,open
+TCK-001-31,Không đăng nhập được hệ thống thi online,Không thể đăng nhập vào hệ thống thi trước lịch thi sáng mai. Mẫu ghi nhận số 31.,open
+TCK-002-32,Lỗi đăng nhập tài khoản sinh viên,Tài khoản sinh viên báo sai mật khẩu dù đã nhập đúng. Mẫu ghi nhận số 32.,open
+TCK-003-33,Wifi phòng B305 rất yếu,Wifi tại phòng B305 mất kết nối nhiều lần trong buổi học. Mẫu ghi nhận số 33.,open
+TCK-004-34,Mạng ký túc xá chậm,Internet ký túc xá không ổn định vào buổi tối. Mẫu ghi nhận số 34.,open
+TCK-005-35,Máy chiếu phòng A402 không hoạt động,Máy chiếu không nhận tín hiệu HDMI từ laptop. Mẫu ghi nhận số 35.,open
+TCK-006-36,Loa giảng đường bị rè,Loa trong phòng học phát âm thanh rè và nhỏ. Mẫu ghi nhận số 36.,open
+TCK-007-37,Đèn phòng học bị hỏng,Một số bóng đèn trong phòng học không sáng. Mẫu ghi nhận số 37.,open
+TCK-008-38,Máy lạnh phòng C201 không mát,"Máy lạnh hoạt động yếu, cả lớp thấy nóng. Mẫu ghi nhận số 38.",open
+TCK-009-39,Trùng lịch thi hai môn,Sinh viên bị trùng hai lịch thi trong cùng một buổi. Mẫu ghi nhận số 39.,open
+TCK-010-40,Sai phòng thi trên hệ thống,Phòng thi hiển thị trên cổng sinh viên không đúng. Mẫu ghi nhận số 40.,open
+TCK-001-41,Không đăng nhập được hệ thống thi online,Không thể đăng nhập vào hệ thống thi trước lịch thi sáng mai. Mẫu ghi nhận số 41.,open
+TCK-002-42,Lỗi đăng nhập tài khoản sinh viên,Tài khoản sinh viên báo sai mật khẩu dù đã nhập đúng. Mẫu ghi nhận số 42.,open
+TCK-003-43,Wifi phòng B305 rất yếu,Wifi tại phòng B305 mất kết nối nhiều lần trong buổi học. Mẫu ghi nhận số 43.,open
+TCK-004-44,Mạng ký túc xá chậm,Internet ký túc xá không ổn định vào buổi tối. Mẫu ghi nhận số 44.,open
+TCK-005-45,Máy chiếu phòng A402 không hoạt động,Máy chiếu không nhận tín hiệu HDMI từ laptop. Mẫu ghi nhận số 45.,open
+TCK-006-46,Loa giảng đường bị rè,Loa trong phòng học phát âm thanh rè và nhỏ. Mẫu ghi nhận số 46.,open
+TCK-007-47,Đèn phòng học bị hỏng,Một số bóng đèn trong phòng học không sáng. Mẫu ghi nhận số 47.,open
+TCK-008-48,Máy lạnh phòng C201 không mát,"Máy lạnh hoạt động yếu, cả lớp thấy nóng. Mẫu ghi nhận số 48.",open
+TCK-009-49,Trùng lịch thi hai môn,Sinh viên bị trùng hai lịch thi trong cùng một buổi. Mẫu ghi nhận số 49.,open
+TCK-010-50,Sai phòng thi trên hệ thống,Phòng thi hiển thị trên cổng sinh viên không đúng. Mẫu ghi nhận số 50.,open
