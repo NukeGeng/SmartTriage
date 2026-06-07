@@ -103,6 +103,28 @@ smarttriage/
 
 ## Setup Local
 
+### Quick Start Một Lệnh
+
+```bash
+npm start
+```
+
+Lệnh này sẽ:
+
+1. Tạo các file env local từ `.env.example` nếu còn thiếu.
+2. Tạo virtual environment và cài dependencies cho backend/AI service nếu còn thiếu.
+3. Cài frontend dependencies nếu `node_modules` chưa có.
+4. Chạy PostgreSQL bằng Docker Compose.
+5. Chạy migration, seed user demo.
+6. Train AI model nếu artifacts chưa có.
+7. Chạy AI service, backend và frontend cùng lúc.
+
+Muốn chạy toàn bộ bằng container Docker:
+
+```bash
+npm run start:docker
+```
+
 ### 1. Start PostgreSQL
 
 ```bash

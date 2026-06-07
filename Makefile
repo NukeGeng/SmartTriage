@@ -1,7 +1,8 @@
-.PHONY: help up down logs backend-dev ai-dev frontend-dev backend-test ai-test frontend-lint compose-config up-postgres
+.PHONY: help start up down logs backend-dev ai-dev frontend-dev backend-test ai-test frontend-lint compose-config up-postgres
 
 help:
 	@echo "SmartTriage development commands"
+	@echo "  make start          Run full local dev stack through npm start"
 	@echo "  make up             Start all Docker Compose services"
 	@echo "  make down           Stop local services"
 	@echo "  make logs           Follow Docker Compose logs"
@@ -11,6 +12,9 @@ help:
 	@echo "  make backend-test   Run backend tests"
 	@echo "  make ai-test        Run AI service tests"
 	@echo "  make frontend-lint  Run frontend lint"
+
+start:
+	npm start
 
 up:
 	docker compose up -d
