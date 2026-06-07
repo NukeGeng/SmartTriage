@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Activity, AlertTriangle, CheckCircle2, ClipboardList } from "lucide-react";
@@ -9,6 +9,7 @@ import { AppShell } from "@/components/layout/AppShell";
 import { Badge } from "@/components/ui/Badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Loading } from "@/components/ui/Loading";
+import { Toast } from "@/components/ui/Toast";
 import {
   getDashboardStats,
   getRecentTickets,
@@ -35,6 +36,41 @@ export default function DashboardPage() {
   const [recentTickets, setRecentTickets] = useState<RecentTicket[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [notification, setNotification] = useState("");
+  const latestTicketIdRef = useRef<string | null>(null);
+
+  const loadDashboard = useCallback(async (showLoading = false) => {
+    if (showLoading) {
+      setLoading(true);
+    }
+    setError("");
+
+    try {
+      const [nextStats, nextCategories, nextPriorities, nextStatuses, nextRecent] = await Promise.all([
+        getDashboardStats(),
+        getTicketsByCategory(),
+        getTicketsByPriority(),
+        getTicketsByStatus(),
+        getRecentTickets(8),
+      ]);
+
+      const latestTicketId = nextRecent[0]?.id ?? null;
+      if (!showLoading && latestTicketId && latestTicketIdRef.current && latestTicketId !== latestTicketIdRef.current) {
+        setNotification("Có phản ánh mới vừa được gửi.");
+      }
+      latestTicketIdRef.current = latestTicketId;
+
+      setStats(nextStats);
+      setCategories(nextCategories);
+      setPriorities(nextPriorities);
+      setStatuses(nextStatuses);
+      setRecentTickets(nextRecent);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Không tải được dashboard");
+    } finally {
+      setLoading(false);
+    }
+  }, []);
 
   useEffect(() => {
     const user = getStoredUser();
@@ -43,36 +79,15 @@ export default function DashboardPage() {
       return;
     }
 
-    let active = true;
-    setLoading(true);
-    setError("");
-
-    Promise.all([
-      getDashboardStats(),
-      getTicketsByCategory(),
-      getTicketsByPriority(),
-      getTicketsByStatus(),
-      getRecentTickets(8),
-    ])
-      .then(([nextStats, nextCategories, nextPriorities, nextStatuses, nextRecent]) => {
-        if (!active) return;
-        setStats(nextStats);
-        setCategories(nextCategories);
-        setPriorities(nextPriorities);
-        setStatuses(nextStatuses);
-        setRecentTickets(nextRecent);
-      })
-      .catch((err) => {
-        if (active) setError(err instanceof Error ? err.message : "Không tải được dashboard");
-      })
-      .finally(() => {
-        if (active) setLoading(false);
-      });
+    void loadDashboard(true);
+    const intervalId = window.setInterval(() => {
+      void loadDashboard(false);
+    }, 10000);
 
     return () => {
-      active = false;
+      window.clearInterval(intervalId);
     };
-  }, [router]);
+  }, [loadDashboard, router]);
 
   const cards = useMemo(
     () => [
@@ -106,6 +121,7 @@ export default function DashboardPage() {
 
   return (
     <AppShell>
+      <Toast message={notification} onClose={() => setNotification("")} />
       <div className="space-y-5">
         <div>
           <p className="text-sm font-semibold text-brand-700">Dashboard</p>

@@ -1,3 +1,5 @@
+import csv
+from io import StringIO
 from typing import Any
 
 import pytest
@@ -147,3 +149,53 @@ def test_update_status_as_staff_success(client_with_fake_ai: TestClient) -> None
 
     assert response.status_code == 200
     assert response.json()["data"]["status"] == "in_progress"
+
+
+def test_admin_exports_training_data_with_manual_labels(client_with_fake_ai: TestClient) -> None:
+    student_token = _register_and_login(client_with_fake_ai, "ticket-export-student@example.com")
+    admin_token = _register_and_login(
+        client_with_fake_ai,
+        "ticket-export-admin@example.com",
+        role="admin",
+    )
+    created_ticket = _create_ticket(client_with_fake_ai, student_token)
+
+    update_response = client_with_fake_ai.patch(
+        f"/api/v1/tickets/{created_ticket['id']}",
+        headers=_auth_headers(admin_token),
+        json={
+            "manual_category": "learning_platform",
+            "manual_priority": "medium",
+            "assigned_department": "IT Department",
+        },
+    )
+    assert update_response.status_code == 200
+
+    response = client_with_fake_ai.get(
+        "/api/v1/tickets/export-training-data",
+        headers=_auth_headers(admin_token),
+    )
+
+    assert response.status_code == 200
+    assert response.headers["content-type"].startswith("text/csv")
+    rows = list(csv.DictReader(StringIO(response.text)))
+    assert rows == [
+        {
+            "title": "Cannot login to online exam system",
+            "description": "Student cannot login before tomorrow online exam.",
+            "category": "learning_platform",
+            "priority": "medium",
+            "source": "manual",
+        }
+    ]
+
+
+def test_student_cannot_export_training_data(client_with_fake_ai: TestClient) -> None:
+    student_token = _register_and_login(client_with_fake_ai, "ticket-export-denied@example.com")
+
+    response = client_with_fake_ai.get(
+        "/api/v1/tickets/export-training-data",
+        headers=_auth_headers(student_token),
+    )
+
+    assert response.status_code == 403

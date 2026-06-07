@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ArrowUpDown, Eye } from "lucide-react";
@@ -12,6 +12,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { Input } from "@/components/ui/Input";
 import { Loading } from "@/components/ui/Loading";
+import { Toast } from "@/components/ui/Toast";
 import { TicketFilters } from "@/components/tickets/TicketFilters";
 import { listTickets, updateTicketStatus } from "@/features/tickets/api";
 import { getStoredUser } from "@/lib/auth";
@@ -44,6 +45,29 @@ export default function AdminTicketsPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [savingTicketId, setSavingTicketId] = useState("");
+  const [notification, setNotification] = useState("");
+  const latestTicketIdRef = useRef<string | null>(null);
+
+  const loadTickets = useCallback(async (showLoading = false) => {
+    if (showLoading) {
+      setLoading(true);
+    }
+    setError("");
+
+    try {
+      const result = await listTickets({ ...filters, assigned_department: department });
+      const latestTicketId = result.items[0]?.id ?? null;
+      if (!showLoading && latestTicketId && latestTicketIdRef.current && latestTicketId !== latestTicketIdRef.current) {
+        setNotification("Có ticket mới trong danh sách quản lý.");
+      }
+      latestTicketIdRef.current = latestTicketId;
+      setTickets(result.items);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Không tải được ticket");
+    } finally {
+      setLoading(false);
+    }
+  }, [department, filters]);
 
   useEffect(() => {
     const user = getStoredUser();
@@ -52,25 +76,15 @@ export default function AdminTicketsPage() {
       return;
     }
 
-    let active = true;
-    setLoading(true);
-    setError("");
-
-    listTickets({ ...filters, assigned_department: department })
-      .then((result) => {
-        if (active) setTickets(result.items);
-      })
-      .catch((err) => {
-        if (active) setError(err instanceof Error ? err.message : "Không tải được ticket");
-      })
-      .finally(() => {
-        if (active) setLoading(false);
-      });
+    void loadTickets(true);
+    const intervalId = window.setInterval(() => {
+      void loadTickets(false);
+    }, 10000);
 
     return () => {
-      active = false;
+      window.clearInterval(intervalId);
     };
-  }, [department, filters, router]);
+  }, [loadTickets, router]);
 
   const sortedTickets = useMemo(() => {
     return [...tickets].sort((a, b) => {
@@ -98,6 +112,7 @@ export default function AdminTicketsPage() {
 
   return (
     <AppShell>
+      <Toast message={notification} onClose={() => setNotification("")} />
       <div className="space-y-5">
         <div>
           <p className="text-sm font-semibold text-brand-700">Admin</p>
