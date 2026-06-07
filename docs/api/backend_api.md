@@ -395,6 +395,40 @@ Response data:
 ]
 ```
 
+## Admin Triage APIs
+
+### `GET /api/v1/admin/triage/overview`
+
+Yêu cầu staff hoặc admin.
+
+Mục tiêu: trả dữ liệu cho màn `Smart Triage Cockpit`, giúp người xử lý biết ticket nào cần ưu tiên, ticket nào AI chưa chắc, ticket nào có thể thuộc cùng một nhóm sự cố và ticket nào nên điều phối lại phòng ban.
+
+Response data:
+
+```json
+{
+  "summary": {
+    "total_open": 24,
+    "high_priority": 6,
+    "low_confidence": 3,
+    "possible_incidents": 2
+  },
+  "critical_queue": [],
+  "low_confidence_cases": [],
+  "possible_incident_groups": [],
+  "routing_recommendations": [],
+  "recent_tickets": []
+}
+```
+
+Các nhóm dữ liệu:
+
+- `critical_queue`: ticket đang mở có priority `high` hoặc `priority_score >= 70`.
+- `low_confidence_cases`: ticket có `category_confidence < 0.6`.
+- `possible_incident_groups`: gợi ý nhóm phản ánh cùng chủ đề từ duplicate candidates hoặc cụm category đang mở.
+- `routing_recommendations`: ticket có phòng ban AI đề xuất nhưng chưa được gán đúng.
+- `recent_tickets`: ticket mới nhất trong phạm vi nhìn thấy của admin/staff.
+
 ## AI Proxy APIs
 
 ### `GET /api/v1/ai/model-info`
