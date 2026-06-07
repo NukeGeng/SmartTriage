@@ -7,12 +7,16 @@ WORKDIR /app
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip \
-    && pip install --no-cache-dir -r requirements.txt
+    && pip install --no-cache-dir -r requirements.txt \
+    && addgroup --system smarttriage \
+    && adduser --system --ingroup smarttriage smarttriage
 
 COPY app ./app
 COPY data ./data
 COPY models ./models
 COPY scripts ./scripts
+
+USER smarttriage
 
 EXPOSE 8001
 
