@@ -153,6 +153,9 @@ run(`${backendPython} -m alembic upgrade head`, pathFromRoot("backend"));
 log("Seeding backend demo users");
 run(`${backendPython} scripts/seed_users.py`, pathFromRoot("backend"));
 
+log("Seeding backend demo tickets");
+run(`${backendPython} scripts/seed_tickets.py`, pathFromRoot("backend"));
+
 ensureAiArtifacts(aiPython);
 
 console.log("\nSmartTriage is starting:");

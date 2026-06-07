@@ -115,7 +115,7 @@ Lệnh này sẽ:
 2. Tạo virtual environment và cài dependencies cho backend/AI service nếu còn thiếu.
 3. Cài frontend dependencies nếu `node_modules` chưa có.
 4. Chạy PostgreSQL bằng Docker Compose.
-5. Chạy migration, seed user demo.
+5. Chạy migration, seed user demo và 100 phản ánh demo.
 6. Train AI model nếu artifacts chưa có.
 7. Chạy AI service, backend và frontend cùng lúc.
 
