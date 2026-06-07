@@ -1,0 +1,12 @@
+{
+  "name": "smarttriage",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SmartTriage monorepo runner",
+  "scripts": {
+    "start": "node scripts/start-all.mjs",
+    "start:docker": "docker compose up --build",
+    "stop": "docker compose down",
+    "compose:config": "docker compose config"
+  }
+}

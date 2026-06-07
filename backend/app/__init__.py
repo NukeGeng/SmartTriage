@@ -1,0 +1,1 @@
+"""SmartTriage backend application package."""
