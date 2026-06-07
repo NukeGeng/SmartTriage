@@ -16,14 +16,34 @@ class FakeAIClient:
             "category": "account_system",
             "category_label": "Account / System",
             "confidence": 0.91,
+            "category_confidence": 0.91,
             "priority": "high",
             "priority_score": 82,
+            "priority_breakdown": {
+                "total_score": 82,
+                "level": "high",
+                "items": [
+                    {
+                        "name": "Issue group",
+                        "score": 25,
+                        "reason": "Account system issue.",
+                        "matched_terms": ["account_system"],
+                    }
+                ],
+            },
             "suggested_department": "IT Department",
             "duplicate_candidates": [],
             "suggested_actions": [
                 "Check student account status",
                 "Reset password if needed",
             ],
+            "explanation": {
+                "summary": "Account login issue before online exam.",
+                "category_reason": "Login terms indicate account system.",
+                "priority_reason": "Exam context raises priority.",
+                "department_reason": "IT handles account systems.",
+                "detected_signals": ["login", "exam"],
+            },
             "model_version": "test-v1",
         }
 
@@ -129,6 +149,8 @@ def test_get_ticket_detail_success(client_with_fake_ai: TestClient) -> None:
     ticket = response.json()["data"]
     assert ticket["id"] == created_ticket["id"]
     assert ticket["analysis"]["model_version"] == "test-v1"
+    assert ticket["analysis"]["explanation"]["summary"] == "Account login issue before online exam."
+    assert ticket["analysis"]["priority_breakdown"]["total_score"] == 82
 
 
 def test_update_status_as_staff_success(client_with_fake_ai: TestClient) -> None:
