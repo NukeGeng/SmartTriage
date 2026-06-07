@@ -97,3 +97,13 @@ class TicketRepository:
             .limit(limit)
         )
         return list(db.execute(statement).scalars().all())
+
+    @staticmethod
+    def list_for_training_export(db: Session) -> list[Ticket]:
+        statement = (
+            select(Ticket)
+            .options(joinedload(Ticket.analysis))
+            .outerjoin(TicketAnalysis)
+            .order_by(Ticket.created_at.desc())
+        )
+        return list(db.execute(statement).scalars().all())

@@ -259,6 +259,25 @@ Yêu cầu auth header.
 
 Response trả ticket detail kèm `analysis`.
 
+### `GET /api/v1/tickets/export-training-data`
+
+Chỉ admin được gọi.
+
+Mục tiêu: export dữ liệu training theo cơ chế human-in-the-loop. Nếu staff/admin đã sửa `manual_category` hoặc `manual_priority`, hệ thống dùng nhãn thủ công này thay cho nhãn AI.
+
+Response là CSV:
+
+```csv
+title,description,category,priority,source
+Không đăng nhập được hệ thống thi online,Em không đăng nhập được...,learning_platform,medium,manual
+```
+
+Quy tắc export:
+
+- `category`: ưu tiên `manual_category`, nếu không có thì dùng `predicted_category`.
+- `priority`: ưu tiên `manual_priority`, nếu không có thì dùng priority từ AI analysis.
+- `source`: `manual` nếu có manual label, ngược lại là `predicted`.
+
 ### `PATCH /api/v1/tickets/{ticket_id}/status`
 
 Yêu cầu staff hoặc admin.
@@ -374,4 +393,32 @@ Response data:
     "created_at": "2026-06-06T00:00:00Z"
   }
 ]
+```
+
+## AI Proxy APIs
+
+### `GET /api/v1/ai/model-info`
+
+Yêu cầu staff hoặc admin.
+
+Backend gọi AI service `/api/v1/model-info` và trả lại thông tin model cho frontend. Nếu AI service không phản hồi, backend trả fallback an toàn với `model_loaded: false`.
+
+Response:
+
+```json
+{
+  "success": true,
+  "message": "AI model info retrieved",
+  "data": {
+    "model_version": "tfidf-logreg-v1",
+    "algorithm": "TF-IDF + Logistic Regression",
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "categories": [
+      "account_system",
+      "network"
+    ],
+    "model_loaded": true
+  }
+}
 ```

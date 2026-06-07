@@ -23,6 +23,26 @@ class AIServiceClient:
             logger.warning("AI service health check failed: %s", exc)
             return False
 
+    def get_model_info(self) -> dict[str, Any]:
+        try:
+            with httpx.Client(timeout=self.timeout_seconds) as client:
+                response = client.get(f"{self.base_url}/api/v1/model-info")
+                response.raise_for_status()
+                data = response.json()
+                if isinstance(data, dict) and "data" in data and "algorithm" not in data:
+                    return data["data"]
+                return data
+        except httpx.HTTPError as exc:
+            logger.warning("AI model info request failed: %s", exc)
+            return {
+                "model_version": None,
+                "algorithm": "unavailable",
+                "accuracy": None,
+                "macro_f1": None,
+                "categories": [],
+                "model_loaded": False,
+            }
+
     def analyze_ticket(
         self,
         ticket_id: str,

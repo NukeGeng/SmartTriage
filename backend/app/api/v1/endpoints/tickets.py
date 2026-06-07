@@ -1,9 +1,12 @@
+import csv
+from io import StringIO
 from uuid import UUID
 
 from fastapi import APIRouter, Depends, Query, status
+from fastapi.responses import StreamingResponse
 from sqlalchemy.orm import Session
 
-from app.core.security import get_current_user, require_staff_or_admin
+from app.core.security import get_current_user, require_admin, require_staff_or_admin
 from app.db.session import get_db
 from app.models.ticket import TicketStatus
 from app.models.user import User
@@ -54,6 +57,27 @@ def list_tickets(
         page_size=page_size,
     )
     return ApiResponse(success=True, message="Tickets retrieved", data=tickets)
+
+
+@router.get("/export-training-data")
+def export_training_data(
+    db: Session = Depends(get_db),
+    current_user: User = Depends(require_admin),
+    service: TicketService = Depends(get_ticket_service),
+) -> StreamingResponse:
+    output = StringIO()
+    writer = csv.DictWriter(
+        output,
+        fieldnames=["title", "description", "category", "priority", "source"],
+    )
+    writer.writeheader()
+    writer.writerows(service.export_training_data(db))
+    output.seek(0)
+    return StreamingResponse(
+        iter([output.getvalue()]),
+        media_type="text/csv",
+        headers={"Content-Disposition": "attachment; filename=smarttriage_training_data.csv"},
+    )
 
 
 @router.get("/{ticket_id}", response_model=ApiResponse)

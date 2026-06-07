@@ -26,6 +26,9 @@ SmartTriage giải quyết bài toán này bằng workflow ticket kết hợp AI
 - Gợi ý phòng ban xử lý.
 - Gợi ý hành động ban đầu cho staff/admin.
 - Staff/admin cập nhật status, department, manual category và manual priority.
+- Admin export training data từ nhãn AI và nhãn chỉnh thủ công để cải thiện model.
+- Admin/staff xem Model Info để giải trình thuật toán, metrics và trạng thái model.
+- Dashboard và admin ticket management tự refresh định kỳ để tạo cảm giác realtime.
 - Dashboard thống kê ticket theo category, priority, status.
 - Docker Compose cho local infrastructure.
 - Test suite cho backend, AI service và frontend build/lint.

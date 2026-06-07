@@ -138,6 +138,25 @@ class TicketService:
             raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Ticket not found")
         return TicketDetailResponse.model_validate(refreshed)
 
+    def export_training_data(self, db: Session) -> list[dict[str, Any]]:
+        tickets = TicketRepository.list_for_training_export(db)
+        rows: list[dict[str, Any]] = []
+        for ticket in tickets:
+            analysis = ticket.analysis
+            category = ticket.manual_category or (analysis.predicted_category if analysis else "")
+            priority = ticket.manual_priority or (analysis.priority if analysis else "")
+            source = "manual" if ticket.manual_category or ticket.manual_priority else "predicted"
+            rows.append(
+                {
+                    "title": ticket.title,
+                    "description": ticket.description,
+                    "category": category,
+                    "priority": priority,
+                    "source": source,
+                }
+            )
+        return rows
+
     def _get_visible_ticket(self, db: Session, ticket_id: UUID, current_user: User) -> Ticket:
         ticket = TicketRepository.get_by_id(db, ticket_id)
         if ticket is None:
