@@ -395,6 +395,102 @@ Response data:
 ]
 ```
 
+## Incident Group APIs
+
+Các endpoint incident group yêu cầu staff hoặc admin.
+
+### `GET /api/v1/admin/incident-groups`
+
+Trả danh sách nhóm sự cố/phản ánh cùng chủ đề.
+
+Response data:
+
+```json
+[
+  {
+    "id": "uuid",
+    "title": "Sự cố Wifi khu B",
+    "description": "Nhiều sinh viên phản ánh wifi khu B yếu.",
+    "category": "network",
+    "priority": "medium",
+    "suggested_department": "Phòng CNTT",
+    "status": "open",
+    "related_count": 3,
+    "created_at": "2026-06-07T00:00:00Z",
+    "updated_at": "2026-06-07T00:00:00Z"
+  }
+]
+```
+
+### `GET /api/v1/admin/incident-groups/{id}`
+
+Trả chi tiết nhóm sự cố kèm danh sách ticket liên quan và similarity score.
+
+### `POST /api/v1/admin/incident-groups`
+
+Tạo nhóm thủ công.
+
+```json
+{
+  "title": "Sự cố Wifi khu B",
+  "description": "Nhiều phản ánh cùng chủ đề mạng khu B.",
+  "category": "network",
+  "priority": "medium",
+  "suggested_department": "Phòng CNTT",
+  "ticket_ids": ["uuid-1", "uuid-2"]
+}
+```
+
+### `POST /api/v1/admin/incident-groups/from-suggestion`
+
+Tạo nhóm từ gợi ý AI/duplicate/incident suggestion.
+
+```json
+{
+  "title": "Sự cố Wifi khu B",
+  "category": "network",
+  "priority": "high",
+  "suggested_department": "Phòng CNTT",
+  "ticket_ids": ["uuid-1", "uuid-2"],
+  "similarity_scores": {
+    "uuid-1": 1.0,
+    "uuid-2": 0.82
+  }
+}
+```
+
+### `PATCH /api/v1/admin/incident-groups/{id}/status`
+
+```json
+{
+  "status": "in_progress"
+}
+```
+
+Status hợp lệ:
+
+```txt
+open
+in_progress
+resolved
+closed
+```
+
+### `POST /api/v1/admin/incident-groups/{id}/tickets/{ticket_id}`
+
+Thêm ticket vào nhóm.
+
+```json
+{
+  "similarity_score": 0.76,
+  "reason": "Cùng phản ánh wifi khu B."
+}
+```
+
+### `DELETE /api/v1/admin/incident-groups/{id}/tickets/{ticket_id}`
+
+Gỡ ticket khỏi nhóm.
+
 ## AI Proxy APIs
 
 ### `GET /api/v1/ai/model-info`

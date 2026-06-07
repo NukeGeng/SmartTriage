@@ -156,6 +156,9 @@ run(`${backendPython} scripts/seed_users.py`, pathFromRoot("backend"));
 log("Seeding backend demo tickets");
 run(`${backendPython} scripts/seed_tickets.py`, pathFromRoot("backend"));
 
+log("Seeding backend demo incident groups");
+run(`${backendPython} scripts/seed_incident_groups.py`, pathFromRoot("backend"));
+
 ensureAiArtifacts(aiPython);
 
 console.log("\nSmartTriage is starting:");

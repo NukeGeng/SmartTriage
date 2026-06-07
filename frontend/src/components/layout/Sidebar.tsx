@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BarChart3, Brain, ClipboardList, FilePlus2, ShieldCheck } from "lucide-react";
+import { BarChart3, Brain, ClipboardList, FilePlus2, GitMerge, ShieldCheck } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import type { User } from "@/types/auth";
@@ -30,6 +30,12 @@ const navItems = [
     href: "/admin/tickets",
     label: "Quản lý",
     icon: ShieldCheck,
+    roles: ["staff", "admin"],
+  },
+  {
+    href: "/admin/incidents",
+    label: "Incident Groups",
+    icon: GitMerge,
     roles: ["staff", "admin"],
   },
   {

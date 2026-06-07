@@ -166,6 +166,53 @@ Response:
 
 Nếu chưa có model artifacts, endpoint vẫn trả an toàn với `model_loaded: false`.
 
+## Suggest Incident Group
+
+### `POST /api/v1/suggest-incident-group`
+
+Endpoint gợi ý nhiều phản ánh cùng chủ đề/sự cố. Khác với duplicate detection, chức năng này hướng tới nhóm phản ánh liên quan để xử lý tập trung.
+
+Request:
+
+```json
+{
+  "new_ticket": {
+    "id": "TCK-001",
+    "title": "Wifi phòng B305 rất yếu",
+    "description": "Em không vào được mạng ở phòng B305.",
+    "category": "network"
+  },
+  "existing_tickets": [
+    {
+      "id": "TCK-002",
+      "title": "Không vào được mạng khu B tầng 3",
+      "description": "Wifi khu B tầng 3 bị lỗi liên tục.",
+      "category": "network"
+    }
+  ]
+}
+```
+
+Response data:
+
+```json
+{
+  "has_incident_suggestion": true,
+  "suggested_group_title": "Sự cố Wifi / mạng đang được phản ánh",
+  "suggested_category": "network",
+  "average_similarity": 0.76,
+  "related_tickets": [
+    {
+      "ticket_id": "TCK-002",
+      "title": "Không vào được mạng khu B tầng 3",
+      "similarity": 0.82,
+      "reason": "Cùng chủ đề theo TF-IDF cosine similarity và category gần nhau."
+    }
+  ],
+  "recommendation": "Nên gom các phản ánh này thành một nhóm sự cố để xử lý tập trung."
+}
+```
+
 ## Luồng Sử Dụng Trong Hệ Thống
 
 Frontend không gọi trực tiếp AI service. Luồng đúng:
