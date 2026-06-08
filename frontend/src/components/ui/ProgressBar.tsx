@@ -34,13 +34,13 @@ export function ProgressBar({
   return (
     <div className={cn("space-y-2", className)}>
       {(label || showValue) ? (
-        <div className="flex items-center justify-between gap-3 text-xs font-bold text-command-muted">
+        <div className="flex items-center justify-between gap-3 text-xs font-bold text-neutral-500">
           <span>{label}</span>
           {showValue ? <span>{percent}%</span> : null}
         </div>
       ) : null}
       <div
-        className="h-2 overflow-hidden rounded-pill bg-white/10"
+        className="h-2 overflow-hidden rounded-pill bg-neutral-100"
         role="progressbar"
         aria-label={label}
         aria-valuenow={normalized}

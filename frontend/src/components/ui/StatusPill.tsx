@@ -13,12 +13,12 @@ interface StatusPillProps {
 }
 
 const toneClasses: Record<StatusTone, string> = {
-  neutral: "border-white/[0.12] bg-white/[0.06] text-command-muted",
-  accent: "border-brand-500/30 bg-brand-500/15 text-brand-100",
-  info: "border-cyan-400/30 bg-cyan-500/15 text-cyan-100",
-  success: "border-emerald-400/30 bg-emerald-500/15 text-emerald-100",
-  warning: "border-amber-400/30 bg-amber-500/15 text-amber-100",
-  danger: "border-rose-400/30 bg-rose-500/15 text-rose-100",
+  neutral: "border-line bg-white text-neutral-600",
+  accent: "border-brand-100 bg-brand-50 text-brand-700",
+  info: "border-cyan-100 bg-cyan-50 text-cyan-700",
+  success: "border-emerald-100 bg-emerald-50 text-emerald-700",
+  warning: "border-amber-100 bg-amber-50 text-amber-700",
+  danger: "border-rose-100 bg-rose-50 text-rose-700",
 };
 
 export function StatusPill({ label, tone = "neutral", icon, className }: StatusPillProps) {

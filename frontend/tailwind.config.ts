@@ -37,7 +37,6 @@ const config: Config = {
       boxShadow: {
         soft: "var(--shadow-soft)",
         command: "var(--shadow-command)",
-        glow: "var(--shadow-glow)",
       },
       borderRadius: {
         sm: "var(--radius-sm)",

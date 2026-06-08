@@ -31,7 +31,7 @@ export function Button({
     <button
       type={type}
       className={cn(
-        "inline-flex min-h-10 items-center justify-center gap-2 rounded-md border px-4 py-2 text-sm font-bold transition duration-200 ease-out-expo hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-brand-500/40 disabled:cursor-not-allowed disabled:translate-y-0 disabled:opacity-55",
+        "inline-flex min-h-10 items-center justify-center gap-2 rounded-md border px-4 py-2 text-sm font-bold transition duration-150 ease-smooth focus-visible:ring-2 focus-visible:ring-brand-500/30 disabled:cursor-not-allowed disabled:opacity-55",
         variants[variant],
         fullWidth && "w-full",
         className,
