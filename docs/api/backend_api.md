@@ -191,11 +191,30 @@ Response `201`:
       "category_confidence": 0.87,
       "priority": "high",
       "priority_score": 82,
+      "priority_breakdown": {
+        "total_score": 82,
+        "level": "high",
+        "items": [
+          {
+            "name": "Nhóm vấn đề",
+            "score": 25,
+            "reason": "Lỗi tài khoản/hệ thống ảnh hưởng trực tiếp đến khả năng sử dụng dịch vụ.",
+            "matched_terms": ["account_system"]
+          }
+        ]
+      },
       "suggested_department": "Phòng CNTT",
       "duplicate_candidates": [],
       "suggested_actions": [
         "Kiểm tra trạng thái tài khoản sinh viên"
       ],
+      "explanation": {
+        "summary": "Phản ánh được phân loại là Tài khoản / Hệ thống, mức ưu tiên high với điểm 82/100 và được đề xuất chuyển đến Phòng CNTT.",
+        "category_reason": "Nội dung chứa tín hiệu đăng nhập và hệ thống thi online.",
+        "priority_reason": "Mức ưu tiên cao vì có ngữ cảnh thi và deadline gần.",
+        "department_reason": "Phòng CNTT là đơn vị phù hợp để xử lý lỗi tài khoản và hệ thống.",
+        "detected_signals": ["không đăng nhập được", "sáng mai", "thi online"]
+      },
       "model_version": "tfidf-logreg-v1"
     }
   }
@@ -257,7 +276,10 @@ Visibility:
 
 Yêu cầu auth header.
 
-Response trả ticket detail kèm `analysis`.
+Response trả ticket detail kèm `analysis`. Analysis hiện bao gồm:
+
+- `explanation`: giải thích rule-based cho category, priority, department và detected signals.
+- `priority_breakdown`: từng phần điểm ưu tiên để người xử lý hiểu vì sao ticket được xếp `low`, `medium` hoặc `high`.
 
 ### `GET /api/v1/tickets/export-training-data`
 
@@ -394,6 +416,102 @@ Response data:
   }
 ]
 ```
+
+## Incident Group APIs
+
+Các endpoint incident group yêu cầu staff hoặc admin.
+
+### `GET /api/v1/admin/incident-groups`
+
+Trả danh sách nhóm sự cố/phản ánh cùng chủ đề.
+
+Response data:
+
+```json
+[
+  {
+    "id": "uuid",
+    "title": "Sự cố Wifi khu B",
+    "description": "Nhiều sinh viên phản ánh wifi khu B yếu.",
+    "category": "network",
+    "priority": "medium",
+    "suggested_department": "Phòng CNTT",
+    "status": "open",
+    "related_count": 3,
+    "created_at": "2026-06-07T00:00:00Z",
+    "updated_at": "2026-06-07T00:00:00Z"
+  }
+]
+```
+
+### `GET /api/v1/admin/incident-groups/{id}`
+
+Trả chi tiết nhóm sự cố kèm danh sách ticket liên quan và similarity score.
+
+### `POST /api/v1/admin/incident-groups`
+
+Tạo nhóm thủ công.
+
+```json
+{
+  "title": "Sự cố Wifi khu B",
+  "description": "Nhiều phản ánh cùng chủ đề mạng khu B.",
+  "category": "network",
+  "priority": "medium",
+  "suggested_department": "Phòng CNTT",
+  "ticket_ids": ["uuid-1", "uuid-2"]
+}
+```
+
+### `POST /api/v1/admin/incident-groups/from-suggestion`
+
+Tạo nhóm từ gợi ý AI/duplicate/incident suggestion.
+
+```json
+{
+  "title": "Sự cố Wifi khu B",
+  "category": "network",
+  "priority": "high",
+  "suggested_department": "Phòng CNTT",
+  "ticket_ids": ["uuid-1", "uuid-2"],
+  "similarity_scores": {
+    "uuid-1": 1.0,
+    "uuid-2": 0.82
+  }
+}
+```
+
+### `PATCH /api/v1/admin/incident-groups/{id}/status`
+
+```json
+{
+  "status": "in_progress"
+}
+```
+
+Status hợp lệ:
+
+```txt
+open
+in_progress
+resolved
+closed
+```
+
+### `POST /api/v1/admin/incident-groups/{id}/tickets/{ticket_id}`
+
+Thêm ticket vào nhóm.
+
+```json
+{
+  "similarity_score": 0.76,
+  "reason": "Cùng phản ánh wifi khu B."
+}
+```
+
+### `DELETE /api/v1/admin/incident-groups/{id}/tickets/{ticket_id}`
+
+Gỡ ticket khỏi nhóm.
 
 ## AI Proxy APIs
 

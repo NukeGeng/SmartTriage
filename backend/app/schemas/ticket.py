@@ -23,6 +23,27 @@ class TicketStatusUpdateRequest(BaseModel):
     status: TicketStatus
 
 
+class AnalysisExplanation(BaseModel):
+    summary: str
+    category_reason: str
+    priority_reason: str
+    department_reason: str
+    detected_signals: list[str]
+
+
+class PriorityBreakdownItem(BaseModel):
+    name: str
+    score: int
+    reason: str
+    matched_terms: list[str] = Field(default_factory=list)
+
+
+class PriorityBreakdown(BaseModel):
+    total_score: int
+    level: str
+    items: list[PriorityBreakdownItem]
+
+
 class TicketAnalysisResponse(BaseModel):
     id: uuid.UUID
     ticket_id: uuid.UUID
@@ -34,6 +55,9 @@ class TicketAnalysisResponse(BaseModel):
     suggested_department: str
     duplicate_candidates: list[dict[str, Any]]
     suggested_actions: list[str]
+    explanation: AnalysisExplanation | None = None
+    priority_breakdown: PriorityBreakdown | None = None
+    analysis_metadata: dict[str, Any] = Field(default_factory=dict)
     model_version: str
     created_at: datetime
 

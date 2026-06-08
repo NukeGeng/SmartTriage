@@ -5,12 +5,14 @@ def test_priority_low() -> None:
     result = score_priority("Góp ý giao diện", "Em đề xuất cải thiện màu nút.", "feedback")
 
     assert result["priority"] == "low"
+    assert result["priority_breakdown"]["level"] == "low"
 
 
 def test_priority_medium() -> None:
     result = score_priority("Wifi phòng B305 yếu", "Nhiều sinh viên không truy cập được tài liệu.", "network")
 
     assert result["priority"] == "medium"
+    assert result["priority_breakdown"]["total_score"] == result["priority_score"]
 
 
 def test_priority_high() -> None:
@@ -22,4 +24,6 @@ def test_priority_high() -> None:
 
     assert result["priority"] == "high"
     assert result["priority_score"] >= 70
+    assert "sáng mai" in result["detected_signals"]
+    assert result["priority_breakdown"]["items"]
     assert result["reasons"]

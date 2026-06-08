@@ -104,23 +104,58 @@ def get_existing_ticket(db, title: str, created_by_id) -> Ticket | None:
     return db.get(Ticket, ticket_id)
 
 
+def build_analysis_metadata(row: dict[str, str]) -> dict:
+    category = row["category"].strip()
+    priority = row["priority"].strip()
+    department = DEPARTMENT_BY_CATEGORY.get(category, "Bộ phận tiếp nhận phản ánh")
+    priority_score = PRIORITY_SCORE.get(priority, 50)
+    category_label = row["category_label"].strip()
+    return {
+        "explanation": {
+            "summary": (
+                f"Phản ánh mẫu được phân loại là {category_label}, mức ưu tiên {priority} "
+                f"và được đề xuất chuyển đến {department}."
+            ),
+            "category_reason": f"Dữ liệu demo đã gắn nhãn phản ánh này vào nhóm {category_label}.",
+            "priority_reason": f"Điểm ưu tiên demo là {priority_score}/100 dựa trên nhãn mẫu.",
+            "department_reason": f"{department} là đơn vị xử lý phù hợp với nhóm {category_label}.",
+            "detected_signals": [category],
+        },
+        "priority_breakdown": {
+            "total_score": priority_score,
+            "level": priority,
+            "items": [
+                {
+                    "name": "Nhãn demo",
+                    "score": priority_score,
+                    "reason": "Điểm ưu tiên được seed để phục vụ demo dữ liệu mẫu.",
+                    "matched_terms": [category],
+                }
+            ],
+        },
+    }
+
+
 def add_analysis(db, ticket: Ticket, row: dict[str, str]) -> None:
     category = row["category"].strip()
     priority = row["priority"].strip()
     department = DEPARTMENT_BY_CATEGORY.get(category, "Bộ phận tiếp nhận phản ánh")
+    priority_score = PRIORITY_SCORE.get(priority, 50)
+    category_label = row["category_label"].strip()
 
     ticket.assigned_department = ticket.assigned_department or department
     db.add(
         TicketAnalysis(
             ticket_id=ticket.id,
             predicted_category=category,
-            category_label=row["category_label"].strip(),
+            category_label=category_label,
             category_confidence=0.86,
             priority=priority,
-            priority_score=PRIORITY_SCORE.get(priority, 50),
+            priority_score=priority_score,
             suggested_department=department,
             duplicate_candidates=[],
             suggested_actions=ACTION_BY_CATEGORY.get(category, ACTION_BY_CATEGORY["other"]),
+            analysis_metadata=build_analysis_metadata(row),
             model_version="seed-v1.0.0",
         )
     )
@@ -150,6 +185,9 @@ def main() -> None:
                 if existing_ticket is not None:
                     if existing_ticket.analysis is None:
                         add_analysis(db, existing_ticket, row)
+                        updated += 1
+                    elif not existing_ticket.analysis.analysis_metadata:
+                        existing_ticket.analysis.analysis_metadata = build_analysis_metadata(row)
                         updated += 1
                     else:
                         skipped += 1

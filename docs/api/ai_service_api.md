@@ -84,8 +84,21 @@ Response:
     "category": "account_system",
     "category_label": "Tài khoản / Hệ thống",
     "confidence": 0.87,
+    "category_confidence": 0.87,
     "priority": "high",
     "priority_score": 82,
+    "priority_breakdown": {
+      "total_score": 82,
+      "level": "high",
+      "items": [
+        {
+          "name": "Nhóm vấn đề",
+          "score": 25,
+          "reason": "Lỗi tài khoản/hệ thống ảnh hưởng trực tiếp đến khả năng sử dụng dịch vụ.",
+          "matched_terms": ["account_system"]
+        }
+      ]
+    },
     "suggested_department": "Phòng CNTT",
     "duplicate_candidates": [
       {
@@ -99,6 +112,13 @@ Response:
       "Reset mật khẩu nếu thông tin xác thực hợp lệ",
       "Xác minh lịch thi để ưu tiên xử lý"
     ],
+    "explanation": {
+      "summary": "Phản ánh được phân loại là Tài khoản / Hệ thống, mức ưu tiên high với điểm 82/100 và được đề xuất chuyển đến Phòng CNTT.",
+      "category_reason": "Nội dung chứa tín hiệu đăng nhập và hệ thống thi online.",
+      "priority_reason": "Mức ưu tiên cao vì có ngữ cảnh thi và deadline gần.",
+      "department_reason": "Phòng CNTT là đơn vị phù hợp để xử lý lỗi tài khoản và hệ thống.",
+      "detected_signals": ["không đăng nhập được", "sáng mai", "thi online"]
+    },
     "model_version": "tfidf-logreg-v1"
   }
 }
@@ -111,11 +131,14 @@ Response:
 | `category` | Category machine-readable |
 | `category_label` | Label tiếng Việt |
 | `confidence` | Độ tin cậy classifier |
+| `category_confidence` | Alias rõ nghĩa của `confidence` cho frontend/backend |
 | `priority` | `low`, `medium`, `high` |
 | `priority_score` | Điểm ưu tiên 0-100 |
+| `priority_breakdown` | Giải thích từng phần điểm ưu tiên |
 | `suggested_department` | Phòng ban gợi ý |
 | `duplicate_candidates` | Ticket tương tự theo cosine similarity |
 | `suggested_actions` | Gợi ý xử lý ban đầu |
+| `explanation` | Giải thích rule-based cho category, priority, department và detected signals |
 | `model_version` | Version model đang dùng |
 
 Curl test:
@@ -165,6 +188,53 @@ Response:
 ```
 
 Nếu chưa có model artifacts, endpoint vẫn trả an toàn với `model_loaded: false`.
+
+## Suggest Incident Group
+
+### `POST /api/v1/suggest-incident-group`
+
+Endpoint gợi ý nhiều phản ánh cùng chủ đề/sự cố. Khác với duplicate detection, chức năng này hướng tới nhóm phản ánh liên quan để xử lý tập trung.
+
+Request:
+
+```json
+{
+  "new_ticket": {
+    "id": "TCK-001",
+    "title": "Wifi phòng B305 rất yếu",
+    "description": "Em không vào được mạng ở phòng B305.",
+    "category": "network"
+  },
+  "existing_tickets": [
+    {
+      "id": "TCK-002",
+      "title": "Không vào được mạng khu B tầng 3",
+      "description": "Wifi khu B tầng 3 bị lỗi liên tục.",
+      "category": "network"
+    }
+  ]
+}
+```
+
+Response data:
+
+```json
+{
+  "has_incident_suggestion": true,
+  "suggested_group_title": "Sự cố Wifi / mạng đang được phản ánh",
+  "suggested_category": "network",
+  "average_similarity": 0.76,
+  "related_tickets": [
+    {
+      "ticket_id": "TCK-002",
+      "title": "Không vào được mạng khu B tầng 3",
+      "similarity": 0.82,
+      "reason": "Cùng chủ đề theo TF-IDF cosine similarity và category gần nhau."
+    }
+  ],
+  "recommendation": "Nên gom các phản ánh này thành một nhóm sự cố để xử lý tập trung."
+}
+```
 
 ## Luồng Sử Dụng Trong Hệ Thống
 

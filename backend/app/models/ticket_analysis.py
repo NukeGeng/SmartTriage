@@ -40,6 +40,11 @@ class TicketAnalysis(Base):
         nullable=False,
         default=list,
     )
+    analysis_metadata: Mapped[dict[str, Any]] = mapped_column(
+        JSON().with_variant(JSONB, "postgresql"),
+        nullable=False,
+        default=dict,
+    )
     model_version: Mapped[str] = mapped_column(String(100), nullable=False)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True),
@@ -48,3 +53,11 @@ class TicketAnalysis(Base):
     )
 
     ticket: Mapped["Ticket"] = relationship("Ticket", back_populates="analysis")
+
+    @property
+    def explanation(self) -> dict[str, Any] | None:
+        return self.analysis_metadata.get("explanation")
+
+    @property
+    def priority_breakdown(self) -> dict[str, Any] | None:
+        return self.analysis_metadata.get("priority_breakdown")
