@@ -417,39 +417,101 @@ Response data:
 ]
 ```
 
-## Admin Triage APIs
+## Incident Group APIs
 
-### `GET /api/v1/admin/triage/overview`
+Các endpoint incident group yêu cầu staff hoặc admin.
 
-Yêu cầu staff hoặc admin.
+### `GET /api/v1/admin/incident-groups`
 
-Mục tiêu: trả dữ liệu cho màn `Smart Triage Cockpit`, giúp người xử lý biết ticket nào cần ưu tiên, ticket nào AI chưa chắc, ticket nào có thể thuộc cùng một nhóm sự cố và ticket nào nên điều phối lại phòng ban.
+Trả danh sách nhóm sự cố/phản ánh cùng chủ đề.
 
 Response data:
 
 ```json
+[
+  {
+    "id": "uuid",
+    "title": "Sự cố Wifi khu B",
+    "description": "Nhiều sinh viên phản ánh wifi khu B yếu.",
+    "category": "network",
+    "priority": "medium",
+    "suggested_department": "Phòng CNTT",
+    "status": "open",
+    "related_count": 3,
+    "created_at": "2026-06-07T00:00:00Z",
+    "updated_at": "2026-06-07T00:00:00Z"
+  }
+]
+```
+
+### `GET /api/v1/admin/incident-groups/{id}`
+
+Trả chi tiết nhóm sự cố kèm danh sách ticket liên quan và similarity score.
+
+### `POST /api/v1/admin/incident-groups`
+
+Tạo nhóm thủ công.
+
+```json
 {
-  "summary": {
-    "total_open": 24,
-    "high_priority": 6,
-    "low_confidence": 3,
-    "possible_incidents": 2
-  },
-  "critical_queue": [],
-  "low_confidence_cases": [],
-  "possible_incident_groups": [],
-  "routing_recommendations": [],
-  "recent_tickets": []
+  "title": "Sự cố Wifi khu B",
+  "description": "Nhiều phản ánh cùng chủ đề mạng khu B.",
+  "category": "network",
+  "priority": "medium",
+  "suggested_department": "Phòng CNTT",
+  "ticket_ids": ["uuid-1", "uuid-2"]
 }
 ```
 
-Các nhóm dữ liệu:
+### `POST /api/v1/admin/incident-groups/from-suggestion`
 
-- `critical_queue`: ticket đang mở có priority `high` hoặc `priority_score >= 70`.
-- `low_confidence_cases`: ticket có `category_confidence < 0.6`.
-- `possible_incident_groups`: gợi ý nhóm phản ánh cùng chủ đề từ duplicate candidates hoặc cụm category đang mở.
-- `routing_recommendations`: ticket có phòng ban AI đề xuất nhưng chưa được gán đúng.
-- `recent_tickets`: ticket mới nhất trong phạm vi nhìn thấy của admin/staff.
+Tạo nhóm từ gợi ý AI/duplicate/incident suggestion.
+
+```json
+{
+  "title": "Sự cố Wifi khu B",
+  "category": "network",
+  "priority": "high",
+  "suggested_department": "Phòng CNTT",
+  "ticket_ids": ["uuid-1", "uuid-2"],
+  "similarity_scores": {
+    "uuid-1": 1.0,
+    "uuid-2": 0.82
+  }
+}
+```
+
+### `PATCH /api/v1/admin/incident-groups/{id}/status`
+
+```json
+{
+  "status": "in_progress"
+}
+```
+
+Status hợp lệ:
+
+```txt
+open
+in_progress
+resolved
+closed
+```
+
+### `POST /api/v1/admin/incident-groups/{id}/tickets/{ticket_id}`
+
+Thêm ticket vào nhóm.
+
+```json
+{
+  "similarity_score": 0.76,
+  "reason": "Cùng phản ánh wifi khu B."
+}
+```
+
+### `DELETE /api/v1/admin/incident-groups/{id}/tickets/{ticket_id}`
+
+Gỡ ticket khỏi nhóm.
 
 ## AI Proxy APIs
 
