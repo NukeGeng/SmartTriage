@@ -1,39 +1,39 @@
-/* [AESTHETIC: technical triage command center] | MOTION: 6/10 | VARIANCE: 7/10 */
+/* [AESTHETIC: clean white academic operations] | MOTION: 5/10 | VARIANCE: 5/10 */
 :root {
-  --color-bg: 218 38% 7%;
-  --color-bg-soft: 218 34% 10%;
-  --color-surface: 218 30% 13%;
-  --color-surface-elevated: 216 25% 17%;
-  --color-surface-glass: 216 24% 18%;
-  --color-text-primary: 210 40% 96%;
-  --color-text-secondary: 214 18% 72%;
-  --color-muted: 215 15% 52%;
-  --color-border: 210 40% 96% / 0.12;
+  --color-bg: 210 33% 98%;
+  --color-bg-soft: 210 28% 96%;
+  --color-surface: 0 0% 100%;
+  --color-surface-elevated: 210 25% 99%;
+  --color-surface-glass: 0 0% 100%;
+  --color-text-primary: 222 32% 12%;
+  --color-text-secondary: 216 15% 38%;
+  --color-muted: 215 13% 56%;
+  --color-border: 214 24% 86%;
 
-  --color-accent: 174 84% 46%;
-  --color-accent-strong: 178 88% 36%;
-  --color-accent-soft: 174 78% 20%;
-  --color-warning: 38 92% 58%;
-  --color-danger: 8 84% 60%;
-  --color-success: 146 68% 44%;
-  --color-info: 194 82% 50%;
+  --color-accent: 174 68% 33%;
+  --color-accent-strong: 174 72% 25%;
+  --color-accent-soft: 174 58% 94%;
+  --color-warning: 38 88% 48%;
+  --color-danger: 6 74% 52%;
+  --color-success: 150 62% 36%;
+  --color-info: 205 72% 42%;
 
-  --color-priority-low: 146 68% 44%;
-  --color-priority-medium: 38 92% 58%;
-  --color-priority-high: 8 84% 60%;
-  --color-confidence-low: 32 92% 55%;
-  --color-confidence-medium: 194 82% 50%;
-  --color-confidence-high: 146 68% 44%;
+  --color-priority-low: 150 62% 36%;
+  --color-priority-medium: 38 88% 48%;
+  --color-priority-high: 6 74% 52%;
+  --color-confidence-low: 38 88% 48%;
+  --color-confidence-medium: 205 72% 42%;
+  --color-confidence-high: 150 62% 36%;
 
-  --color-canvas: 210 24% 96%;
+  --color-canvas: 210 33% 98%;
   --color-card: 0 0% 100%;
-  --color-ink: 218 26% 12%;
-  --color-line: 214 25% 84%;
-  --color-brand-50: 165 74% 95%;
-  --color-brand-100: 166 70% 88%;
-  --color-brand-500: 172 73% 42%;
-  --color-brand-600: 174 84% 34%;
-  --color-brand-700: 176 88% 25%;
+  --color-ink: 222 32% 12%;
+  --color-line: 214 24% 86%;
+  --color-brand-50: 174 58% 96%;
+  --color-brand-100: 174 48% 90%;
+  --color-brand-500: 174 68% 38%;
+  --color-brand-600: 174 72% 30%;
+  --color-brand-700: 174 76% 23%;
 
   --font-display: "Segoe UI Variable Display", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Segoe UI Variable Text", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
@@ -60,14 +60,13 @@
   --space-16: 4rem;
 
   --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
   --radius-pill: 9999px;
 
-  --shadow-soft: 0 18px 42px hsl(218 38% 5% / 0.12);
-  --shadow-command: 0 24px 60px hsl(218 38% 4% / 0.28);
-  --shadow-glow: 0 0 0 1px hsl(var(--color-accent) / 0.24), 0 18px 40px hsl(var(--color-accent) / 0.12);
+  --shadow-soft: 0 10px 28px hsl(222 32% 12% / 0.06);
+  --shadow-command: 0 16px 36px hsl(222 32% 12% / 0.08);
 
   --z-base: 0;
   --z-sticky: 20;
@@ -84,21 +83,11 @@
 @keyframes triage-fade-up {
   from {
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes triage-soft-pulse {
-  0%,
-  100% {
-    box-shadow: 0 0 0 0 hsl(var(--color-accent) / 0.2);
-  }
-  50% {
-    box-shadow: 0 0 0 8px hsl(var(--color-accent) / 0);
   }
 }
 
@@ -117,11 +106,11 @@
 }
 
 .triage-enter {
-  animation: triage-fade-up 520ms var(--ease-out-expo) both;
+  animation: triage-fade-up 300ms var(--ease-out-expo) both;
 }
 
 .triage-scrollbar {
-  scrollbar-color: hsl(var(--color-muted) / 0.55) transparent;
+  scrollbar-color: hsl(var(--color-muted) / 0.45) transparent;
   scrollbar-width: thin;
 }
 

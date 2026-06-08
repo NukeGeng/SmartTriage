@@ -146,6 +146,6 @@ export function getNavigationContext(pathname: string, role: UserRole) {
   const item = getVisibleNavigation(role).find((entry) => isNavigationItemActive(entry, pathname));
   return {
     label: item?.label ?? "SmartTriage Console",
-    context: item?.context ?? "AI-assisted triage command center cho phản ánh sinh viên.",
+    context: item?.context ?? "AI-assisted triage console cho phản ánh sinh viên.",
   };
 }
