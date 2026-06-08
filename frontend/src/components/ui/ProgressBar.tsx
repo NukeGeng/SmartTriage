@@ -40,7 +40,7 @@ export function ProgressBar({
         </div>
       ) : null}
       <div
-        className="h-2 overflow-hidden rounded-pill bg-neutral-100"
+        className="h-2 overflow-hidden rounded-sm bg-neutral-100"
         role="progressbar"
         aria-label={label}
         aria-valuenow={normalized}
@@ -48,7 +48,7 @@ export function ProgressBar({
         aria-valuemax={max}
       >
         <div
-          className={cn("h-full origin-left rounded-pill animate-[triage-progress_700ms_var(--ease-out-expo)_both]", toneClasses[tone])}
+          className={cn("h-full origin-left rounded-sm animate-[triage-progress_700ms_var(--ease-out-expo)_both]", toneClasses[tone])}
           style={{ width: `${percent}%` }}
         />
       </div>

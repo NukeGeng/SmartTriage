@@ -18,16 +18,16 @@ export function Toast({
   return (
     <div
       className={cn(
-        "fixed right-4 top-4 z-50 flex max-w-sm items-start gap-3 rounded-lg border border-brand-100 bg-white px-4 py-3 text-sm font-medium text-ink shadow-soft",
+        "fixed right-4 top-4 z-50 flex max-w-sm items-start gap-3 rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink shadow-soft",
         className,
       )}
       role="status"
     >
-      <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand-600" aria-hidden="true" />
+      <span className="mt-1 h-2 w-2 shrink-0 rounded-sm bg-brand-600" aria-hidden="true" />
       <span className="min-w-0 flex-1">{message}</span>
       <button
         type="button"
-        className="rounded-md p-1 text-neutral-500 transition hover:bg-panel hover:text-ink"
+        className="rounded-md border border-transparent p-1 text-neutral-500 transition hover:border-line hover:bg-white hover:text-ink"
         onClick={onClose}
         aria-label="Đóng thông báo"
       >

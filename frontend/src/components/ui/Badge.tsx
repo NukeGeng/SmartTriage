@@ -15,12 +15,12 @@ type BadgeProps = {
 };
 
 const toneClasses: Record<BadgeTone, string> = {
-  neutral: "border-neutral-200 bg-neutral-100 text-neutral-700",
-  green: "border-emerald-200 bg-emerald-50 text-emerald-700",
-  cyan: "border-cyan-200 bg-cyan-50 text-cyan-700",
-  amber: "border-amber-200 bg-amber-50 text-amber-800",
-  rose: "border-rose-200 bg-rose-50 text-rose-700",
-  slate: "border-slate-200 bg-slate-50 text-slate-700",
+  neutral: "border-neutral-200 bg-white text-neutral-700",
+  green: "border-neutral-200 bg-white text-emerald-700",
+  cyan: "border-neutral-200 bg-white text-cyan-700",
+  amber: "border-neutral-200 bg-white text-amber-700",
+  rose: "border-neutral-200 bg-white text-rose-700",
+  slate: "border-neutral-200 bg-white text-slate-700",
 };
 
 function getStatusTone(status?: TicketStatus | null): BadgeTone {
@@ -45,7 +45,7 @@ export function Badge({ children, tone = "neutral", priority, status, className 
   return (
     <span
       className={cn(
-        "inline-flex min-h-7 items-center rounded-sm border px-2.5 py-1 text-xs font-bold",
+        "inline-flex min-h-7 items-center rounded-sm border px-2.5 py-1 text-xs font-semibold",
         toneClasses[resolvedTone],
         className,
       )}

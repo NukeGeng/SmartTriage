@@ -27,32 +27,32 @@ export function TopBar({ user }: { user: User | null }) {
   }
 
   return (
-    <header className="sticky top-0 z-sticky border-b border-line bg-white/95 px-4 backdrop-blur-md md:px-6 xl:px-8">
-      <div className="mx-auto flex min-h-20 w-full max-w-[1440px] items-center justify-between gap-4">
+    <header className="sticky top-0 z-sticky border-b border-line bg-white px-5 md:px-6 xl:px-8">
+      <div className="mx-auto flex min-h-16 w-full max-w-[1440px] items-center justify-between gap-4">
         <div className="min-w-0">
-          <p className="text-[11px] font-black uppercase tracking-[0.14em] text-brand-700">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-brand-700">
             SmartTriage Console
           </p>
-          <h1 className="truncate font-display text-xl font-black tracking-tight text-ink md:text-2xl">
+          <h1 className="truncate font-display text-lg font-bold tracking-tight text-ink md:text-xl">
             {context.label}
           </h1>
-          <p className="mt-1 hidden max-w-2xl truncate text-sm font-medium text-neutral-500 md:block">
+          <p className="hidden max-w-2xl truncate text-sm font-normal text-neutral-500 md:block">
             {context.context}
           </p>
         </div>
         <div className="flex shrink-0 items-center gap-3">
-          <div className="hidden items-center gap-2 rounded-md border border-line bg-panel px-3 py-2 md:flex">
-            <UserCircle className="h-5 w-5 text-brand-600" aria-hidden="true" />
+          <div className="hidden items-center gap-2 border-l border-line pl-3 md:flex">
+            <UserCircle className="h-5 w-5 text-neutral-500" aria-hidden="true" />
             <div className="min-w-0">
-              <p className="max-w-44 truncate text-sm font-bold text-ink">
+              <p className="max-w-44 truncate text-sm font-semibold text-ink">
                 {user?.full_name ?? "Người dùng"}
               </p>
-              <p className="text-xs font-semibold text-neutral-500">{roleLabels[role]}</p>
+              <p className="text-xs font-medium text-neutral-500">{roleLabels[role]}</p>
             </div>
           </div>
           <Button
             variant="ghost"
-            className="text-ink hover:bg-panel"
+            className="text-neutral-700 hover:border-line hover:bg-white hover:text-ink"
             icon={<LogOut className="h-4 w-4" aria-hidden="true" />}
             onClick={handleLogout}
           >

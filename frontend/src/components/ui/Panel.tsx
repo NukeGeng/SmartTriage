@@ -13,7 +13,7 @@ interface PanelProps extends HTMLAttributes<HTMLDivElement> {
 const variants: Record<PanelVariant, string> = {
   surface: "border-line bg-white text-ink shadow-soft",
   elevated: "border-line bg-command-elevated text-ink shadow-command",
-  glass: "border-line bg-white/95 text-ink shadow-soft backdrop-blur-md",
+  glass: "border-line bg-white text-ink shadow-soft",
   light: "border-line bg-white text-ink shadow-soft",
 };
 
@@ -26,9 +26,9 @@ export function Panel({
   return (
     <div
       className={cn(
-        "min-w-0 rounded-lg border transition duration-200 ease-smooth",
+        "min-w-0 rounded-lg border transition duration-150 ease-smooth",
         variants[variant],
-        interactive && "hover:-translate-y-0.5 hover:border-brand-100 hover:bg-brand-50/40 hover:shadow-soft",
+        interactive && "hover:border-brand-600/40",
         className,
       )}
       {...props}

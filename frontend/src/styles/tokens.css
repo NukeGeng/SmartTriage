@@ -1,22 +1,22 @@
-/* [AESTHETIC: clean white academic operations] | MOTION: 5/10 | VARIANCE: 5/10 */
+/* [AESTHETIC: restrained white operations] | MOTION: 5/10 | VARIANCE: 4/10 */
 :root {
-  --color-bg: 210 33% 98%;
-  --color-bg-soft: 210 28% 96%;
+  --color-bg: 210 24% 97%;
+  --color-bg-soft: 210 20% 95%;
   --color-surface: 0 0% 100%;
-  --color-surface-elevated: 210 25% 99%;
+  --color-surface-elevated: 0 0% 100%;
   --color-surface-glass: 0 0% 100%;
-  --color-text-primary: 222 32% 12%;
-  --color-text-secondary: 216 15% 38%;
-  --color-muted: 215 13% 56%;
-  --color-border: 214 24% 86%;
+  --color-text-primary: 222 28% 12%;
+  --color-text-secondary: 216 16% 34%;
+  --color-muted: 215 12% 50%;
+  --color-border: 214 20% 82%;
 
-  --color-accent: 174 68% 33%;
-  --color-accent-strong: 174 72% 25%;
-  --color-accent-soft: 174 58% 94%;
-  --color-warning: 38 88% 48%;
-  --color-danger: 6 74% 52%;
-  --color-success: 150 62% 36%;
-  --color-info: 205 72% 42%;
+  --color-accent: 188 62% 28%;
+  --color-accent-strong: 188 68% 20%;
+  --color-accent-soft: 188 34% 94%;
+  --color-warning: 36 84% 43%;
+  --color-danger: 2 68% 48%;
+  --color-success: 152 56% 32%;
+  --color-info: 207 62% 36%;
 
   --color-priority-low: 150 62% 36%;
   --color-priority-medium: 38 88% 48%;
@@ -25,15 +25,15 @@
   --color-confidence-medium: 205 72% 42%;
   --color-confidence-high: 150 62% 36%;
 
-  --color-canvas: 210 33% 98%;
+  --color-canvas: 210 24% 97%;
   --color-card: 0 0% 100%;
-  --color-ink: 222 32% 12%;
-  --color-line: 214 24% 86%;
-  --color-brand-50: 174 58% 96%;
-  --color-brand-100: 174 48% 90%;
-  --color-brand-500: 174 68% 38%;
-  --color-brand-600: 174 72% 30%;
-  --color-brand-700: 174 76% 23%;
+  --color-ink: 222 28% 12%;
+  --color-line: 214 20% 82%;
+  --color-brand-50: 188 34% 96%;
+  --color-brand-100: 188 28% 88%;
+  --color-brand-500: 188 62% 32%;
+  --color-brand-600: 188 68% 26%;
+  --color-brand-700: 188 72% 20%;
 
   --font-display: "Segoe UI Variable Display", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Segoe UI Variable Text", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
@@ -59,14 +59,14 @@
   --space-12: 3rem;
   --space-16: 4rem;
 
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
-  --radius-xl: 18px;
+  --radius-sm: 3px;
+  --radius-md: 5px;
+  --radius-lg: 8px;
+  --radius-xl: 8px;
   --radius-pill: 9999px;
 
-  --shadow-soft: 0 10px 28px hsl(222 32% 12% / 0.06);
-  --shadow-command: 0 16px 36px hsl(222 32% 12% / 0.08);
+  --shadow-soft: 0 1px 2px hsl(222 28% 12% / 0.05);
+  --shadow-command: 0 8px 22px hsl(222 28% 12% / 0.06);
 
   --z-base: 0;
   --z-sticky: 20;
