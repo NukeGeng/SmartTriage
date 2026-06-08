@@ -1,9 +1,10 @@
+// Badge.tsx - Compact semantic label atom. Props: tone, priority, status, children.
 import type { ReactNode } from "react";
 
 import type { TicketPriority, TicketStatus } from "@/types/ticket";
 import { cn, getPriorityLabel, getStatusLabel } from "@/lib/utils";
 
-type BadgeTone = "neutral" | "green" | "cyan" | "amber" | "rose" | "violet";
+type BadgeTone = "neutral" | "green" | "cyan" | "amber" | "rose" | "slate";
 
 type BadgeProps = {
   children?: ReactNode;
@@ -14,12 +15,12 @@ type BadgeProps = {
 };
 
 const toneClasses: Record<BadgeTone, string> = {
-  neutral: "bg-neutral-100 text-neutral-700 border-neutral-200",
-  green: "bg-emerald-50 text-emerald-700 border-emerald-200",
-  cyan: "bg-cyan-50 text-cyan-700 border-cyan-200",
-  amber: "bg-amber-50 text-amber-800 border-amber-200",
-  rose: "bg-rose-50 text-rose-700 border-rose-200",
-  violet: "bg-violet-50 text-violet-700 border-violet-200",
+  neutral: "border-neutral-200 bg-neutral-100 text-neutral-700",
+  green: "border-emerald-200 bg-emerald-50 text-emerald-700",
+  cyan: "border-cyan-200 bg-cyan-50 text-cyan-700",
+  amber: "border-amber-200 bg-amber-50 text-amber-800",
+  rose: "border-rose-200 bg-rose-50 text-rose-700",
+  slate: "border-slate-200 bg-slate-50 text-slate-700",
 };
 
 function getStatusTone(status?: TicketStatus | null): BadgeTone {
@@ -44,7 +45,7 @@ export function Badge({ children, tone = "neutral", priority, status, className 
   return (
     <span
       className={cn(
-        "inline-flex min-h-7 items-center rounded-md border px-2.5 py-1 text-xs font-semibold",
+        "inline-flex min-h-7 items-center rounded-sm border px-2.5 py-1 text-xs font-bold",
         toneClasses[resolvedTone],
         className,
       )}

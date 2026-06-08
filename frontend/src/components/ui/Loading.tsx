@@ -1,3 +1,4 @@
+// Loading.tsx - Small loading indicator for route and data states.
 import { Loader2 } from "lucide-react";
 
 export function Loading({ label = "Đang tải dữ liệu..." }: { label?: string }) {

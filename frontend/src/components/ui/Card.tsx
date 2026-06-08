@@ -1,3 +1,4 @@
+// Card.tsx - Legacy light card wrapper kept for existing pages during redesign.
 import type { HTMLAttributes, ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
@@ -5,7 +6,7 @@ import { cn } from "@/lib/utils";
 export function Card({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cn("rounded-lg border border-line bg-white shadow-soft", className)}
+      className={cn("rounded-lg border border-line bg-white shadow-soft transition duration-200 ease-out-expo", className)}
       {...props}
     />
   );

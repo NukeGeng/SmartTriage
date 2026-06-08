@@ -1,77 +1,60 @@
+// Sidebar.tsx - Role-aware command navigation for student and staff workflows.
 "use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BarChart3, Brain, ClipboardList, FilePlus2, ShieldCheck } from "lucide-react";
+import { Bot, Signal } from "lucide-react";
 
-import { cn } from "@/lib/utils";
+import { NavItem } from "@/components/navigation/NavItem";
+import {
+  getVisibleNavigation,
+  getVisibleSections,
+  isNavigationItemActive,
+} from "@/data/navigation";
 import type { User } from "@/types/auth";
-
-const navItems = [
-  {
-    href: "/dashboard",
-    label: "Dashboard",
-    icon: BarChart3,
-    roles: ["staff", "admin"],
-  },
-  {
-    href: "/tickets",
-    label: "Phản ánh",
-    icon: ClipboardList,
-    roles: ["student", "staff", "admin"],
-  },
-  {
-    href: "/tickets/new",
-    label: "Tạo mới",
-    icon: FilePlus2,
-    roles: ["student", "staff", "admin"],
-  },
-  {
-    href: "/admin/tickets",
-    label: "Quản lý",
-    icon: ShieldCheck,
-    roles: ["staff", "admin"],
-  },
-  {
-    href: "/admin/model-info",
-    label: "Model Info",
-    icon: Brain,
-    roles: ["staff", "admin"],
-  },
-];
 
 export function Sidebar({ user }: { user: User | null }) {
   const pathname = usePathname();
   const role = user?.role ?? "student";
-  const visibleItems = navItems.filter((item) => item.roles.includes(role));
+  const visibleItems = getVisibleNavigation(role);
+  const visibleSections = getVisibleSections(role);
 
   return (
-    <aside className="border-b border-line bg-ink text-white lg:min-h-screen lg:w-64 lg:border-b-0 lg:border-r lg:border-neutral-800">
+    <aside className="border-b border-white/10 bg-command-soft text-command-text lg:sticky lg:top-0 lg:min-h-screen lg:w-72 lg:border-b-0 lg:border-r">
       <div className="flex h-full flex-col">
-        <div className="flex h-16 items-center border-b border-neutral-800 px-5">
-          <Link href="/" className="flex items-center gap-3">
-            <span className="flex h-9 w-9 items-center justify-center rounded-md bg-brand-500 text-sm font-bold">
+        <div className="flex h-20 items-center border-b border-white/10 px-4 lg:px-5">
+          <Link href="/" className="flex min-w-0 items-center gap-3">
+            <span className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-brand-500/30 bg-brand-500/15 text-sm font-black text-brand-100 shadow-glow">
               ST
+              <Signal className="absolute -right-1 -top-1 h-3.5 w-3.5 text-brand-100" aria-hidden="true" />
             </span>
-            <span className="text-base font-semibold">SmartTriage</span>
+            <span className="min-w-0">
+              <span className="block truncate text-base font-black tracking-tight">SmartTriage</span>
+              <span className="flex items-center gap-1.5 text-xs font-semibold text-command-muted">
+                <Bot className="h-3.5 w-3.5" aria-hidden="true" />
+                AI triage command center
+              </span>
+            </span>
           </Link>
         </div>
-        <nav className="flex gap-2 overflow-x-auto px-3 py-3 lg:flex-col lg:overflow-visible">
-          {visibleItems.map((item) => {
-            const Icon = item.icon;
-            const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+        <nav className="triage-scrollbar flex gap-2 overflow-x-auto px-3 py-3 lg:flex-1 lg:flex-col lg:gap-5 lg:overflow-visible lg:px-4 lg:py-5">
+          {visibleSections.map((section) => {
+            const sectionItems = visibleItems.filter((item) => item.section === section.id);
             return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "flex min-h-10 shrink-0 items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-neutral-300 transition hover:bg-neutral-800 hover:text-white",
-                  active && "bg-brand-600 text-white",
-                )}
-              >
-                <Icon className="h-4 w-4" aria-hidden="true" />
-                <span>{item.label}</span>
-              </Link>
+              <section key={section.id} className="min-w-max space-y-2 lg:min-w-0">
+                <p className="hidden px-3 text-[11px] font-black uppercase tracking-[0.16em] text-command-muted lg:block">
+                  {section.label}
+                </p>
+                <div className="flex gap-2 lg:flex-col">
+                  {sectionItems.map((item) => (
+                    <NavItem
+                      key={item.href}
+                      item={item}
+                      active={isNavigationItemActive(item, pathname)}
+                    />
+                  ))}
+                </div>
+              </section>
             );
           })}
         </nav>
