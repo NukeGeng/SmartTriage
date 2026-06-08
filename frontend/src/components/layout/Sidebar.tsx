@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BarChart3, Brain, ClipboardList, FilePlus2, ShieldCheck } from "lucide-react";
+import { BarChart3, Brain, ClipboardList, FilePlus2, Radar, ShieldCheck } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import type { User } from "@/types/auth";
@@ -12,6 +12,12 @@ const navItems = [
     href: "/dashboard",
     label: "Dashboard",
     icon: BarChart3,
+    roles: ["staff", "admin"],
+  },
+  {
+    href: "/admin/triage",
+    label: "Triage Cockpit",
+    icon: Radar,
     roles: ["staff", "admin"],
   },
   {
