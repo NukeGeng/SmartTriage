@@ -13,7 +13,7 @@ export function SectionLabel({ children, icon, className }: SectionLabelProps) {
   return (
     <div
       className={cn(
-        "inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.16em] text-command-muted",
+        "inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.14em] text-neutral-500",
         className,
       )}
     >
