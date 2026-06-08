@@ -191,11 +191,30 @@ Response `201`:
       "category_confidence": 0.87,
       "priority": "high",
       "priority_score": 82,
+      "priority_breakdown": {
+        "total_score": 82,
+        "level": "high",
+        "items": [
+          {
+            "name": "Nhóm vấn đề",
+            "score": 25,
+            "reason": "Lỗi tài khoản/hệ thống ảnh hưởng trực tiếp đến khả năng sử dụng dịch vụ.",
+            "matched_terms": ["account_system"]
+          }
+        ]
+      },
       "suggested_department": "Phòng CNTT",
       "duplicate_candidates": [],
       "suggested_actions": [
         "Kiểm tra trạng thái tài khoản sinh viên"
       ],
+      "explanation": {
+        "summary": "Phản ánh được phân loại là Tài khoản / Hệ thống, mức ưu tiên high với điểm 82/100 và được đề xuất chuyển đến Phòng CNTT.",
+        "category_reason": "Nội dung chứa tín hiệu đăng nhập và hệ thống thi online.",
+        "priority_reason": "Mức ưu tiên cao vì có ngữ cảnh thi và deadline gần.",
+        "department_reason": "Phòng CNTT là đơn vị phù hợp để xử lý lỗi tài khoản và hệ thống.",
+        "detected_signals": ["không đăng nhập được", "sáng mai", "thi online"]
+      },
       "model_version": "tfidf-logreg-v1"
     }
   }
@@ -257,7 +276,10 @@ Visibility:
 
 Yêu cầu auth header.
 
-Response trả ticket detail kèm `analysis`.
+Response trả ticket detail kèm `analysis`. Analysis hiện bao gồm:
+
+- `explanation`: giải thích rule-based cho category, priority, department và detected signals.
+- `priority_breakdown`: từng phần điểm ưu tiên để người xử lý hiểu vì sao ticket được xếp `low`, `medium` hoặc `high`.
 
 ### `GET /api/v1/tickets/export-training-data`
 

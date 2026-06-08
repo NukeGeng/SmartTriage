@@ -15,6 +15,12 @@ const navItems = [
     roles: ["staff", "admin"],
   },
   {
+    href: "/admin/triage",
+    label: "Triage Cockpit",
+    icon: Radar,
+    roles: ["staff", "admin"],
+  },
+  {
     href: "/tickets",
     label: "Phản ánh",
     icon: ClipboardList,

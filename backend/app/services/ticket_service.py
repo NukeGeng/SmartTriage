@@ -195,16 +195,26 @@ class TicketService:
 
     @staticmethod
     def _create_analysis_from_payload(ticket_id: UUID, payload: dict[str, Any]) -> TicketAnalysis:
+        confidence = payload.get("category_confidence", payload.get("confidence"))
+        explanation = payload.get("explanation")
+        priority_breakdown = payload.get("priority_breakdown")
+        analysis_metadata: dict[str, Any] = {}
+        if explanation:
+            analysis_metadata["explanation"] = explanation
+        if priority_breakdown:
+            analysis_metadata["priority_breakdown"] = priority_breakdown
+
         return TicketAnalysis(
             ticket_id=ticket_id,
             predicted_category=str(payload.get("category") or "other"),
             category_label=str(payload.get("category_label") or "Khác"),
-            category_confidence=float(payload.get("confidence") or 0.0),
+            category_confidence=float(confidence or 0.0),
             priority=str(payload.get("priority") or "medium"),
             priority_score=int(payload.get("priority_score") or 50),
             suggested_department=str(payload.get("suggested_department") or "Bộ phận tiếp nhận phản ánh"),
             duplicate_candidates=payload.get("duplicate_candidates") or [],
             suggested_actions=payload.get("suggested_actions") or [],
+            analysis_metadata=analysis_metadata,
             model_version=str(payload.get("model_version") or "unknown"),
         )
 
