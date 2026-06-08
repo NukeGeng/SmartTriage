@@ -24,4 +24,8 @@ def test_analysis_service_returns_complete_response(tmp_path) -> None:
     assert result.duplicate_candidates
     assert result.suggested_department == "Phòng CNTT"
     assert result.suggested_actions
+    assert result.explanation.summary
+    assert "sáng mai" in result.explanation.detected_signals
+    assert result.priority_breakdown.total_score == result.priority_score
+    assert result.priority_breakdown.items
     assert result.model_version

@@ -26,13 +26,18 @@ def test_analyze_ticket_endpoint() -> None:
         "confidence",
         "priority",
         "priority_score",
+        "priority_breakdown",
         "suggested_department",
         "duplicate_candidates",
         "suggested_actions",
+        "explanation",
         "model_version",
     }.issubset(data)
     assert data["category"] == "account_system"
     assert data["priority"] == "high"
+    assert data["category_confidence"] == data["confidence"]
+    assert data["priority_breakdown"]["total_score"] == data["priority_score"]
+    assert data["explanation"]["detected_signals"]
     assert isinstance(data["suggested_actions"], list)
 
 

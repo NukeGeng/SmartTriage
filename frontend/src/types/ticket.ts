@@ -14,6 +14,27 @@ export type DuplicateCandidate = {
   similarity: number;
 };
 
+export type AnalysisExplanation = {
+  summary: string;
+  category_reason: string;
+  priority_reason: string;
+  department_reason: string;
+  detected_signals: string[];
+};
+
+export type PriorityBreakdownItem = {
+  name: string;
+  score: number;
+  reason: string;
+  matched_terms?: string[];
+};
+
+export type PriorityBreakdown = {
+  total_score: number;
+  level: TicketPriority;
+  items: PriorityBreakdownItem[];
+};
+
 export type TicketAnalysis = {
   id: string;
   ticket_id: string;
@@ -25,6 +46,9 @@ export type TicketAnalysis = {
   suggested_department: string;
   duplicate_candidates: DuplicateCandidate[];
   suggested_actions: string[];
+  explanation?: AnalysisExplanation | null;
+  priority_breakdown?: PriorityBreakdown | null;
+  analysis_metadata?: Record<string, unknown>;
   model_version: string;
   created_at: string;
 };
