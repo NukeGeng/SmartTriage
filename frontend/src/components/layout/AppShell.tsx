@@ -1,13 +1,14 @@
+// AppShell.tsx - Auth-protected application shell for the SmartTriage console.
 "use client";
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
+import { Sidebar } from "@/components/layout/Sidebar";
+import { TopBar } from "@/components/layout/TopBar";
+import { Loading } from "@/components/ui/Loading";
 import { getStoredUser, getToken } from "@/lib/auth";
 import type { User } from "@/types/auth";
-import { Loading } from "@/components/ui/Loading";
-import { Sidebar } from "./Sidebar";
-import { Topbar } from "./Topbar";
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -36,11 +37,13 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div className="min-h-screen bg-panel text-ink lg:flex">
+    <div className="min-h-screen bg-command-bg text-command-text lg:flex">
       <Sidebar user={user} />
       <div className="min-w-0 flex-1">
-        <Topbar user={user} />
-        <main className="mx-auto w-full max-w-7xl px-4 py-6 md:px-6">{children}</main>
+        <TopBar user={user} />
+        <main className="mx-auto w-full max-w-[1440px] px-4 py-6 md:px-6 xl:px-8">
+          <div className="triage-enter min-w-0">{children}</div>
+        </main>
       </div>
     </div>
   );
