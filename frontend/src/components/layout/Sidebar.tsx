@@ -1,62 +1,55 @@
-// Sidebar.tsx - Role-aware navigation for student and staff workflows.
+// Sidebar.tsx - Floating bottom navigation dock for student and staff workflows.
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Bot } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
+import { LogOut, Sparkles } from "lucide-react";
 
 import { NavItem } from "@/components/navigation/NavItem";
-import {
-  getVisibleNavigation,
-  getVisibleSections,
-  isNavigationItemActive,
-} from "@/data/navigation";
+import { getVisibleNavigation, isNavigationItemActive } from "@/data/navigation";
+import { clearToken } from "@/lib/auth";
 import type { User } from "@/types/auth";
 
 export function Sidebar({ user }: { user: User | null }) {
+  const router = useRouter();
   const pathname = usePathname();
   const role = user?.role ?? "student";
   const visibleItems = getVisibleNavigation(role);
-  const visibleSections = getVisibleSections(role);
+
+  function handleLogout() {
+    clearToken();
+    router.replace("/login");
+  }
 
   return (
-    <aside className="border-b border-line bg-white text-ink lg:sticky lg:top-0 lg:min-h-screen lg:w-72 lg:border-b-0 lg:border-r">
-      <div className="flex h-full flex-col">
-        <div className="flex h-20 items-center border-b border-line px-4 lg:px-5">
-          <Link href="/" className="flex min-w-0 items-center gap-3">
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-brand-100 bg-brand-50 text-sm font-black text-brand-700">
-              ST
-            </span>
-            <span className="min-w-0">
-              <span className="block truncate text-base font-black tracking-tight">SmartTriage</span>
-              <span className="flex items-center gap-1.5 text-xs font-semibold text-neutral-500">
-                <Bot className="h-3.5 w-3.5" aria-hidden="true" />
-                AI triage console
-              </span>
-            </span>
-          </Link>
+    <aside className="fixed inset-x-0 bottom-4 z-sticky flex justify-center px-3 text-ink">
+      <div className="flex max-w-[calc(100vw-24px)] flex-wrap items-center justify-center gap-2 rounded-[28px] border border-line bg-white/95 px-3 py-2 shadow-command backdrop-blur sm:rounded-pill">
+        <div className="group relative hidden h-12 w-12 shrink-0 items-center justify-center rounded-pill bg-brand-600 text-white sm:flex">
+          <Sparkles className="h-5 w-5" aria-hidden="true" />
+          <div className="st-tooltip absolute bottom-[calc(100%+12px)] left-1/2 w-52 rounded-2xl border border-line bg-card px-4 py-3 text-left text-xs text-ink shadow-command">
+            <p className="font-bold">SmartTriage</p>
+            <p className="mt-1 text-command-muted">{user?.full_name ?? "AI-assisted triage console"}</p>
+          </div>
         </div>
-        <nav className="triage-scrollbar flex gap-2 overflow-x-auto px-3 py-3 lg:flex-1 lg:flex-col lg:gap-5 lg:overflow-visible lg:px-4 lg:py-5">
-          {visibleSections.map((section) => {
-            const sectionItems = visibleItems.filter((item) => item.section === section.id);
-            return (
-              <section key={section.id} className="min-w-max space-y-2 lg:min-w-0">
-                <p className="hidden px-3 text-[11px] font-black uppercase tracking-[0.14em] text-neutral-500 lg:block">
-                  {section.label}
-                </p>
-                <div className="flex gap-2 lg:flex-col">
-                  {sectionItems.map((item) => (
-                    <NavItem
-                      key={item.href}
-                      item={item}
-                      active={isNavigationItemActive(item, pathname)}
-                    />
-                  ))}
-                </div>
-              </section>
-            );
-          })}
+
+        <nav className="flex flex-wrap items-center justify-center gap-1.5" aria-label="SmartTriage console navigation">
+          {visibleItems.map((item) => (
+            <NavItem key={item.href} item={item} active={isNavigationItemActive(item, pathname)} />
+          ))}
         </nav>
+
+        <span className="mx-1 h-8 w-px shrink-0 bg-line" aria-hidden="true" />
+
+        <button
+          type="button"
+          className="st-icon-button group relative flex h-12 w-12 shrink-0 items-center justify-center rounded-pill text-neutral-500 hover:bg-brand-50 hover:text-brand-700 focus-visible:bg-brand-50 focus-visible:text-brand-700"
+          onClick={handleLogout}
+          aria-label="Đăng xuất"
+        >
+          <LogOut className="h-5 w-5" aria-hidden="true" />
+          <span className="st-tooltip absolute bottom-[calc(100%+12px)] left-1/2 w-max rounded-2xl border border-line bg-card px-4 py-2 text-xs font-bold text-ink shadow-command">
+            Đăng xuất
+          </span>
+        </button>
       </div>
     </aside>
   );

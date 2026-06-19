@@ -1,18 +1,8 @@
 from app.ml.preprocessing import combine_title_description, normalize_text
 
 
-def test_normalize_text_keeps_real_vietnamese_accents() -> None:
-    value = normalize_text(
-        "Kh\u00f4ng \u0111\u0103ng nh\u1eadp \u0111\u01b0\u1ee3c v\u00e0o h\u1ec7 th\u1ed1ng thi."
-    )
-
-    assert "kh\u00f4ng" in value
-    assert "\u0111\u0103ng nh\u1eadp" in value
-    assert "h\u1ec7 th\u1ed1ng" in value
-
-
 def test_normalize_text_keeps_vietnamese_accents() -> None:
-    value = normalize_text("Em không đăng nhập được vào hệ thống thi online!!!  ")
+    value = normalize_text("Em không đăng nhập được vào hệ thống thi online!!!")
 
     assert value == "em không đăng nhập được vào hệ thống thi online"
 

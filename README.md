@@ -85,6 +85,8 @@ SmartTriage dùng pipeline ML/rule-based gồm:
 
 Chi tiết ML pipeline: [docs/report/ml_pipeline.md](docs/report/ml_pipeline.md)
 
+Pipeline hai luồng, dataset versioning và model promotion: [docs/report/offline_training_pipeline.md](docs/report/offline_training_pipeline.md)
+
 ## Folder Structure
 
 ```txt
@@ -167,7 +169,7 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python scripts/generate_sample_dataset.py
-python scripts/train_category_model.py
+python scripts/train_category_model.py --dataset-path data/training/versions/synthetic-v2/training.csv --dataset-version synthetic-v2 --promote
 python scripts/build_duplicate_index.py
 ```
 
@@ -180,7 +182,7 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 python scripts\generate_sample_dataset.py
-python scripts\train_category_model.py
+python scripts\train_category_model.py --dataset-path data\training\versions\synthetic-v2\training.csv --dataset-version synthetic-v2 --promote
 python scripts\build_duplicate_index.py
 ```
 

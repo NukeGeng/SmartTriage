@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     APP_ENV: str = "development"
     API_V1_PREFIX: str = "/api/v1"
     MODEL_DIR: str = "models"
-    DATASET_PATH: str = "data/raw/ticket_samples.csv"
+    DATASET_PATH: str = "data/training/versions/synthetic-v2/training.csv"
     DUPLICATE_INDEX_PATH: str = "data/tickets_index/sample_existing_tickets.csv"
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")

@@ -12,7 +12,7 @@ export function IncidentSuggestionList({ groups }: { groups: IncidentGroupSugges
   return (
     <div className="space-y-3">
       {groups.map((group) => (
-        <div key={group.group_key} className="rounded-md border border-line bg-white p-4">
+        <div key={group.group_key} className="rounded-md border border-line bg-card p-4">
           <div className="flex items-start justify-between gap-3">
             <div>
               <h3 className="flex items-center gap-2 text-sm font-semibold text-ink">

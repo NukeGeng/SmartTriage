@@ -6,14 +6,14 @@ import { cn } from "@/lib/utils";
 export function Card({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cn("rounded-lg border border-line bg-white shadow-soft transition duration-200 ease-out-expo", className)}
+      className={cn("st-card rounded-lg bg-card shadow-soft", className)}
       {...props}
     />
   );
 }
 
 export function CardHeader({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn("border-b border-line px-5 py-4", className)} {...props} />;
+  return <div className={cn("px-5 py-4", className)} {...props} />;
 }
 
 export function CardTitle({ children }: { children: ReactNode }) {

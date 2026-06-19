@@ -298,6 +298,39 @@ Quy tắc export:
 
 - `category`: ưu tiên `manual_category`, nếu không có thì dùng `predicted_category`.
 - `priority`: ưu tiên `manual_priority`, nếu không có thì dùng priority từ AI analysis.
+
+> Endpoint export cũ được giữ để tương thích. Pipeline mới sử dụng nhóm endpoint versioned bên dưới.
+
+## Offline Training Pipeline
+
+Tất cả endpoint trong nhóm này yêu cầu role `admin` và không được sử dụng để render danh sách ticket trên web.
+
+### `POST /api/v1/admin/training-pipeline/sync`
+
+Snapshot các ticket `resolved`, ẩn danh PII và tạo training sample. Nhãn thủ công được approve; nhãn chỉ do AI dự đoán ở trạng thái candidate.
+
+### `GET /api/v1/admin/training-pipeline/samples`
+
+Query hỗ trợ `review_status`, `page`, `page_size`.
+
+### `PATCH /api/v1/admin/training-pipeline/samples/{sample_id}`
+
+Cho phép sửa category/priority và chuyển trạng thái `candidate`, `approved`, `excluded`. Sample đã nằm trong dataset version không được sửa.
+
+### `POST /api/v1/admin/training-pipeline/datasets`
+
+```json
+{
+  "version": "production-2026-06-v1",
+  "minimum_samples": 100
+}
+```
+
+Đóng gói toàn bộ sample approved chưa thuộc version nào thành một dataset bất biến.
+
+### `GET /api/v1/admin/training-pipeline/datasets/{dataset_id}/export`
+
+Xuất CSV đã ẩn danh, có `dataset_version`, `label_source`, `review_status` và `scenario_group` để AI service train offline.
 - `source`: `manual` nếu có manual label, ngược lại là `predicted`.
 
 ### `PATCH /api/v1/tickets/{ticket_id}/status`

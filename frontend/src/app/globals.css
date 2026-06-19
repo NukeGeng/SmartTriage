@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap");
 @import "../styles/tokens.css";
 
 @tailwind base;
@@ -6,7 +7,7 @@
 
 :root {
   color: hsl(var(--color-text-primary));
-  background: hsl(var(--color-bg));
+  background: #fff;
 }
 
 * {
@@ -15,13 +16,13 @@
 
 html {
   min-height: 100%;
-  background: hsl(var(--color-bg));
+  background: #fff;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background: hsl(var(--color-bg));
+  background: #fff;
   color: hsl(var(--color-text-primary));
   font-family: var(--font-body);
   text-rendering: geometricPrecision;

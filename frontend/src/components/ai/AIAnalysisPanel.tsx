@@ -83,7 +83,7 @@ export function AIAnalysisPanel({ analysis }: { analysis: TicketAnalysis | null 
         </div>
 
         {explanation ? (
-          <section className="space-y-3 rounded-md border border-line bg-white p-4">
+          <section className="space-y-3 rounded-md border border-line bg-card p-4">
             <div className="flex items-center gap-2 text-sm font-semibold text-ink">
               <Sparkles className="h-4 w-4 text-brand-600" aria-hidden="true" />
               Explanation Summary

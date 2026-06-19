@@ -124,7 +124,10 @@ function ensureAiArtifacts(aiPython) {
   log("Generating AI dataset");
   run(`${aiPython} scripts/generate_sample_dataset.py`, pathFromRoot("ai-service"));
   log("Training AI model");
-  run(`${aiPython} scripts/train_category_model.py`, pathFromRoot("ai-service"));
+  run(
+    `${aiPython} scripts/train_category_model.py --dataset-path data/training/versions/synthetic-v2/training.csv --dataset-version synthetic-v2 --promote`,
+    pathFromRoot("ai-service"),
+  );
   log("Building duplicate index");
   run(`${aiPython} scripts/build_duplicate_index.py`, pathFromRoot("ai-service"));
 }

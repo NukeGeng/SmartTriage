@@ -88,9 +88,16 @@ class TicketDetailResponse(TicketResponse):
 class TicketListItemResponse(BaseModel):
     id: uuid.UUID
     title: str
+    description: str | None = None
     status: TicketStatus
     assigned_department: str | None = None
+    manual_category: str | None = None
+    manual_priority: str | None = None
     category: str | None = None
+    category_label: str | None = None
+    category_confidence: float | None = None
+    ai_category: str | None = None
+    ai_priority: str | None = None
     priority: str | None = None
     priority_score: int | None = None
     created_at: datetime

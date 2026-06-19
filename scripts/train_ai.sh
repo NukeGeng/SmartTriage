@@ -28,7 +28,10 @@ log "Generating sample dataset"
 "$AI_PY" scripts/generate_sample_dataset.py
 
 log "Training category model"
-"$AI_PY" scripts/train_category_model.py
+"$AI_PY" scripts/train_category_model.py \
+  --dataset-path data/training/versions/synthetic-v2/training.csv \
+  --dataset-version synthetic-v2 \
+  --promote
 
 log "Building duplicate index"
 "$AI_PY" scripts/build_duplicate_index.py

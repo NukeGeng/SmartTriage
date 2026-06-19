@@ -1,0 +1,27 @@
+{
+  "evaluation_scope": "external_dataset",
+  "dataset_path": "data\\raw\\ticket_samples.csv",
+  "dataset_fingerprint": "d1a596f754710999dc582a69d1b6f41f0ae2d7146a26585c4b3e749926c5ef0d",
+  "sample_count": 300,
+  "accuracy": 0.9067,
+  "macro_precision": 0.9231,
+  "macro_recall": 0.9067,
+  "macro_f1": 0.9047
+}
+
+                   precision    recall  f1-score   support
+
+   account_system       1.00      1.00      1.00        30
+ classroom_device       1.00      1.00      1.00        30
+ document_profile       1.00      0.70      0.82        30
+         facility       0.80      0.93      0.86        30
+         feedback       1.00      0.63      0.78        30
+learning_platform       1.00      0.90      0.95        30
+          network       0.88      0.97      0.92        30
+            other       1.00      0.97      0.98        30
+    schedule_exam       0.76      0.97      0.85        30
+  tuition_payment       0.79      1.00      0.88        30
+
+         accuracy                           0.91       300
+        macro avg       0.92      0.91      0.90       300
+     weighted avg       0.92      0.91      0.90       300

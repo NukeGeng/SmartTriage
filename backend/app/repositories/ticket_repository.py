@@ -49,7 +49,7 @@ class TicketRepository:
         assigned_department: str | None = None,
         search: str | None = None,
         page: int = 1,
-        page_size: int = 20,
+        page_size: int = 30,
     ) -> tuple[list[Ticket], int]:
         statement = select(Ticket).outerjoin(TicketAnalysis).options(joinedload(Ticket.analysis))
 

@@ -1,0 +1,7 @@
+{
+  "run_id": "synthetic-v2-candidate-001",
+  "model_version": "tfidf-logreg-synthetic-v2-921e131e",
+  "dataset_version": "synthetic-v2",
+  "dataset_fingerprint": "51836619c80894e837d1b3c1cadcabfef7e44fde2f41eebc1a9514917f1ce400",
+  "promoted_at": "2026-06-19T07:31:46.156667+00:00"
+}

@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.api.v1.endpoints import ai, auth, dashboard, health, incident_groups, tickets, users
+from app.api.v1.endpoints import ai, auth, admin_triage, dashboard, health, incident_groups, tickets, training_pipeline, users
 
 api_router = APIRouter()
 
@@ -10,4 +10,6 @@ api_router.include_router(auth.router)
 api_router.include_router(users.router)
 api_router.include_router(tickets.router)
 api_router.include_router(dashboard.router)
+api_router.include_router(admin_triage.router)
 api_router.include_router(incident_groups.router)
+api_router.include_router(training_pipeline.router)

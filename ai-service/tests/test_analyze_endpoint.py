@@ -1,4 +1,5 @@
 from fastapi.testclient import TestClient
+import json
 
 from app.main import app
 
@@ -50,3 +51,34 @@ def test_model_info_endpoint_without_model_is_safe(tmp_path, monkeypatch) -> Non
     body = response.json()
     assert body["success"] is True
     assert body["data"]["model_loaded"] is False
+
+
+def test_model_info_exposes_training_lineage(tmp_path, monkeypatch) -> None:
+    for name in ("category_classifier.joblib", "tfidf_vectorizer.joblib", "label_encoder.joblib"):
+        (tmp_path / name).write_bytes(b"artifact")
+    (tmp_path / "model_metadata.json").write_text(
+        json.dumps(
+            {
+                "model_version": "tfidf-logreg-synthetic-v2-test",
+                "algorithm": "TF-IDF + Logistic Regression",
+                "run_id": "candidate-001",
+                "dataset_version": "synthetic-v2",
+                "dataset_fingerprint": "a" * 64,
+                "sample_count": 12000,
+                "split_strategy": "stratified_scenario_group",
+                "synthetic_ratio": 1.0,
+                "categories": ["network"],
+            }
+        ),
+        encoding="utf-8",
+    )
+    monkeypatch.setattr("app.api.v1.endpoints.model_info.settings.MODEL_DIR", str(tmp_path))
+
+    response = client.get("/api/v1/model-info")
+
+    assert response.status_code == 200
+    data = response.json()["data"]
+    assert data["model_loaded"] is True
+    assert data["run_id"] == "candidate-001"
+    assert data["dataset_version"] == "synthetic-v2"
+    assert data["sample_count"] == 12000

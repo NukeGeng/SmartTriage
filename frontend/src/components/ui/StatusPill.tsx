@@ -13,19 +13,19 @@ interface StatusPillProps {
 }
 
 const toneClasses: Record<StatusTone, string> = {
-  neutral: "border-line bg-white text-neutral-600",
-  accent: "border-brand-100 bg-brand-50 text-brand-700",
-  info: "border-cyan-100 bg-cyan-50 text-cyan-700",
-  success: "border-emerald-100 bg-emerald-50 text-emerald-700",
-  warning: "border-amber-100 bg-amber-50 text-amber-700",
-  danger: "border-rose-100 bg-rose-50 text-rose-700",
+  neutral: "border-line bg-card text-neutral-600",
+  accent: "border-line bg-card text-brand-700",
+  info: "border-line bg-card text-cyan-700",
+  success: "border-line bg-card text-emerald-700",
+  warning: "border-line bg-card text-amber-700",
+  danger: "border-line bg-card text-rose-700",
 };
 
 export function StatusPill({ label, tone = "neutral", icon, className }: StatusPillProps) {
   return (
     <span
       className={cn(
-        "inline-flex min-h-8 items-center gap-2 rounded-pill border px-3 py-1 text-xs font-black uppercase tracking-[0.12em]",
+        "inline-flex min-h-7 items-center gap-2 rounded-md border px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.1em]",
         toneClasses[tone],
         className,
       )}
