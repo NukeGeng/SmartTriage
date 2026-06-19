@@ -22,7 +22,7 @@ export function TriageSummaryCards({ summary }: { summary: TriageSummary }) {
                 <p className="text-xs font-semibold uppercase text-neutral-500">{item.label}</p>
                 <p className="mt-1 text-2xl font-semibold text-ink">{summary[item.key]}</p>
               </div>
-              <span className="flex h-10 w-10 items-center justify-center rounded-md border border-line bg-white text-brand-700">
+              <span className="flex h-10 w-10 items-center justify-center rounded-md border border-line bg-card text-brand-700">
                 <Icon className="h-5 w-5" aria-hidden="true" />
               </span>
             </CardContent>

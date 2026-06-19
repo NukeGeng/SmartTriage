@@ -27,7 +27,7 @@ export function TopBar({ user }: { user: User | null }) {
   }
 
   return (
-    <header className="sticky top-0 z-sticky border-b border-line bg-white px-5 md:px-6 xl:px-8">
+    <header className="sticky top-0 z-sticky border-b border-line bg-card px-5 md:px-6 xl:px-8">
       <div className="mx-auto flex min-h-16 w-full max-w-[1440px] items-center justify-between gap-4">
         <div className="min-w-0">
           <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-brand-700">
@@ -52,7 +52,7 @@ export function TopBar({ user }: { user: User | null }) {
           </div>
           <Button
             variant="ghost"
-            className="text-neutral-700 hover:border-line hover:bg-white hover:text-ink"
+            className="text-neutral-700 hover:border-line hover:bg-card hover:text-ink"
             icon={<LogOut className="h-4 w-4" aria-hidden="true" />}
             onClick={handleLogout}
           >

@@ -14,7 +14,7 @@ build/
 .docs/
 *.logs
 *.log
-
+.ai/
 # Keep small sample datasets tracked for demos.
 !datasets/samples/
 !datasets/samples/**

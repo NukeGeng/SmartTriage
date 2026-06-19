@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { EmptyState } from "@/components/ui/EmptyState";
 import type { Ticket } from "@/types/ticket";
-import { TicketCard } from "./TicketCard";
+import { TicketShotCard } from "./TicketShotCard";
 
 export function TicketList({ tickets }: { tickets: Ticket[] }) {
   if (tickets.length === 0) {
@@ -22,9 +22,9 @@ export function TicketList({ tickets }: { tickets: Ticket[] }) {
   }
 
   return (
-    <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-      {tickets.map((ticket) => (
-        <TicketCard key={ticket.id} ticket={ticket} />
+    <div className="st-hover-grid grid grid-cols-[repeat(auto-fill,minmax(min(100%,280px),315px))] justify-center gap-x-6 gap-y-7 lg:justify-start">
+      {tickets.map((ticket, index) => (
+        <TicketShotCard key={ticket.id} ticket={ticket} index={index} />
       ))}
     </div>
   );

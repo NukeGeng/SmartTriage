@@ -64,6 +64,10 @@ export type Ticket = {
   manual_category?: string | null;
   manual_priority?: string | null;
   category?: string | null;
+  category_label?: string | null;
+  category_confidence?: number | null;
+  ai_category?: string | null;
+  ai_priority?: TicketPriority | null;
   priority?: TicketPriority | null;
   priority_score?: number | null;
   created_at: string;
@@ -97,4 +101,9 @@ export type TicketFilters = {
   category?: string;
   assigned_department?: string;
   search?: string;
+};
+
+export type TicketPaginationParams = {
+  page?: number;
+  page_size?: number;
 };

@@ -16,7 +16,7 @@ export function EmptyState({
   className?: string;
 }) {
   return (
-    <div className={`flex min-h-52 flex-col items-center justify-center rounded-lg border border-dashed border-line bg-white px-6 py-10 text-center ${className ?? ""}`}>
+    <div className={`flex min-h-52 flex-col items-center justify-center rounded-lg border border-dashed border-line bg-card px-6 py-10 text-center ${className ?? ""}`}>
       <div className="mb-3 text-neutral-400">
         {icon ?? <Inbox className="h-10 w-10" aria-hidden="true" />}
       </div>

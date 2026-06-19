@@ -18,7 +18,7 @@ export function Toast({
   return (
     <div
       className={cn(
-        "fixed right-4 top-4 z-50 flex max-w-sm items-start gap-3 rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink shadow-soft",
+        "fixed right-4 top-4 z-50 flex max-w-sm items-start gap-3 rounded-lg border border-line bg-card px-4 py-3 text-sm font-medium text-ink shadow-soft",
         className,
       )}
       role="status"
@@ -27,7 +27,7 @@ export function Toast({
       <span className="min-w-0 flex-1">{message}</span>
       <button
         type="button"
-        className="rounded-md border border-transparent p-1 text-neutral-500 transition hover:border-line hover:bg-white hover:text-ink"
+        className="st-icon-button rounded-md border border-transparent p-1 text-neutral-500 hover:border-line hover:bg-card hover:text-ink"
         onClick={onClose}
         aria-label="Đóng thông báo"
       >

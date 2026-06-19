@@ -48,7 +48,7 @@ export function ProgressBar({
         aria-valuemax={max}
       >
         <div
-          className={cn("h-full origin-left rounded-sm animate-[triage-progress_700ms_var(--ease-out-expo)_both]", toneClasses[tone])}
+          className={cn("h-full origin-left rounded-sm animate-[st-progress-grow_700ms_var(--ease-out-expo)_both]", toneClasses[tone])}
           style={{ width: `${percent}%` }}
         />
       </div>

@@ -73,7 +73,7 @@ export default function IncidentGroupDetailPage() {
             <label className="block space-y-1.5">
               <span className="text-sm font-medium text-ink">Status</span>
               <select
-                className="h-11 min-w-48 rounded-md border border-line bg-white px-3 text-sm text-ink outline-none focus:border-brand-600 focus:ring-2 focus:ring-brand-100"
+                className="h-11 min-w-48 rounded-md border border-line bg-card px-3 text-sm text-ink outline-none focus:border-brand-600 focus:ring-2 focus:ring-brand-100"
                 value={group.status}
                 disabled={saving}
                 onChange={(event) => handleStatusChange(event.target.value as IncidentGroupStatus)}

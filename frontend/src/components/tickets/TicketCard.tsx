@@ -14,7 +14,7 @@ export function TicketCard({ ticket }: { ticket: Ticket }) {
 
   return (
     <Link href={`/tickets/${ticket.id}`} className="block">
-      <Card className="transition hover:border-brand-500 hover:shadow-none">
+      <Card className="hover:bg-neutral-50 hover:shadow-none">
         <CardContent className="space-y-3">
           <div className="flex items-start justify-between gap-4">
             <div className="min-w-0">

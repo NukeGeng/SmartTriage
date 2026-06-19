@@ -62,8 +62,6 @@ export const navigationItems: NavigationItem[] = [
     icon: Radar,
     roles: ["staff", "admin"],
     section: "operations",
-    available: false,
-    activePaths: ["/dashboard"],
   },
   {
     href: "/admin/tickets",
@@ -80,7 +78,6 @@ export const navigationItems: NavigationItem[] = [
     icon: GitMerge,
     roles: ["staff", "admin"],
     section: "operations",
-    available: false,
   },
   {
     href: "/admin/review",
@@ -89,7 +86,6 @@ export const navigationItems: NavigationItem[] = [
     icon: Workflow,
     roles: ["staff", "admin"],
     section: "learning",
-    available: false,
   },
   {
     href: "/admin/ml-feedback",
@@ -98,7 +94,6 @@ export const navigationItems: NavigationItem[] = [
     icon: Sparkles,
     roles: ["staff", "admin"],
     section: "learning",
-    available: false,
   },
   {
     href: "/dashboard",

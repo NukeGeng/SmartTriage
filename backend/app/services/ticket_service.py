@@ -75,7 +75,7 @@ class TicketService:
         assigned_department: str | None = None,
         search: str | None = None,
         page: int = 1,
-        page_size: int = 20,
+        page_size: int = 30,
     ) -> TicketListResponse:
         tickets, total = TicketRepository.list_visible(
             db=db,
@@ -184,9 +184,16 @@ class TicketService:
         return TicketListItemResponse(
             id=ticket.id,
             title=ticket.title,
+            description=ticket.description,
             status=ticket.status,
             assigned_department=ticket.assigned_department,
+            manual_category=ticket.manual_category,
+            manual_priority=ticket.manual_priority,
             category=ticket.manual_category or (analysis.predicted_category if analysis else None),
+            category_label=analysis.category_label if analysis else None,
+            category_confidence=analysis.category_confidence if analysis else None,
+            ai_category=analysis.predicted_category if analysis else None,
+            ai_priority=analysis.priority if analysis else None,
             priority=ticket.manual_priority or (analysis.priority if analysis else None),
             priority_score=analysis.priority_score if analysis else None,
             created_at=ticket.created_at,

@@ -5,14 +5,13 @@ import { useParams } from "next/navigation";
 import { RefreshCcw } from "lucide-react";
 
 import { AppShell } from "@/components/layout/AppShell";
-import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Loading } from "@/components/ui/Loading";
-import { TicketAnalysisPanel } from "@/components/tickets/TicketAnalysisPanel";
-import { TicketStatusForm } from "@/components/tickets/TicketStatusForm";
+import { TicketDetailHero } from "@/components/tickets/detail/TicketDetailHero";
+import { TicketStoryCard } from "@/components/tickets/detail/TicketStoryCard";
+import { TriageReport } from "@/components/tickets/detail/TriageReport";
+import { TriageSummaryRail } from "@/components/tickets/detail/TriageSummaryRail";
 import { getTicket } from "@/features/tickets/api";
-import { formatDate } from "@/lib/utils";
 import { getStoredUser } from "@/lib/auth";
 import type { Ticket } from "@/types/ticket";
 
@@ -62,45 +61,19 @@ export default function TicketDetailPage() {
           </Button>
         </div>
       ) : ticket ? (
-        <div className="grid gap-5 xl:grid-cols-[1fr_360px]">
-          <div className="space-y-5">
-            <Card>
-              <CardHeader>
-                <div className="flex flex-col justify-between gap-3 md:flex-row md:items-start">
-                  <div>
-                    <p className="text-sm font-semibold text-brand-700">Ticket detail</p>
-                    <CardTitle>{ticket.title}</CardTitle>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge status={ticket.status} />
-                    {ticket.analysis ? <Badge priority={ticket.analysis.priority} /> : null}
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="whitespace-pre-wrap text-sm leading-6 text-neutral-700">{ticket.description}</p>
-                <div className="grid gap-3 rounded-md border border-line bg-panel p-4 text-sm md:grid-cols-2">
-                  <Info label="Created by" value={ticket.created_by_id ?? "Không rõ"} />
-                  <Info label="Created at" value={formatDate(ticket.created_at)} />
-                  <Info label="Updated at" value={formatDate(ticket.updated_at)} />
-                  <Info label="Assigned department" value={ticket.assigned_department ?? "Chưa gán"} />
-                </div>
-              </CardContent>
-            </Card>
-            <TicketAnalysisPanel analysis={ticket.analysis} />
+        <div className="space-y-6">
+          <TicketDetailHero ticket={ticket} />
+          <div className="grid items-start gap-6 xl:grid-cols-[minmax(0,1fr)_380px]">
+            <div className="st-enter min-w-0 space-y-6" style={{ animationDelay: "120ms" }}>
+              <TicketStoryCard ticket={ticket} />
+              <TriageReport analysis={ticket.analysis} />
+            </div>
+            <div className="st-enter min-w-0" style={{ animationDelay: "220ms" }}>
+              <TriageSummaryRail ticket={ticket} canManage={canManage} onSaved={setTicket} />
+            </div>
           </div>
-          {canManage ? <TicketStatusForm ticket={ticket} onSaved={setTicket} /> : null}
         </div>
       ) : null}
     </AppShell>
-  );
-}
-
-function Info({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="min-w-0">
-      <p className="text-xs font-semibold uppercase text-neutral-500">{label}</p>
-      <p className="truncate font-medium text-ink">{value}</p>
-    </div>
   );
 }

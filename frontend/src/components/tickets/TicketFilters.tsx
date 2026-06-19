@@ -51,7 +51,7 @@ export function TicketFilters({
   }
 
   return (
-    <div className="rounded-lg border border-line bg-white p-4 shadow-soft">
+    <div className="rounded-lg border border-line bg-card p-4 shadow-soft">
       <div className="grid gap-3 md:grid-cols-[1.4fr_1fr_1fr_1fr_auto]">
         <Input
           name="search"
@@ -60,7 +60,7 @@ export function TicketFilters({
           onChange={(event) => update("search", event.target.value)}
         />
         <select
-          className="h-11 rounded-md border border-line bg-white px-3 text-sm text-ink outline-none focus:border-brand-600 focus:ring-2 focus:ring-brand-100"
+          className="h-11 rounded-md border border-line bg-card px-3 text-sm text-ink outline-none focus:border-neutral-300 focus:ring-2 focus:ring-neutral-200"
           value={filters.status ?? ""}
           onChange={(event) => update("status", event.target.value)}
           aria-label="Lọc trạng thái"
@@ -72,7 +72,7 @@ export function TicketFilters({
           ))}
         </select>
         <select
-          className="h-11 rounded-md border border-line bg-white px-3 text-sm text-ink outline-none focus:border-brand-600 focus:ring-2 focus:ring-brand-100"
+          className="h-11 rounded-md border border-line bg-card px-3 text-sm text-ink outline-none focus:border-neutral-300 focus:ring-2 focus:ring-neutral-200"
           value={filters.priority ?? ""}
           onChange={(event) => update("priority", event.target.value)}
           aria-label="Lọc ưu tiên"
@@ -84,7 +84,7 @@ export function TicketFilters({
           ))}
         </select>
         <select
-          className="h-11 rounded-md border border-line bg-white px-3 text-sm text-ink outline-none focus:border-brand-600 focus:ring-2 focus:ring-brand-100"
+          className="h-11 rounded-md border border-line bg-card px-3 text-sm text-ink outline-none focus:border-neutral-300 focus:ring-2 focus:ring-neutral-200"
           value={filters.category ?? ""}
           onChange={(event) => update("category", event.target.value)}
           aria-label="Lọc category"

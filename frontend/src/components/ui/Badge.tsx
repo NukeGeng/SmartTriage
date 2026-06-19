@@ -15,12 +15,21 @@ type BadgeProps = {
 };
 
 const toneClasses: Record<BadgeTone, string> = {
-  neutral: "border-neutral-200 bg-white text-neutral-700",
-  green: "border-neutral-200 bg-white text-emerald-700",
-  cyan: "border-neutral-200 bg-white text-cyan-700",
-  amber: "border-neutral-200 bg-white text-amber-700",
-  rose: "border-neutral-200 bg-white text-rose-700",
-  slate: "border-neutral-200 bg-white text-slate-700",
+  neutral: "text-neutral-700",
+  green: "text-emerald-700",
+  cyan: "text-cyan-700",
+  amber: "text-amber-700",
+  rose: "text-rose-700",
+  slate: "text-slate-700",
+};
+
+const dotClasses: Record<BadgeTone, string> = {
+  neutral: "bg-neutral-300",
+  green: "bg-emerald-600",
+  cyan: "bg-cyan-600",
+  amber: "bg-amber-500",
+  rose: "bg-rose-600",
+  slate: "bg-slate-500",
 };
 
 function getStatusTone(status?: TicketStatus | null): BadgeTone {
@@ -41,15 +50,17 @@ function getPriorityTone(priority?: TicketPriority | null): BadgeTone {
 export function Badge({ children, tone = "neutral", priority, status, className }: BadgeProps) {
   const resolvedTone = status ? getStatusTone(status) : priority ? getPriorityTone(priority) : tone;
   const label = status ? getStatusLabel(status) : priority ? getPriorityLabel(priority) : children;
+  const showDot = Boolean(status || priority);
 
   return (
     <span
       className={cn(
-        "inline-flex min-h-7 items-center rounded-sm border px-2.5 py-1 text-xs font-semibold",
+        "inline-flex min-h-7 items-center gap-2 py-1 text-xs font-semibold",
         toneClasses[resolvedTone],
         className,
       )}
     >
+      {showDot ? <span className={cn("h-2 w-2 shrink-0 rounded-pill", dotClasses[resolvedTone])} aria-hidden="true" /> : null}
       {label}
     </span>
   );

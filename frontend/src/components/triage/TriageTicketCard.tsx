@@ -8,7 +8,7 @@ import type { TriageTicket } from "@/types/triage";
 
 export function TriageTicketCard({ ticket }: { ticket: TriageTicket }) {
   return (
-    <div className="rounded-md border border-line bg-white p-4">
+    <div className="rounded-md border border-line bg-card p-4">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <h3 className="line-clamp-2 text-sm font-semibold text-ink">{ticket.title}</h3>

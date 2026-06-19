@@ -1,4 +1,4 @@
-// NavItem.tsx - Role-aware sidebar navigation atom. Props: NavigationItem, active state.
+// NavItem.tsx - Icon-only floating dock item with above-label hover context.
 import Link from "next/link";
 
 import type { NavigationItem as NavigationItemType } from "@/data/navigation";
@@ -13,24 +13,23 @@ export function NavItem({ item, active }: NavItemProps) {
   const Icon = item.icon;
   const available = item.available !== false;
   const baseClasses =
-    "group flex min-h-10 min-w-0 items-center gap-2.5 rounded-md border border-transparent px-2.5 py-2 text-sm font-medium transition duration-150 ease-smooth";
+    "st-icon-button group relative flex h-12 w-12 shrink-0 items-center justify-center rounded-pill text-sm font-medium";
   const stateClasses = active
-    ? "text-brand-700"
-    : "text-neutral-600 hover:border-line hover:bg-white hover:text-ink";
-  const disabledClasses = "cursor-not-allowed opacity-50 hover:border-transparent hover:bg-transparent hover:text-neutral-600";
+    ? "bg-brand-600 text-white shadow-[0_12px_28px_rgba(37,99,235,0.24)]"
+    : "text-neutral-500 hover:bg-brand-50 hover:text-brand-700 focus-visible:bg-brand-50 focus-visible:text-brand-700";
+  const disabledClasses = "cursor-not-allowed opacity-45 hover:bg-transparent hover:text-neutral-500";
 
   const content = (
     <>
-      <Icon
-        className={cn("h-4 w-4 shrink-0", active ? "text-brand-700" : "text-neutral-500 group-hover:text-ink")}
-        aria-hidden="true"
-      />
-      <span className="min-w-0 flex-1 truncate">{item.label}</span>
-      {!available ? (
-        <span className="text-[10px] font-semibold uppercase tracking-[0.1em] text-neutral-400">
-          Sắp mở
+      <Icon className="h-5 w-5 shrink-0 text-current" aria-hidden="true" />
+      <span className="sr-only">{item.label}</span>
+      <span className="st-tooltip absolute bottom-[calc(100%+12px)] left-1/2 w-64 rounded-2xl border border-line bg-card px-4 py-3 text-left text-xs text-ink shadow-command">
+        <span className="block font-bold">{item.label}</span>
+        <span className="mt-1 block leading-5 text-command-muted">
+          {item.context}
+          {!available ? " Sắp mở." : ""}
         </span>
-      ) : null}
+      </span>
     </>
   );
 
@@ -43,7 +42,7 @@ export function NavItem({ item, active }: NavItemProps) {
   }
 
   return (
-    <Link className={cn(baseClasses, stateClasses)} href={item.href} title={item.context}>
+    <Link className={cn(baseClasses, stateClasses)} href={item.href} aria-label={item.label}>
       {content}
     </Link>
   );

@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 import { Sidebar } from "@/components/layout/Sidebar";
-import { TopBar } from "@/components/layout/TopBar";
 import { Loading } from "@/components/ui/Loading";
 import { getStoredUser, getToken } from "@/lib/auth";
 import type { User } from "@/types/auth";
@@ -37,14 +36,11 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div className="min-h-screen bg-command-bg text-command-text lg:flex">
+    <div className="st-canvas min-h-screen text-command-text">
       <Sidebar user={user} />
-      <div className="min-w-0 flex-1 bg-command-bg">
-        <TopBar user={user} />
-        <main className="mx-auto w-full max-w-[1440px] px-4 py-6 md:px-6 xl:px-8">
-          <div className="triage-enter min-w-0">{children}</div>
-        </main>
-      </div>
+      <main className="mx-auto w-full max-w-[1440px] px-4 pb-32 pt-6 md:px-6 xl:px-8">
+        <div className="st-page-enter min-w-0">{children}</div>
+      </main>
     </div>
   );
 }

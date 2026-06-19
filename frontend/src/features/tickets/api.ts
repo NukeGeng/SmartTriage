@@ -5,13 +5,20 @@ import type {
   TicketCreateRequest,
   TicketFilters,
   TicketListResponse,
+  TicketPaginationParams,
   TicketStatus,
   TicketUpdateRequest,
 } from "@/types/ticket";
 
-export function listTickets(filters: TicketFilters = {}) {
+export const TICKET_PAGE_SIZE = 30;
+
+export function listTickets(filters: TicketFilters = {}, pagination: TicketPaginationParams = {}) {
   return apiFetch<TicketListResponse>(
-    `/api/v1/tickets${toQueryString({ ...filters, page_size: 100 })}`,
+    `/api/v1/tickets${toQueryString({
+      ...filters,
+      page: pagination.page ?? 1,
+      page_size: pagination.page_size ?? TICKET_PAGE_SIZE,
+    })}`,
   );
 }
 
