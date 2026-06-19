@@ -9,6 +9,7 @@ __pycache__/
 .DS_Store
 coverage/
 .pytest_cache/
+.pytest-tmp/
 dist/
 build/
 .docs/

@@ -1,0 +1,11 @@
+,account_system,classroom_device,document_profile,facility,feedback,learning_platform,network,other,schedule_exam,tuition_payment
+account_system,406,0,0,0,0,0,0,0,0,0
+classroom_device,0,221,0,0,0,0,0,0,0,0
+document_profile,0,0,224,0,0,0,0,0,0,0
+facility,0,0,0,230,0,0,0,0,0,0
+feedback,0,0,0,0,123,0,0,0,0,0
+learning_platform,0,0,0,0,0,304,0,0,0,0
+network,0,0,0,0,0,0,305,0,0,0
+other,0,0,0,0,0,0,0,98,0,0
+schedule_exam,0,0,0,0,0,0,0,0,254,0
+tuition_payment,0,0,0,0,0,0,0,0,0,223

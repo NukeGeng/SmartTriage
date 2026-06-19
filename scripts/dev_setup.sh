@@ -39,7 +39,10 @@ cd "$ROOT_DIR/ai-service"
 "$AI_PY" scripts/generate_sample_dataset.py
 
 log "Training AI category model"
-"$AI_PY" scripts/train_category_model.py
+"$AI_PY" scripts/train_category_model.py \
+  --dataset-path data/training/versions/synthetic-v2/training.csv \
+  --dataset-version synthetic-v2 \
+  --promote
 
 log "Building duplicate detection index"
 "$AI_PY" scripts/build_duplicate_index.py

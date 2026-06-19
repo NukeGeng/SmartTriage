@@ -41,6 +41,12 @@ class AIServiceClient:
                 "macro_f1": None,
                 "categories": [],
                 "model_loaded": False,
+                "run_id": None,
+                "dataset_version": None,
+                "dataset_fingerprint": None,
+                "sample_count": None,
+                "split_strategy": None,
+                "synthetic_ratio": None,
             }
 
     def analyze_ticket(

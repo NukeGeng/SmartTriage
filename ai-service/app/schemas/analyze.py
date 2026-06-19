@@ -71,3 +71,9 @@ class ModelInfoResponse(BaseModel):
     macro_f1: float | None = None
     categories: list[str]
     model_loaded: bool
+    run_id: str | None = None
+    dataset_version: str | None = None
+    dataset_fingerprint: str | None = None
+    sample_count: int | None = None
+    split_strategy: str | None = None
+    synthetic_ratio: float | None = None

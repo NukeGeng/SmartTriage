@@ -33,5 +33,11 @@ def model_info() -> ApiResponse:
         macro_f1=metadata.get("macro_f1"),
         categories=metadata.get("categories", []),
         model_loaded=model_loaded,
+        run_id=metadata.get("run_id"),
+        dataset_version=metadata.get("dataset_version"),
+        dataset_fingerprint=metadata.get("dataset_fingerprint"),
+        sample_count=metadata.get("sample_count"),
+        split_strategy=metadata.get("split_strategy"),
+        synthetic_ratio=metadata.get("synthetic_ratio"),
     )
     return ApiResponse(success=True, message="Model information retrieved", data=data)

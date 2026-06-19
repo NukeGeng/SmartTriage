@@ -1,0 +1,46 @@
+{
+  "run_id": "synthetic-v2-candidate-001",
+  "model_version": "tfidf-logreg-synthetic-v2-921e131e",
+  "algorithm": "TF-IDF + Logistic Regression",
+  "dataset_version": "synthetic-v2",
+  "dataset_path": "data\\training\\versions\\synthetic-v2\\training.csv",
+  "dataset_fingerprint": "51836619c80894e837d1b3c1cadcabfef7e44fde2f41eebc1a9514917f1ce400",
+  "sample_count": 12000,
+  "train_count": 9612,
+  "test_count": 2388,
+  "split_strategy": "stratified_scenario_group",
+  "evaluation_scope": "internal_holdout",
+  "category_distribution": {
+    "document_profile": 960,
+    "learning_platform": 1560,
+    "schedule_exam": 1440,
+    "tuition_payment": 1080,
+    "account_system": 1920,
+    "feedback": 600,
+    "facility": 1200,
+    "network": 1680,
+    "other": 480,
+    "classroom_device": 1080
+  },
+  "label_source_distribution": {
+    "curated_synthetic": 12000
+  },
+  "synthetic_ratio": 1.0,
+  "accuracy": 1.0,
+  "macro_precision": 1.0,
+  "macro_recall": 1.0,
+  "macro_f1": 1.0,
+  "categories": [
+    "account_system",
+    "classroom_device",
+    "document_profile",
+    "facility",
+    "feedback",
+    "learning_platform",
+    "network",
+    "other",
+    "schedule_exam",
+    "tuition_payment"
+  ],
+  "created_at": "2026-06-19T07:22:33.203184+00:00"
+}

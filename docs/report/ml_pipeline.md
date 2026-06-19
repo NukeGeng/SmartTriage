@@ -1,5 +1,7 @@
 # SmartTriage ML Pipeline
 
+> Pipeline huấn luyện mới tách riêng dữ liệu vận hành và dataset offline có version. Xem [offline_training_pipeline.md](offline_training_pipeline.md).
+
 ## 1. Mục Tiêu ML
 
 ML trong SmartTriage giúp hệ thống xử lý phản ánh sinh viên nhanh hơn bằng cách:

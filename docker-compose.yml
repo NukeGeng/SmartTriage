@@ -26,7 +26,7 @@ services:
     environment:
       APP_ENV: development
       MODEL_DIR: models
-      DATASET_PATH: data/raw/ticket_samples.csv
+      DATASET_PATH: data/training/versions/synthetic-v2/training.csv
       DUPLICATE_INDEX_PATH: data/tickets_index/sample_existing_tickets.csv
     ports:
       - "8001:8001"
