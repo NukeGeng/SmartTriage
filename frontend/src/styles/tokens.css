@@ -318,7 +318,7 @@
 .st-card:hover,
 .group:hover .st-card,
 .group:focus-within .st-card {
-  transform: translate3d(0, -3px, 0) scale(1.025);
+  transform: translate3d(0, -2px, 0);
 }
 
 .st-ticket-card {

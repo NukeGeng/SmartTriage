@@ -11,7 +11,12 @@ from app.db.session import get_db
 from app.models.ticket import TicketStatus
 from app.models.user import User
 from app.schemas.common import ApiResponse
-from app.schemas.ticket import TicketCreateRequest, TicketStatusUpdateRequest, TicketUpdateRequest
+from app.schemas.ticket import (
+    TicketCreateRequest,
+    TicketReanalyzeResponse,
+    TicketStatusUpdateRequest,
+    TicketUpdateRequest,
+)
 from app.services.ticket_service import TicketService
 
 router = APIRouter(prefix="/tickets", tags=["tickets"])
@@ -77,6 +82,20 @@ def export_training_data(
         iter([output.getvalue()]),
         media_type="text/csv",
         headers={"Content-Disposition": "attachment; filename=smarttriage_training_data.csv"},
+    )
+
+
+@router.post("/reanalyze", response_model=ApiResponse)
+def reanalyze_tickets(
+    db: Session = Depends(get_db),
+    current_user: User = Depends(require_admin),
+    service: TicketService = Depends(get_ticket_service),
+) -> ApiResponse:
+    summary = TicketReanalyzeResponse(**service.reanalyze_all(db))
+    return ApiResponse(
+        success=True,
+        message="Đã chạy lại phân tích AI cho toàn bộ ticket",
+        data=summary,
     )
 
 
