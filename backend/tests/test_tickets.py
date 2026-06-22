@@ -212,6 +212,67 @@ def test_admin_exports_training_data_with_manual_labels(client_with_fake_ai: Tes
     ]
 
 
+class RetrainedAIClient:
+    """Simulates a freshly retrained model returning different predictions."""
+
+    def analyze_ticket(self, **kwargs: Any) -> dict[str, Any]:
+        return {
+            "category": "network",
+            "category_label": "Network",
+            "confidence": 0.42,
+            "category_confidence": 0.42,
+            "priority": "low",
+            "priority_score": 21,
+            "suggested_department": "IT Department",
+            "duplicate_candidates": [],
+            "suggested_actions": ["Check campus wifi"],
+            "model_version": "test-v2",
+        }
+
+
+def test_admin_reanalyze_overwrites_stored_analysis(client_with_fake_ai: TestClient) -> None:
+    student_token = _register_and_login(client_with_fake_ai, "reanalyze-student@example.com")
+    admin_token = _register_and_login(client_with_fake_ai, "reanalyze-admin@example.com", role="admin")
+    created_ticket = _create_ticket(client_with_fake_ai, student_token)
+    assert created_ticket["analysis"]["priority"] == "high"
+    assert created_ticket["analysis"]["model_version"] == "test-v1"
+
+    # Swap in the "retrained" model, then run the bulk re-analysis.
+    app.dependency_overrides[ticket_endpoints.get_ticket_service] = lambda: TicketService(
+        ai_client=RetrainedAIClient(),
+    )
+    response = client_with_fake_ai.post(
+        "/api/v1/tickets/reanalyze",
+        headers=_auth_headers(admin_token),
+    )
+
+    assert response.status_code == 200
+    summary = response.json()["data"]
+    assert summary["total"] == 1
+    assert summary["updated"] == 1
+    assert summary["model_version"] == "test-v2"
+
+    detail = client_with_fake_ai.get(
+        f"/api/v1/tickets/{created_ticket['id']}",
+        headers=_auth_headers(admin_token),
+    ).json()["data"]
+    assert detail["analysis"]["priority"] == "low"
+    assert detail["analysis"]["priority_score"] == 21
+    assert detail["analysis"]["category_confidence"] == 0.42
+    assert detail["analysis"]["model_version"] == "test-v2"
+
+
+def test_student_cannot_reanalyze(client_with_fake_ai: TestClient) -> None:
+    student_token = _register_and_login(client_with_fake_ai, "reanalyze-denied@example.com")
+
+    response = client_with_fake_ai.post(
+        "/api/v1/tickets/reanalyze",
+        headers=_auth_headers(student_token),
+    )
+
+    assert response.status_code == 403
+
+
 def test_student_cannot_export_training_data(client_with_fake_ai: TestClient) -> None:
     student_token = _register_and_login(client_with_fake_ai, "ticket-export-denied@example.com")
 

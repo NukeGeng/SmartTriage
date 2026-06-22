@@ -138,6 +138,61 @@ class TicketService:
             raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Ticket not found")
         return TicketDetailResponse.model_validate(refreshed)
 
+    def reanalyze_all(self, db: Session) -> dict[str, Any]:
+        """Re-run AI analysis for every ticket and overwrite the stored result.
+
+        Used after the model is retrained so existing tickets reflect the new
+        priority/confidence instead of the snapshot frozen at creation time.
+        Manual overrides (manual_category/priority) and the actual
+        assigned_department routing are left untouched on purpose.
+        """
+        tickets = TicketRepository.list_all(db)
+        existing_context = self._build_existing_ticket_context(db)
+        updated = 0
+        created = 0
+        failed = 0
+        model_version: str | None = None
+
+        for ticket in tickets:
+            created_by_role = ticket.created_by.role.value if ticket.created_by else "student"
+            analysis_payload = self.ai_client.analyze_ticket(
+                ticket_id=str(ticket.id),
+                title=ticket.title,
+                description=ticket.description or "",
+                created_by_role=created_by_role,
+                existing_tickets=[
+                    item for item in existing_context if item["ticket_id"] != str(ticket.id)
+                ],
+            )
+            if not analysis_payload:
+                failed += 1
+                continue
+
+            fresh = self._create_analysis_from_payload(ticket.id, analysis_payload)
+            if ticket.analysis is not None:
+                self._apply_analysis_fields(ticket.analysis, fresh)
+                updated += 1
+            else:
+                db.add(fresh)
+                created += 1
+            model_version = fresh.model_version
+
+        db.commit()
+        logger.info(
+            "Reanalyze all tickets done: total=%s updated=%s created=%s failed=%s",
+            len(tickets),
+            updated,
+            created,
+            failed,
+        )
+        return {
+            "total": len(tickets),
+            "updated": updated,
+            "created": created,
+            "failed": failed,
+            "model_version": model_version,
+        }
+
     def export_training_data(self, db: Session) -> list[dict[str, Any]]:
         tickets = TicketRepository.list_for_training_export(db)
         rows: list[dict[str, Any]] = []
@@ -224,6 +279,19 @@ class TicketService:
             analysis_metadata=analysis_metadata,
             model_version=str(payload.get("model_version") or "unknown"),
         )
+
+    @staticmethod
+    def _apply_analysis_fields(target: TicketAnalysis, source: TicketAnalysis) -> None:
+        target.predicted_category = source.predicted_category
+        target.category_label = source.category_label
+        target.category_confidence = source.category_confidence
+        target.priority = source.priority
+        target.priority_score = source.priority_score
+        target.suggested_department = source.suggested_department
+        target.duplicate_candidates = source.duplicate_candidates
+        target.suggested_actions = source.suggested_actions
+        target.analysis_metadata = source.analysis_metadata
+        target.model_version = source.model_version
 
     @staticmethod
     def _build_existing_ticket_context(db: Session) -> list[dict[str, Any]]:

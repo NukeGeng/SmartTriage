@@ -9,6 +9,7 @@ import { ModelCategoryCloud } from "@/components/model/ModelCategoryCloud";
 import { ModelInfoHero } from "@/components/model/ModelInfoHero";
 import { ModelMetricCard } from "@/components/model/ModelMetricCard";
 import { ModelPipelinePanel } from "@/components/model/ModelPipelinePanel";
+import { ModelReanalyzePanel } from "@/components/model/ModelReanalyzePanel";
 import { Loading } from "@/components/ui/Loading";
 import { getModelInfo } from "@/features/ai/api";
 import { getStoredUser } from "@/lib/auth";
@@ -20,6 +21,7 @@ export function ModelInfoDashboard() {
   const [modelInfo, setModelInfo] = useState<ModelInfo | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [isAdmin, setIsAdmin] = useState(false);
 
   const loadModelInfo = useCallback(async () => {
     setError("");
@@ -39,6 +41,7 @@ export function ModelInfoDashboard() {
       router.replace("/tickets");
       return;
     }
+    setIsAdmin(user?.role === "admin");
     void loadModelInfo();
   }, [loadModelInfo, router]);
 
@@ -86,6 +89,8 @@ export function ModelInfoDashboard() {
               <ModelMetricCard key={metric.label} {...metric} />
             ))}
           </section>
+
+          {isAdmin ? <ModelReanalyzePanel /> : null}
 
           <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_360px]">
             <div className="min-w-0">

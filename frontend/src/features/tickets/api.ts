@@ -6,11 +6,16 @@ import type {
   TicketFilters,
   TicketListResponse,
   TicketPaginationParams,
+  TicketReanalyzeResult,
   TicketStatus,
   TicketUpdateRequest,
 } from "@/types/ticket";
 
 export const TICKET_PAGE_SIZE = 30;
+
+export function reanalyzeAllTickets() {
+  return apiFetch<TicketReanalyzeResult>("/api/v1/tickets/reanalyze", { method: "POST" });
+}
 
 export function listTickets(filters: TicketFilters = {}, pagination: TicketPaginationParams = {}) {
   return apiFetch<TicketListResponse>(

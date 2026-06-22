@@ -22,7 +22,7 @@ export function TicketList({ tickets }: { tickets: Ticket[] }) {
   }
 
   return (
-    <div className="st-hover-grid grid grid-cols-[repeat(auto-fill,minmax(min(100%,280px),315px))] justify-center gap-x-6 gap-y-7 lg:justify-start">
+    <div className="st-hover-grid grid grid-cols-[repeat(auto-fit,minmax(min(100%,280px),1fr))] gap-x-6 gap-y-7">
       {tickets.map((ticket, index) => (
         <TicketShotCard key={ticket.id} ticket={ticket} index={index} />
       ))}

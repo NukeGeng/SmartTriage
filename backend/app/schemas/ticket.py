@@ -23,6 +23,14 @@ class TicketStatusUpdateRequest(BaseModel):
     status: TicketStatus
 
 
+class TicketReanalyzeResponse(BaseModel):
+    total: int
+    updated: int
+    created: int
+    failed: int
+    model_version: str | None = None
+
+
 class AnalysisExplanation(BaseModel):
     summary: str
     category_reason: str

@@ -1,0 +1,101 @@
+﻿category,term,weight
+account_system,tài khoản,2.951
+account_system,nhập,2.855
+account_system,khoản,2.541
+account_system,đăng,2.539
+account_system,đăng nhập,2.339
+account_system,tài,2.21
+account_system,khẩu,2.202
+account_system,mật khẩu,2.202
+account_system,mật,2.202
+account_system,bị khóa,1.869
+classroom_device,đã được,2.306
+classroom_device,động,2.156
+classroom_device,chiếu,2.039
+classroom_device,bộ tiết,1.827
+classroom_device,của lớp,1.827
+classroom_device,cố ảnh,1.827
+classroom_device,đến toàn,1.827
+classroom_device,toàn,1.827
+classroom_device,toàn bộ,1.827
+classroom_device,giảng viên,1.826
+document_profile,giấy,3.268
+document_profile,giấy tờ,2.122
+document_profile,tờ,2.122
+document_profile,thực tập,1.76
+document_profile,viên kiểm,1.735
+document_profile,và hướng,1.735
+document_profile,dẫn bước,1.735
+document_profile,phòng công,1.735
+document_profile,tác sinh,1.735
+document_profile,công tác,1.735
+facility,khu,1.886
+facility,ánh về,1.804
+facility,khu vực,1.726
+facility,đều,1.726
+facility,vực,1.726
+facility,bị ảnh,1.726
+facility,vực đều,1.726
+facility,viên trong,1.726
+facility,trong khu,1.726
+facility,đều bị,1.726
+feedback,quy trình,1.933
+feedback,góp về,1.799
+feedback,đề xuất,1.736
+feedback,quy,1.626
+feedback,thông báo,1.505
+feedback,trường bổ,1.476
+feedback,dẫn ngắn,1.476
+feedback,sung hướng,1.476
+feedback,cho sinh,1.476
+feedback,ngắn cho,1.476
+learning_platform,bài,3.045
+learning_platform,môn,2.651
+learning_platform,video,2.015
+learning_platform,không,1.819
+learning_platform,nộp,1.769
+learning_platform,tải,1.635
+learning_platform,không truy,1.524
+learning_platform,cập được,1.508
+learning_platform,liệu,1.503
+learning_platform,lỗi,1.476
+network,kết,2.858
+network,nối,2.858
+network,kết nối,2.858
+network,wifi,2.719
+network,vào,2.154
+network,rất,1.917
+network,mạng,1.697
+network,đã kết,1.425
+network,internet,1.425
+network,bị báo,1.425
+other,chung,2.756
+other,về,2.642
+other,tư vấn,2.077
+other,tư,2.077
+other,định,2.03
+other,câu,1.707
+other,động sinh,1.504
+other,vụ,1.387
+other,dẫn phòng,1.371
+other,ban có,1.371
+schedule_exam,môn,2.694
+schedule_exam,thi môn,2.459
+schedule_exam,thời,2.212
+schedule_exam,chính,1.968
+schedule_exam,thi,1.916
+schedule_exam,lịch,1.599
+schedule_exam,lịch học,1.55
+schedule_exam,chính thức,1.491
+schedule_exam,lớp chưa,1.491
+schedule_exam,và thời,1.491
+tuition_payment,giao dịch,3.017
+tuition_payment,giao,2.847
+tuition_payment,tiền,2.627
+tuition_payment,dịch,2.505
+tuition_payment,nợ,1.966
+tuition_payment,công nợ,1.966
+tuition_payment,số tiền,1.948
+tuition_payment,số,1.948
+tuition_payment,phí,1.876
+tuition_payment,công,1.817

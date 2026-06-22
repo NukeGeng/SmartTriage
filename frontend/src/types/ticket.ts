@@ -88,6 +88,14 @@ export type TicketCreateRequest = {
   description: string;
 };
 
+export type TicketReanalyzeResult = {
+  total: number;
+  updated: number;
+  created: number;
+  failed: number;
+  model_version: string | null;
+};
+
 export type TicketUpdateRequest = {
   manual_category?: string | null;
   manual_priority?: string | null;
