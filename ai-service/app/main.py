@@ -15,7 +15,11 @@ logger = logging.getLogger(__name__)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI) -> AsyncIterator[None]:
-    logger.info("AI service started in %s mode", settings.APP_ENV)
+    # Nạp sẵn model (warm cache) lúc khởi động để request đầu tiên không phải chờ nạp joblib.
+    from app.services.analysis_service import get_analysis_service
+
+    get_analysis_service()
+    logger.info("AI service started in %s mode (model preloaded)", settings.APP_ENV)
     yield
 
 

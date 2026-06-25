@@ -1,0 +1,59 @@
+# Render Blueprint cho SmartTriage (tham khảo).
+# Dùng: Render Dashboard → New + → Blueprint → chọn repo.
+# Sau khi dựng: điền FRONTEND_URL (URL Vercel) và kiểm tra AI_SERVICE_URL.
+# Frontend (Next.js) deploy riêng trên Vercel — xem docs/deployment.md.
+
+databases:
+  - name: smarttriage-db
+    databaseName: smarttriage_db
+    user: smarttriage
+    region: singapore
+    plan: free
+
+services:
+  # --- AI Service (FastAPI + scikit-learn) ---
+  - type: web
+    name: smarttriage-ai
+    runtime: docker
+    rootDir: ai-service
+    region: singapore
+    plan: free
+    healthCheckPath: /api/v1/health
+    dockerCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: MODEL_DIR
+        value: models
+      - key: DATASET_PATH
+        value: data/training/versions/synthetic-v2/training.csv
+      - key: DUPLICATE_INDEX_PATH
+        value: data/tickets_index/sample_existing_tickets.csv
+
+  # --- Backend (FastAPI + SQLAlchemy) ---
+  - type: web
+    name: smarttriage-backend
+    runtime: docker
+    rootDir: backend
+    region: singapore
+    plan: free
+    healthCheckPath: /api/v1/health
+    preDeployCommand: alembic upgrade head
+    dockerCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: smarttriage-db
+          property: connectionString
+      - key: JWT_SECRET_KEY
+        generateValue: true          # Render tự sinh chuỗi bí mật mạnh
+      - key: JWT_ALGORITHM
+        value: HS256
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: "60"
+      - key: AI_SERVICE_URL
+        sync: false                  # điền URL ai-service, vd https://smarttriage-ai.onrender.com
+      - key: FRONTEND_URL
+        sync: false                  # điền URL Vercel, vd https://smarttriage.vercel.app

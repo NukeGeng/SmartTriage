@@ -413,6 +413,67 @@ end note
 
 ---
 
+## Hình 3.2. Sơ đồ khối kiến trúc tổng quan (kèm chức năng)
+
+```plantuml
+@startuml
+skinparam shadowing false
+skinparam componentStyle rectangle
+skinparam roundCorner 10
+title SmartTriage — Sơ đồ khối kiến trúc tổng quan (kèm chức năng)
+
+actor "Người dùng\n(Sinh viên · Cán bộ · Admin)" as U
+
+rectangle "① TẦNG TRÌNH DIỄN — Frontend (Next.js · TypeScript · Tailwind)" #EAF1FF {
+  rectangle "Xác thực & Phân quyền\nĐăng nhập JWT · điều hướng theo vai trò" as FE1
+  rectangle "Phản ánh (Sinh viên)\nGửi · Danh sách & lọc · Chi tiết + AI Triage" as FE2
+  rectangle "Điều phối (Admin/Staff)\nDashboard · Triage Cockpit · Incidents\nAI Review · ML Feedback · Model Info" as FE3
+}
+
+rectangle "② TẦNG NGHIỆP VỤ — Backend (FastAPI · SQLAlchemy · Alembic)" #FFF3D6 {
+  rectangle "Auth & Users\nJWT · RBAC · bcrypt" as BE1
+  rectangle "Ticket Service\nCRUD · workflow · re-analyze · export CSV" as BE2
+  rectangle "Dashboard · Triage · Incident Groups\n(thống kê, hàng đợi, gom nhóm)" as BE3
+  rectangle "Training Pipeline\nsync ticket · duyệt mẫu · dataset version" as BE4
+  rectangle "AI Service Client (httpx)" as BE5
+}
+
+rectangle "③ TẦNG AI/ML — AI Service (FastAPI · scikit-learn)" #E7F8F0 {
+  rectangle "Tiền xử lý văn bản\n(combine title+description)" as AI1
+  rectangle "Phân loại lĩnh vực\nTF-IDF + Logistic Regression + confidence" as AI2
+  rectangle "Chấm điểm ưu tiên (rule-based)" as AI3
+  rectangle "Phát hiện trùng lặp (cosine similarity)" as AI4
+  rectangle "Đề xuất phòng ban · gợi ý hành động · giải thích" as AI5
+  rectangle "Huấn luyện & promote model" as AI6
+}
+
+rectangle "④ TẦNG DỮ LIỆU" #F1F0FB {
+  database "PostgreSQL\nusers · tickets · ticket_analyses\nincident_groups · dataset_versions · training_samples" as DB
+  artifact "Model artifacts (joblib)\n+ datasets versioned" as ART
+}
+
+U --> FE1
+FE2 --> BE2 : REST/JSON + JWT
+FE3 --> BE3
+FE1 --> BE1
+BE2 --> BE5
+BE5 --> AI2 : HTTP /analyze-ticket
+BE4 --> AI6
+BE2 --> DB
+BE3 --> DB
+BE4 --> DB
+BE1 --> DB
+AI2 ..> ART : nạp model
+AI6 ..> ART : ghi model mới
+@enduml
+```
+
+> Đọc theo chiều: Người dùng → Frontend → Backend → (AI Service + PostgreSQL). Mỗi khối liệt kê
+> chức năng chính của tầng đó. AI Service không truy cập DB nghiệp vụ — chỉ đọc/ghi **model artifacts**
+> trên đĩa; Backend là nơi duy nhất nói chuyện với PostgreSQL.
+
+---
+
 ### Ghi chú render nhanh
 
 - **VS Code:** cài extension `PlantUML` (jebbs) → mở file → `Alt+D` để preview, hoặc chuột phải → *Export Current Diagram* (PNG/SVG) để chèn Word.

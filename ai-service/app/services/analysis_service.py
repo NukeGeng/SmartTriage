@@ -1,4 +1,5 @@
 import logging
+from functools import lru_cache
 
 from app.ml.action_recommender import recommend_actions
 from app.ml.category_metadata import CATEGORY_LABELS
@@ -87,3 +88,10 @@ class AnalysisService:
             explanation=explanation,
             model_version=prediction.get("model_version", "unknown"),
         )
+
+
+@lru_cache(maxsize=1)
+def get_analysis_service() -> AnalysisService:
+    """AnalysisService dùng chung (singleton) — model joblib chỉ nạp MỘT lần cho cả tiến trình,
+    thay vì nạp lại mỗi request. An toàn tái dùng giữa các request (chỉ đọc, không lưu trạng thái)."""
+    return AnalysisService()
